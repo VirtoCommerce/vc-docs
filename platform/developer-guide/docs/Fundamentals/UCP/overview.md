@@ -67,6 +67,7 @@ The module provides the following capabilities:
 * **Streamable HTTP MCP server**: `/ucp/mcp` with typed UCP commerce tools for the installed Frontend, built on the official C# MCP SDK.
 * **Buyer context propagation**: header-based B2B buyer delegation through `X-Buyer-User-Id` and `X-Buyer-Organization-Id`.
 * **Structured UCP errors**: machine-readable error codes with correlation id support.
+* **OpenTelemetry observability**: correlated tracing and metrics across the UCP operation, the xAPI call, and downstream dependencies. See [Observability](configuration.md#observability).
 
 !!! note
     New UCP features are coming soon: delivery and payment method selection, carrier-level shipment tracking, faceted catalog filters, and OAuth2 or OIDC buyer delegation.
@@ -118,6 +119,8 @@ The module manifest declares the following runtime dependencies.
 | `VirtoCommerce.Marketing` | `3.1000.0` |
 
 Target framework: `.NET 10`.
+
+The module also declares `VirtoCommerce.OpenTelemetry` `3.1001.0` as an optional dependency, used for [observability](configuration.md#observability). The **UCP** module starts normally when it is not installed.
 
 
 <br>

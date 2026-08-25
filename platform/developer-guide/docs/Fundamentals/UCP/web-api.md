@@ -196,7 +196,7 @@ The module returns the following known UCP error codes:
 - `order_not_found`
 - `xapi_execution_failed`
 
-Responses include a correlation id when available. The module reads `X-Correlation-Id` and falls back to the ASP.NET Core trace identifier.
+Responses include a correlation id when available. The module reads `X-Correlation-Id` and falls back to the ASP.NET Core trace identifier. This is the same id used to locate the request's [OpenTelemetry trace](configuration.md#observability).
 
 
 <br>

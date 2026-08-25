@@ -67,11 +67,13 @@ Two things to keep in mind for the `Sitemap:` directive:
 
 ![Readmore](media/readmore.png){: width="25"} [Enhancing SEO with Prerender.io](/storefront/developer-guide/latest/integrations/prerender_io/)
 
+![Readmore](media/readmore.png){: width="25"} [Custom llms.txt File](custom-llms-txt.md)
+
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../configuring-store">← Configuring store</a>
-    <a href="../settings">Store settings →</a>
+    <a href="../custom-llms-txt">Custom llms.txt file →</a>
 </div>

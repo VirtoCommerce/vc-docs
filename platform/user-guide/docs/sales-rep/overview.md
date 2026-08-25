@@ -12,6 +12,8 @@ With the Sales Rep module, you can:
 
 * **Manage sales representatives**: Create, edit, block, unblock, and delete reps.
 * **Assign customers to a rep**: Give a rep the customer organizations they serve through a per-organization role. A global role marks a user as a rep without tying them to any specific customer.
+* **Assign a rep role**: Choose the **Sales Representative** role, or the **Advanced Sales Representative** role, which also grants the rep access to the document library on the Frontend.
+* **Upload sales materials**: Add documents to a document library that Advanced Sales Representatives can browse, open, and download on the Frontend.
 * **Manage the rep's login account**: Set the store, password, and lockout.
 * **Reuse existing data**: Model a rep from a contact, a login account, and a role, with no new data structures.
 * **Show reps to buyers**: Let buyers see the sales reps supporting their organization.
@@ -31,5 +33,5 @@ The diagram below illustrates the dependencies of the Sales Rep module:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../return/overview">← Return module overview</a>
-    <a href="../enabling-sales-rep">Enabling Sales Reps App→</a>
+    <a href="../enabling-sales-rep">Enabling Sales Reps app→</a>
 </div>

@@ -70,6 +70,6 @@ Other store-specific settings include:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../custom-robot-txt">← Custom robot.txt</a>
+    <a href="../custom-llms-txt">← Custom llms.txt file</a>
     <a href="../../pricing/overview">Pricing module overview →</a>
 </div>

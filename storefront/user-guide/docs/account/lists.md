@@ -59,8 +59,7 @@ Sales reps can share lists with their customers individually:
 1. Select **Customer** from the sharing options dropdown.
 1. Select a customer to share the list with from the dropdown that appears. If the list was previously shared with another customer, that customer will loos access to it.
 1. Optionally, add a message. If you don't, the customer will receive a default message.
-1. Check the options for sending the list - email or push notification:
-1. Click **SAVE** to send the list to the customer.
+1. Click **SAVE** to send the list to the customer. The list will be sent via email and push notification.
 
     ![Share list with customer](../media/share-list-with-customer.png){: style="display: block; margin: 0 auto;" width="400"}
 

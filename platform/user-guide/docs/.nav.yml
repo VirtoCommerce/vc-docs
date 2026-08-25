@@ -40,6 +40,7 @@ nav:
                 - Adding New Store: store/adding-new-store.md
                 - Configuring Store: store/configuring-store.md
                 - Custom robot.txt: store/custom-robot-txt.md
+                - Custom llms.txt: store/custom-llms-txt.md
                 - Settings: store/settings.md
           - <b>Pricing</b>:
                 - Overview: pricing/overview.md
@@ -262,6 +263,7 @@ nav:
                 - Overview: sales-rep/overview.md
                 - Enabling Sales Rep App: sales-rep/enabling-sales-rep.md
                 - Managing Sales Reps: sales-rep/managing-sales-reps.md
+                - Document Library: sales-rep/document-library.md
           - Search Related Modules:
                 - Search Index:
                       - Overview: search/overview.md

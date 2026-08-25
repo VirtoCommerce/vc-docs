@@ -1734,13 +1734,22 @@ This node controls the OpenTelemetry observability settings:
 | OpenTelemetry.Enabled | false | Required. Enables the module. Set to `true` to activate. |
 | OpenTelemetry.Endpoint | http://localhost:4317 | Required. OTLP collector endpoint (gRPC). Required to export data. |
 | OpenTelemetry.ServiceName | VirtoCommerce.Platform | Optional. Service name reported in telemetry. |
+| OpenTelemetry.Sources | ["VirtoCommerce.UCP"] | Optional. Activity source names to register for tracing. A module adds its own source name here to have its spans exported. |
+| OpenTelemetry.Meters | ["VirtoCommerce.UCP"] | Optional. Meter names to register for metrics. A module adds its own meter name here to have its counters and histograms exported. |
 
 ```json title="appsettings.json"
 {
   "OpenTelemetry": {
     "Enabled": true,
     "Endpoint": "http://localhost:4317",
-    "ServiceName": "VirtoCommerce.Platform"
+    "ServiceName": "VirtoCommerce.Platform",
+    "Sources": [
+      "VirtoCommerce.UCP",
+      "Experimental.ModelContextProtocol"
+    ],
+    "Meters": [
+      "VirtoCommerce.UCP"
+    ]
   }
 }
 ```
@@ -2579,6 +2588,8 @@ This configuration node configures the UCP protocol adapter. It sets the default
 | HandoffUrlTemplate | "https://store.example.com/checkout?ucp_session={token}" | Explicit override for the hosted checkout handoff URL. `{token}` is replaced with the `ucp_session` token. |
 | HandoffTokenTtlMinutes | 15 | Absolute expiration of temporary checkout handoff sessions in the distributed cache. |
 | AnonymousCatalog | true | Allows anonymous catalog search and product detail requests. |
+| Observability.InputCaptureMode | "ErrorsOnly" | Controls when request and response payloads are attached to traces. `ErrorsOnly` captures input only for failed operations. |
+| Observability.EnableApplicationInsightsCompatibilityBridge | false | Emits UCP dependency telemetry in the legacy Application Insights shape in addition to OpenTelemetry. Keep disabled for plain OpenTelemetry setups to avoid duplicate UCP dependencies. |
 
 **Example**
 
@@ -2591,7 +2602,11 @@ This configuration node configures the UCP protocol adapter. It sets the default
   "StorefrontOrigin": "https://store.example.com",
   "HandoffUrlTemplate": "https://store.example.com/checkout?ucp_session={token}",
   "HandoffTokenTtlMinutes": 15,
-  "AnonymousCatalog": true
+  "AnonymousCatalog": true,
+  "Observability": {
+    "InputCaptureMode": "ErrorsOnly",
+    "EnableApplicationInsightsCompatibilityBridge": false
+  }
 }
 ```
 <!--ucp-end-->

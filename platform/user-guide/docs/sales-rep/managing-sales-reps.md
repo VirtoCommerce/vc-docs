@@ -14,7 +14,7 @@ To add a new sales rep:
 1. In the next blade, select **Sales Reps** and click **Add** in the toolbar.
 1. Fill in the following fields:
 
-    ![New sales rep](media/add-sales-rep.png){: style="display: block; margin: 0 auto;" }
+    ![New sales rep](media/add-sales-rep.png){: style="display: block; margin: 0 auto;" width="600"}
 
 1. Click **Save** in the toolbar.
 
@@ -22,10 +22,18 @@ Your new sales rep has been added to the list.
 
 On the Frontend, you can see a new sales rep added to the sales rep list of the specified organization:
 
+!!! note
+    The **Sales Rep role** field offers two roles: 
+    
+    * **Sales representative** to grant the rep access to sales rep hub on the Frontend. 
+    * **Advanced sales representative** to additionally grant the rep access to the [document library](document-library.md) on the Frontend.
+
 ![Sales rep](media/sales-rep-frontend.png)
+
 
 !!! note
     The role you select here is applied both as the rep's global account role and as the role on every membership for the organizations you select. Changing it later re-points every assignment at once, including memberships that previously granted access through a different role.
+
 
 ## Edit sales rep
 
@@ -74,6 +82,6 @@ The account has been deleted.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../enabling-sales-rep">← Enabling Sales Rep App</a>
-    <a href="../../search/overview">Search module overview →</a>
+    <a href="../enabling-sales-rep">← Enabling Sales Rep app</a>
+    <a href="../document-library">Document library →</a>
 </div>

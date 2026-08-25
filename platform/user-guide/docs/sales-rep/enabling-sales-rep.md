@@ -20,5 +20,5 @@ The Sales Rep application has been enabled for your store.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Overview</a>
-    <a href="../managing-sales-reps">Managing Sales Reps →</a>
+    <a href="../managing-sales-reps">Managing sales reps →</a>
 </div> 
