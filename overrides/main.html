@@ -52,13 +52,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 {% endblock %}
 
-{% block html_body %}
+{% block scripts %}
+{{ super() }}
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HSVF5VV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-{{ super() }}
 
 <!-- Virto OZ AI assistant. The widget renders its own floating launcher and
      binds the header buttons (#virto-oz-button, #virto-oz-button-mobile) by
@@ -67,6 +67,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      (28035d904a) dropped along with scripts-loader.js, and it silently
      vanished from every page. Loading it here keeps it in this repository,
      where a change to it goes through review. Served from the docs parent
-     domain so its Chainlit session cookie is not a third-party cookie. -->
+     domain so its Chainlit session cookie is not a third-party cookie.
+
+     Both tags belong to `scripts`, the last block inside body. They used to
+     sit in `html_body`, which no Material template defines, so Jinja never
+     rendered that block and dropped everything in it. Add to an existing
+     Material block; a new name silently produces no output. -->
 <script type="module" src="https://virtooz.virtocommerce.org/public/virto-assistant.js"></script>
 {% endblock %}
