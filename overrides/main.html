@@ -59,4 +59,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 {{ super() }}
+
+<!-- Virto OZ AI assistant. The widget renders its own floating launcher and
+     binds the header buttons (#virto-oz-button, #virto-oz-button-mobile) by
+     itself, so both stop working when this script fails to load. It used to
+     arrive through the GTM-NKMNNN container, which "GA scripts correction"
+     (28035d904a) dropped along with scripts-loader.js, and it silently
+     vanished from every page. Loading it here keeps it in this repository,
+     where a change to it goes through review. Served from the docs parent
+     domain so its Chainlit session cookie is not a third-party cookie. -->
+<script type="module" src="https://virtooz.virtocommerce.org/public/virto-assistant.js"></script>
 {% endblock %}
