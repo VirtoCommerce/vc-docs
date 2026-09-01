@@ -52,6 +52,10 @@ extra:
                   - title: Github
                     link: https://github.com/VirtoCommerce/vc-deploy-marketplace
         release_notes:
+            - title: September 2026
+              link: https://www.virtocommerce.org/t/virto-s-release-notes-september-2026/862
+              type: Release Notes
+              date: September 1, 2026
             - title: August 2026
               link: https://www.virtocommerce.org/t/virtos-release-notes-august-2026/858
               type: Release Notes
@@ -84,54 +88,6 @@ extra:
               link: https://www.virtocommerce.org/t/virto-s-release-notes-january-2026/821
               type: Release Notes
               date: January 1, 2026
-            - title: December 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-december-2025/818
-              type: Release Notes
-              date: December 2, 2025
-            - title: November 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-november-2025/814
-              type: Release Notes
-              date: November 6, 2025
-            - title: October 2025
-              link: https://www.virtocommerce.org/t/virtos-release-notes-october-2025/807
-              type: Release Notes
-              date: October 7, 2025
-            - title: September 2025
-              link: https://www.virtocommerce.org/t/virtos-release-notes-september-2025/805
-              type: Release Notes
-              date: September 2, 2025
-            - title: August 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-august-2025/801
-              type: Release Notes
-              date: August 1, 2025
-            - title: July 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-july-2025/798
-              type: Release Notes
-              date: July 7, 2025
-            - title: June 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-june-2025/796
-              type: Release Notes
-              date: June 4, 2025
-            - title: May 2025
-              link: https://www.virtocommerce.org/t/virtos-release-notes-may-2025/778
-              type: Release Notes
-              date: May 1, 2025
-            - title: April 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-april-2025/769
-              type: Release Notes
-              date: April 2, 2025
-            - title: March 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-march-2025/767
-              type: Release Notes
-              date: March 3, 2025
-            - title: February 2025
-              link: https://www.virtocommerce.org/t/virtos-release-notes-february-2025/760
-              type: Release Notes
-              date: February 3, 2025
-            - title: January 2025
-              link: https://www.virtocommerce.org/t/virto-s-release-notes-january-2025/755
-              type: Release Notes
-              date: January 1, 2025
         link_cards:
             - title: Contact support
               icon: assets/icons/contact-support.svg
