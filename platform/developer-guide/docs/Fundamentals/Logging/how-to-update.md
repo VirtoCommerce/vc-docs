@@ -53,6 +53,8 @@ After:
 
 ![Readmore](media/readmore.png){: width="25"} [Serilog Settings Configuration](https://github.com/serilog/serilog-settings-configuration)
 
+The logging configuration is now migrated to the Serilog format.
+
 ## Option 2. Use Application Insights 
 
 Since Application Insights integration was moved to a separate module:
@@ -81,6 +83,7 @@ Since Application Insights integration was moved to a separate module:
   }
   ```
 
+The Platform now writes logs through the Application Insights module.
 
 <br>
 <br>

@@ -138,6 +138,7 @@ When paged about a failing outbound integration:
 1. Run the Platform [health check](../Tutorials-and-How-tos/How-tos/health-checks.md) to rule out a broader Platform issue such as database connectivity, asset storage, or the search backend.
 1. After identifying the root cause, decide whether to retry manually (the Hangfire dashboard and the Webhooks UI both expose retry actions) or to escalate.
 
+The failing integration is now diagnosed and either retried or escalated.
 
 <br>
 <br>

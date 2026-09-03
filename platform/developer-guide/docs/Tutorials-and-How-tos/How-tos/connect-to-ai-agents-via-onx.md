@@ -108,6 +108,8 @@ After saving the configuration:
 1. Try a test prompt to confirm the connection works, for example: *Use the onX adapter to list the most recent orders from my Virto Commerce store*.
 1. If the tools do not appear, check Claude Desktop's MCP logs. Consult the Claude Desktop documentation for the log file location on your operating system; logs include the stderr output of each MCP server, which surfaces adapter startup errors such as missing environment variables, invalid `ADAPTER_CONFIG` JSON, or failed authentication against the Virto Commerce API.
 
+The onX adapter is now connected and its tools are available in the MCP client.
+
 ## Use with Claude Code
 
 Claude Code uses its own MCP server registration mechanism. Register the adapter with one CLI command:

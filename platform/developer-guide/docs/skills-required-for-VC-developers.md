@@ -38,10 +38,10 @@ Virto Commerce developer skills include:
 
 ### Backend developer skills
 
-#### Microsoft .NET 8
-* [.NET 8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8)
-* [ASP.NET Core 8.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-8.0)
-* [Entity Framework Core 8.0 (Code First)](https://learn.microsoft.com/en-us/ef/core/)
+#### Microsoft .NET 10
+* [.NET 10](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/overview)
+* [ASP.NET Core 10.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-10.0)
+* [Entity Framework Core 10.0 (Code First)](https://learn.microsoft.com/en-us/ef/core/)
 * Linq
 
 #### Database

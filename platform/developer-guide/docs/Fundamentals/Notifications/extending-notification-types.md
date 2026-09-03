@@ -35,8 +35,7 @@ To extend the existing notification, for example, `SampleEmailNotification`:
 !!! note
 	Running the `.WithTemplates(new EmailNotificationTemplate())` extension method is optional and can be used in case you want to override the default templates.
 
-
-
+The notification type is now extended with your new properties and templates.
 
 <br>
 <br>

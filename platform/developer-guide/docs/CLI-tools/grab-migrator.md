@@ -40,6 +40,7 @@ This section outlines the process of extracting EF-migrations from both the Plat
 1. Run the tool, wait for the sql files to appear in **Statements** directory.
 1. Check the config file: the `ConnectionStringsRefs` node should appear.
 
+The migrations are now extracted and ready to be applied to a database.
 
 ## Apply migrations to different databases
 
@@ -97,6 +98,7 @@ To apply the extracted migrations to different databases:
 1. Copy the `ConnectionStringsRefs` node from the grab config file to apply the config file.
 1. Run the tool to apply the migrations to the databases.
 
+The migrations are now applied to the target databases.
 
 <br>
 <br>

@@ -35,6 +35,8 @@ The following resources will be created during deployment:
 
     ![Url](media/open-url-in-browser.png)
 
+The Frontend is now deployed and accessible in Azure.
+
 ## Extra Deployment
 
 ### Deploy via PowerShell

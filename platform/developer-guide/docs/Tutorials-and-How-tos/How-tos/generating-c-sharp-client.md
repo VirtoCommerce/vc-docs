@@ -92,6 +92,7 @@ To generate C# client code from your Virto Commerce Swagger JSON file:
 1. NSwag Command-Line Tool
 NSwag provides a command-line tool called `NSwag.exe`. NSwag's command-line tool allows you to generate C# client code from a Swagger JSON file directly from the console. This approach is handy when you want to automate client code generation as part of your build or deployment process.
 
+You now have a working C# client for consuming the Virto Commerce API.
 
 <br>
 <br>

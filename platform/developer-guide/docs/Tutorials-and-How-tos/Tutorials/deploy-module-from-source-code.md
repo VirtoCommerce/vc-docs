@@ -16,6 +16,8 @@ To get started with the module locally, ensure the following steps are completed
    git clone https://github.com/VirtoCommerce/{module-name}.git
    ```
 
+The module source code is now cloned and ready to build.
+
 ## Build module
 
 This section explains how to build the module for both backend and frontend components.
@@ -42,6 +44,8 @@ You can build the backend either using the command line or through Visual Studio
     1. Open the **VirtoCommerce.{module-name}.sln** file in Visual Studio.
     1. Build the solution using the **Build Solution** option.
 
+The module backend is now built.
+
 ### Build frontend
 
 When building the module for the first time in Visual Studio, npm references will be installed, and Webpack will be executed automatically. This is managed by the **VirtoCommerce.BuildWebpack** NuGet package, which adds Webpack build targets to the project.
@@ -67,6 +71,8 @@ To build the frontend locally:
     npm run webpack:watch
     ```
 
+The module frontend is now built and ready to load into the Platform.
+
 ## Perform initial configuration
 
 After building the module, configure it by linking the module directory to the Platform. This allows the Platform to read the module's manifest and load it:
@@ -89,6 +95,8 @@ To debug backend:
 
 ![image](media/debug-backend.png){: style="display: block; margin: 0 auto;" }
 
+The backend is now ready for debugging in Visual Studio.
+
 ## Debug frontend
 
 Frontend debugging can be done in Chrome Developer Tools:
@@ -98,6 +106,8 @@ Frontend debugging can be done in Chrome Developer Tools:
 1. In the file navigator, go to **{module-name}/./Script/** to view the source files.
 
 ![image](media/debug-frontend.png){: style="display: block; margin: 0 auto;" }
+
+The frontend is now ready for debugging in Chrome Developer Tools.
 
 ## Test
 

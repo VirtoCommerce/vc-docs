@@ -57,6 +57,8 @@ To start index defragmentation and rebuilding:
     DEALLOCATE TableCursor
     ```
 
+The fragmented indexes are now rebuilt.
+
 ## Find and create missing index
 
 SQL Server keeps up with index statistics behind the scenes. When you use Entity Framework, very easy to skip the required index and decrease the performance of the solution.

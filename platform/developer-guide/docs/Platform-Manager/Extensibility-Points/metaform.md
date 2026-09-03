@@ -90,6 +90,8 @@ metaFormsService.registerMetaFields("accountDetails", [
 ]);
 ```
 
+The new meta-field is now registered and rendered inside the metaform.
+
 ## Meta-field data structure
 
 A meta-field has the following structure:

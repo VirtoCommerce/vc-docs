@@ -15,6 +15,8 @@ To create a new module with a database agnostic approach:
 
 1. Open the solution in Visual Studio.
 
+The new module now has the basic structure required to support the database agnostic approach.
+
 ## Module template features
 
 The template key features  are:

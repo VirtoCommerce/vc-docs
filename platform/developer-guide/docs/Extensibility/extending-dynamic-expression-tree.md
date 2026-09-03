@@ -70,6 +70,8 @@ To register your extension in the **module.cs** file:
     
     ![Readmore](media/readmore.png){: width="25"} [Module Initialization](../Fundamentals/Modularity/04-loading-modules-into-app-process.md)
 
+Your extension is now registered and loaded together with the Marketing module.
+
 ## Define HTML templates for new elements
 
 It is a best practice to define all HTML templates for new elements within a single file, where the templates are dynamically loaded as resources.
@@ -137,7 +139,7 @@ angular.module(moduleName, [])
 
 1. Open Platform Manager, go to **Marketing --> Promotions --> New promotion**. The new `For condition evaluator with any of these sample values` block with its single `Sample condition is met: no/yes` line appears.
 
-
+The dynamic expression tree now includes your new block and condition element.
 
 <br>
 <br>

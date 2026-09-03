@@ -55,6 +55,7 @@ To migrate to the new modules:
 1. For any custom modules, uninstall the NuGet packages from **VirtoCommerce.ExperienceApi** and replace them with the new ones.
 1. Models, service interfaces, GraphQL schema types, and input types, commands, queries, and aggregates are moved to respective Core projects of the new modules (**XCatalog.Core**, **XCart.Core**, etc.) with namespaces adjusted. Data projects contain service implementations, command and query builders, command and query handlers, and middleware.
 
+The Platform now runs on the new xAPI modules.
 
 ## Update and support
 

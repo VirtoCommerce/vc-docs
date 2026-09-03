@@ -58,6 +58,8 @@ To create self-signed certificates for signature and validate tokens:
     !!! note
         The system does not accept private keys smaller than 2048 Bits.
 
+The private key, certificate, and PFX container are now ready for signing and validating tokens.
+
 ## OAuth2 authorization using client credential flow
 
 To authorize client applications (for example, Frontend Application), use the **Client credential flow** mechanism of OAuth2 protocol:

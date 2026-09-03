@@ -70,6 +70,8 @@ A Virto Commerce solution is **composed**, not forked. Customize three layers in
 
     1. Use the [Extensibility Framework](../Extensibility/overview.md) to add entities, override services, extend APIs, and add admin UI without forking.
 
+    The custom module is now installed on your Platform instance and ready for further extension.
+
 ![Read more](media/readmore.png){: width="20"} [Custom module guide](../Tutorials-and-How-tos/Tutorials/creating-custom-module.md)
 
 ![Read more](media/readmore.png){: width="20"} [vc-build](../CLI-tools/overview.md)

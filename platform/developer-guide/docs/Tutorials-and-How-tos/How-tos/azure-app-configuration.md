@@ -70,7 +70,7 @@ To add Azure App Configuration:
 !!! info
     To use current values of the configuration, inject `IOptionsMonitor<T>` instead of `IOptions<T>` and access `CurrentValue` property.
 
-
+The Platform now reads and auto-reloads its configuration from Azure App Configuration.
 
 <br>
 <br>

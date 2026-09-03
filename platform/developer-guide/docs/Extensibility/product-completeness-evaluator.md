@@ -117,6 +117,8 @@ To use the default detail evaluators provided:
     }
     ```
 
+Your product completeness evaluator now uses the default detail evaluators.
+
 ### Custom detail evaluators
 
 To implement your own custom detail evaluators:
@@ -164,6 +166,8 @@ To implement your own custom detail evaluators:
     _container.RegisterType<CustomCompletenessEvaluator, CustomCompletenessEvaluator2>(nameof(CustomCompletenessEvaluator2));
     ```
 
+Your product completeness evaluator now uses your own custom detail evaluators.
+
 ### Combine default and custom detail evaluators
 
 To combine both default and custom detail evaluators:
@@ -182,6 +186,8 @@ To combine both default and custom detail evaluators:
         }
     }
     ```
+
+Your product completeness evaluator now combines default and custom detail evaluators.
 
 ### Mix default and all custom detail evaluators
 
@@ -204,6 +210,7 @@ To mix default and all custom detail evaluators:
     }
     ```
 
+Your product completeness evaluator now mixes default and fully custom detail evaluators.
 
 <br>
 <br>

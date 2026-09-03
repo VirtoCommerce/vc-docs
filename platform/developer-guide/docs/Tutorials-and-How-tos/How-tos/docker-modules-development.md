@@ -46,6 +46,8 @@ For convenience in configuring the **Docker** and **Docker Compose files**, all 
 1. Install [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/) on your machine.
 1. During installation, select Linux as the operating system used inside your containers and install updates for WSL 2 (Windows Subsystem for Linux).
 
+Docker Desktop is now installed and ready to run Linux containers.
+
 ## Use
 
 1. Download the [ModulesDevelop](https://github.com/VirtoCommerce/vc-platform/tree/dev/DockerCompose/ModulesDevelop/) folder to your local machine. Clone the **vc-platform** repository, or click **Code > Download ZIP** on the **dev** branch and take the `DockerCompose/ModulesDevelop` folder. It contains **docker-compose.yml** and **.env**.
@@ -82,6 +84,8 @@ For convenience in configuring the **Docker** and **Docker Compose files**, all 
 1. Copy the built module to the `Modules` folder.
 1. Debug the new module.
 
+The new module is now running and debuggable inside the Docker container.
+
 ## Run Virto Commerce Platform Manager
 
 After the containers are started, open VC Platform Manager at http://localhost:8090/ and sign in with the default credentials `admin` / `store`. Change the password when prompted. This will launch the application and install default modules. After the modules have been installed, restart the container with the Platform to configure sample data.
@@ -93,6 +97,8 @@ After the containers are started, open VC Platform Manager at http://localhost:8
 1. Navigate to the `Modules` folder on the local host.
 1. Create a folder for the newly created module.
 1. Copy the `your_module_project.Web` folder to the created folder.
+
+The built module is now in place under the `Modules` folder.
 
 ## Debug module
 
@@ -119,6 +125,8 @@ If the new module has been rebuilt:
 1. Restart the Platform by clicking **Restart**:
 
     ![Restart platform](media/screen-restart-platform.png)
+
+The Visual Studio debugger is now attached to the module running inside the container.
 
 ## Clean up environment after debugging
 

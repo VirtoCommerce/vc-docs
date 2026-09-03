@@ -74,6 +74,7 @@ To configure Serilog's Application Insights sink in code:
       }
       ```
 
+The Application Insights sink is now registered and logs are sent to Application Insights.
 
 <br>
 <br>

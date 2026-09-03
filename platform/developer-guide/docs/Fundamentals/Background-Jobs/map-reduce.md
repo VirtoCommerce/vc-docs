@@ -57,6 +57,8 @@ Map and Reduce splits a large batch into many independent map tasks that run in 
         });
     ```
 
+The batch now runs as parallel map tasks followed by a single reduce once all items complete.
+
 ## Failure policies
 
 | Policy | Behavior |

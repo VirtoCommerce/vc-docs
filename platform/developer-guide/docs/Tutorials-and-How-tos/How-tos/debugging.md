@@ -64,6 +64,7 @@ If the third-party component doesn't support Source Link and you haven't loaded 
 
 1. Step into this library and continue debugging process.
 
+The library's symbols are now loaded, and you can debug it like any other component.
 
 
 <br>

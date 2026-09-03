@@ -117,6 +117,8 @@ To install templates locally:
     dotnet new install vc-cli-module-template\templates
     ```
 
+The templates are now installed locally for development.
+
 ### Uninstall locally installed templates
 
 To uninstall locally installed templates, run:

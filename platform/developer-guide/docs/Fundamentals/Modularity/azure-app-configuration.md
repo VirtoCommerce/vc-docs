@@ -108,6 +108,8 @@ The module monitors a Sentinel key for configuration refresh. To trigger a reloa
 1. Create a key named `Sentinel` (or your custom `SentinelKey` value) in your Azure App Configuration resource.
 1. When you need to refresh settings, update the Sentinel value. Any change triggers a full reload.
 
+The Platform now reloads its configuration at runtime whenever the Sentinel key changes.
+
 ## Health check
 
 The module registers an ASP.NET Core health check named `AzureAppConfiguration` with tags `infrastructure` and `azure`. It reports `Degraded` (not `Unhealthy`) when Azure App Configuration is unreachable, since the platform can still function with cached configuration.

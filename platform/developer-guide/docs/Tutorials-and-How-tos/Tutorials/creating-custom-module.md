@@ -420,6 +420,8 @@ To define services and an API layer to access the model:
         }
     ```
 
+The new API is now implemented and ready to test.
+
 ## Test and debug API
 
 After creating your module, install it from your source and debug it as follows:
@@ -451,6 +453,7 @@ After creating your module, install it from your source and debug it as follows:
 
         ![dotnet](media/attach-dotnet.png){: style="display: block; margin: 0 auto;" }
 
+The module is now running, tested, and ready for debugging.
 
 ## Extend VC manager with new UI 
 

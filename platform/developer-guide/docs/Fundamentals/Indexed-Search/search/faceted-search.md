@@ -40,6 +40,8 @@ To configure properties available for faceted search via Platform Manager:
 
 ![Filtering properties](media/filtering-properties.png){: style="display: block; margin: 0 auto;" }
 
+The selected properties are now available for faceted search filtering on the Frontend.
+
 To edit the selected property, click it and configure the following fields:
 
 ![Edit property](media/edit-property.png){: style="display: block; margin: 0 auto;" }

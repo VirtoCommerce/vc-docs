@@ -59,6 +59,8 @@ In order to define a new payment method:
 	}
 	```
 
+The new payment method is now registered and ready for use in the Platform.
+
 A very important property belonging to the payment method is `PaymentMethodType`, which defines the actions run by the front end to get the transaction registration result. Currently, there are two types of actions defined, with more being implemented in future:
 
 **Redirection**: Use this type of action if the payment method redirects the user to an outside URL. In order to do so, point the link to the `RedirectUrl` property in the `ProcessPaymentResult`. The front end will use it to redirect the customer (for example, this will happen with the Paypal Express Checkout payment method). 

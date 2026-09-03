@@ -113,6 +113,8 @@ The module exports metrics, traces, and logs over OTLP only. The Platform does n
 1. In the collector, route each signal to your backend: metrics to Prometheus through the collector's Prometheus exporter, traces to a trace store such as Tempo, and logs to a log store such as Loki.
 1. Query those backends from Grafana.
 
+Metrics, traces, and logs from the Platform are now viewable in Prometheus and Grafana.
+
 The exported metrics are infrastructure-level: request rate and duration, .NET runtime, process, database, and the other sources listed above. The module does not define custom business metrics, so application-level indicators are not emitted out of the box.
 
 ## Troubleshooting

@@ -27,6 +27,7 @@ To connect the Intent Search module to Weaviate and Hugging Face and to control 
 1. Register the module in your Virto Commerce Platform following standard module installation procedures.
 1. Run the integration test `IntegrationScenarios.Test_Complete_Scenario()` to verify your setup.
 
+The Intent Search module is now configured and connected to Weaviate and Hugging Face.
 
 <br>
 <br>

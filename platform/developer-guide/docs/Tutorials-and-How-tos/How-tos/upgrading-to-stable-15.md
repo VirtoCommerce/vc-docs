@@ -129,6 +129,8 @@ To migrate a module:
 
 This change applies across most bundle modules.
 
+The module now builds against the modern `CancellationToken` overloads with `TreatWarningsAsErrors` enabled.
+
 ## Query installed modules
 
 The Platform deprecated the read-only module-query path, `IModuleCatalog` (VC0014), and the static `ModuleBootstrapper.Instance`. The new interfaces live in `VirtoCommerce.Platform.Core.Modularity`, so drop the `using VirtoCommerce.Platform.Modules;` import.

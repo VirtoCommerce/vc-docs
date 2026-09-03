@@ -1,5 +1,8 @@
 # Upgrading to Virto Commerce on .NET 8
 
+!!! note
+    Virto Commerce (3.1000+) has since moved to .NET 10. See [Upgrading to Virto Commerce on .NET 10](upgrading-to-dot-net-10.md) for the current upgrade path.
+
 Virto Commerce on NET 8 (3.800+) introduces a significant technical update by transitioning the Platform to .NET 8. This update focuses on enhancing performance and stability while maintaining backward compatibility. It involves updating the Target Framework to .NET 8 and integrating the latest LTS releases of third-party libraries. Importantly, no code refactoring or alterations to the API and internal structure have been made.
 
 The release has undergone extensive testing, including unit, end-to-end, regression, and performance tests to ensure a seamless transition as well as for other stable releases.
@@ -89,6 +92,8 @@ This script automates several tasks, including:
 1. Verify Tests for Issues Perform a thorough verification of tests to identify and address any issues introduced by the update. This step guarantees that the updated solution maintains the expected functionality and performance.
 
 ![step3 build solution](media/updatenet8-step4-build.png)
+
+The solution is now built and verified for .NET 8.
 
 ### Create module package
 

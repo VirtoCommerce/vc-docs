@@ -10,6 +10,8 @@ We recommend following a 3-tier architecture (Core, Data, and Web) for both cust
 1. Define a new model class by extending the base model in the **Models** folder, for example: `CustomerOrder2 : CustomerOrder`.
 1. Add additional properties required for the new model.
 
+The core model is now extended with the new properties.
+
 ## Changes in ".Data" project
 
 1. Add a reference to ".Data" NuGet package containing the base models, for example, `VirtoCommerce.OrdersModule.Data`.
@@ -85,6 +87,8 @@ We recommend following a 3-tier architecture (Core, Data, and Web) for both cust
 
 1. The **Down()** method should do the opposite of what Up() does. That way you can quickly apply and unapply your changes quickly by `Update-Database` command in console.
 
+The data layer and its migration are now updated to support the new model.
+
 ## Changes in ".Web" project
 
 1. Modify the **module.manifest** file. Ensure that a dependency on the appropriate module is added to the **dependencies** section:
@@ -133,6 +137,7 @@ We recommend following a 3-tier architecture (Core, Data, and Web) for both cust
 
 ![Readmore](media/readmore.png){: width="25"} [Creating new module](creating-custom-module.md)
 
+The database model extension is now complete.
 
 
 <br>

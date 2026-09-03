@@ -113,6 +113,7 @@ Manage **Configuration** to connect the frontend and backend pool you created us
 
 1. Review your configurations and click **Create** to deploy the Application Gateway.
 
+The Application Gateway is now deployed.
 
 ## Configure URL rewrite to forward requests to service.prerender.io
 
@@ -140,6 +141,8 @@ Configure the **UrlRewrite** rules to redirect all incoming **GET** requests fro
         The incoming request to the public url https://vc-prerender.westeurope.cloudapp.azure.com/foo will be redirected to https://service.prerender.io/https://virtostart-demo-store.govirto.com/foo after processing this rule.
 
     ![Rule 2](media/rule2.png){: style="display: block; margin: 0 auto;" }
+
+Incoming requests are now rewritten and forwarded to **service.prerender.io**.
 
 ## Verify result
 
@@ -194,6 +197,8 @@ To pre-render site for crawlers only:
 
 !!! note
     The crawler regex above predates AI crawlers. If you want LLM bots such as `GPTBot` (OpenAI) or `ClaudeBot` (Anthropic) to receive pre-rendered HTML, add their User-Agent fragments to the pattern before the closing parenthesis and redeploy the gateway.
+
+The pre-rendered version of the site is now served to crawlers only.
 
 ## Summary
 

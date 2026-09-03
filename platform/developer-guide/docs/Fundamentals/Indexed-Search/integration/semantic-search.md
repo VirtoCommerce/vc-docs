@@ -61,6 +61,8 @@ To activate Machine trained model:
 
 1. Click **Start**.
 
+The ELSER model is now deployed and ready to generate embeddings.
+
 ### Configure pipeline ingester
 
 To implement the ELSER v2 model:
@@ -134,6 +136,8 @@ To implement the ELSER v2 model:
     }
     ```
 
+The ingest pipeline is now configured to generate ELSER embeddings for incoming documents.
+
 ### Reindex
 
 To reindex data, open Platform:
@@ -186,12 +190,16 @@ To add a trained model:
 
 ![Readmore](media/readmore.png){: width="25"} [Import models with Eland](https://www.elastic.co/guide/en/machine-learning/8.12/ml-nlp-import-model.html)
 
+The third-party model is now imported into Elasticsearch as a trained model.
+
 ### Deploy trained model
 
 To deploy a trained model:
 
 1. Go to **Machine Learning** --> **Model Management** --> **Trained Models section**.
 1. Click **Start deployment** in the table row containing your new model to deploy and use it.
+
+The trained model is now deployed and ready to generate embeddings.
 
 ### Configure pipeline ingester
 

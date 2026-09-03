@@ -13,7 +13,7 @@ This guide explores how to create a new module from scratch using Visual Studio,
     1. Delete the auto-generated `Class1.cs` from all projects.
     1. In the **tests** folder, add a project:
         * **DummyModule.Tests**: xUnit Test Project (.NET Core). xUnit is the Platform's standard test framework; pair it with Moq to mock dependencies such as repositories and services.
-1. Set **Target framework** to **.NET 8.0** for all projects.
+1. Set **Target framework** to **.NET 10.0** for all projects.
 1. Set project references and NuGet package references as outlined in the guide:
     1. **References to Projects:**
         * **DummyModule.Data:** Reference **DummyModule.Core**.
@@ -23,6 +23,8 @@ This guide explores how to create a new module from scratch using Visual Studio,
         * **DummyModule.Core:** Add a reference to the latest version of the **VirtoCommerce.Platform.Core** package to leverage core functionalities.
         * **DummyModule.Data:** Add a reference to the latest version of the **VirtoCommerce.Platform.Data** package for data management capabilities.
     1. **Compile the Solution:** Ensure successful build completion without any warnings or errors.
+
+The solution and projects for the new module are now set up.
 
 ## Fill DummyModule.Core project
 
@@ -111,6 +113,8 @@ To populate the **DummyModule.Data** project with necessary components:
    * **ExportImport folder:** Add a class for data export/import, which should be called from **Module.cs** and contain the implementation for module data export and import.
    * **Handlers folder:** Include handlers for domain events defined under **.Core/Events**. These handlers facilitate reacting to and managing domain events within the module.
 
+The **DummyModule.Data** project now contains the persistence layer for the module.
+
 ## Fill DummyModule.Web project
 
 1. Add the required folders and files such as **Controllers/Api**, **Localizations**, **Scripts**, and **module.manifest**.
@@ -118,10 +122,14 @@ To populate the **DummyModule.Data** project with necessary components:
 1. Configure webpack for JavaScript and stylesheet bundling.
 1. If required, add unit tests and integration tests.
 
+The **DummyModule.Web** project now exposes the module through the Platform's API and UI.
+
 ## Fill DummyModule.Tests project
 
 1. Add unit tests and integration tests as needed.
 1. Ensure integration tests are marked appropriately with the **Trait** attribute.
+
+The **DummyModule.Tests** project now covers the module with unit and integration tests.
 
 ## Create module package
 

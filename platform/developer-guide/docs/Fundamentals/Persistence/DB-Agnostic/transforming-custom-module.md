@@ -19,7 +19,7 @@ To transform your custom module to support DB agnostic approach:
 1. Create new Migrations.
 1. Compile, compress, and test.
 
-
+The custom module now supports the database agnostic approach.
 
 <br>
 <br>

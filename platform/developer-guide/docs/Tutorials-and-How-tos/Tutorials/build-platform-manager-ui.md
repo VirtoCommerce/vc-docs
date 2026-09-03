@@ -67,6 +67,8 @@ To enable JS debugging in the Platform:
 
 1. Use the developer tools inside your browser, to debug the JS code. 
 
+JS debugging is now enabled in the Platform.
+
 ![Readmore](media/readmore.png){: width="25"} [Debugging in Chrome](https://javascript.info/debugging-chrome) 
 
 ## Build customer reviews module web UI
@@ -93,6 +95,8 @@ To build the module WEB UI:
     ```
 
 1. Localize UI elements. The localization is based on resources (translation files) placed in **CustomerReviewsModule&#46;Web**\\**Localizations** folder. 
+
+The module's script and localization folders are now in place, ready for the blade, API controller, and widget definitions.
 
 ![Readmore](media/readmore.png){: width="25"} [Localization Implementation](/platform/developer-guide/latest/Platform-Manager/localization)
 

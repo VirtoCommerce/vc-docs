@@ -139,6 +139,8 @@ To configure telemetry:
 
 <!--AppInsights2-end-->
 
+Telemetry is now configured for the Platform.
+
 The module includes a [sink](https://github.com/serilog-contrib/serilog-sinks-applicationinsights) for Serilog that writes events to Microsoft Application Insights. To enable it, update the `Serilog` section in `appsettings.json`:
 
 <!--AppInsights3-start-->

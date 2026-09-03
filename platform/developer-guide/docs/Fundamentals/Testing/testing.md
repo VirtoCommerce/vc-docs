@@ -96,6 +96,8 @@ To install the Testing module:
     pytest --collect-only  # Should discover 80+ tests
     ```
 
+The Testing module is now installed and ready to run tests.
+
 ## Project architecture
 
 ```
@@ -408,6 +410,8 @@ Follow the contribution guidelines below to ensure new frontend tests are consis
 1. Ensure tests pass locally before submitting.
 
 1. Pre-commit hooks will validate code quality.
+
+The new test is now part of the automated test suite.
 
 ### Test data management
 

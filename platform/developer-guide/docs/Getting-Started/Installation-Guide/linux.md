@@ -61,6 +61,8 @@ To use Virto Commerce CLI (vc-build):
 
 ![Readmore](media/readmore.png){: width="25"} [VC-Build for Packages Management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md)
 
+The Platform and its modules are now installed via the Virto Commerce CLI.
+
 ## Set up Platform
 
 To set up the Platform:
@@ -113,6 +115,7 @@ To configure application strings:
 
 1. Save the **appsettings.json** file to apply the configurations.
 
+The application strings are now configured for your environment.
 
 ### Run Platform 
 
@@ -136,6 +139,8 @@ To run the Platform by CLI:
     Now listening on: http://[::]:5000
     Now listening on: https://[::]:5001
     ```
+
+The Platform is now running and ready to accept connections.
 
 ### Perform initial sign-in
 

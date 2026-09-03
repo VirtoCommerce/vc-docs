@@ -83,6 +83,8 @@ For an individual Claude plan:
 1. Select **Add**.
 1. In a new conversation, select **+ --> Connectors** and enable the **Virto Commerce UCP** connector.
 
+The Virto Commerce UCP connector is now available in the conversation.
+
 For a Team or Enterprise plan, an Owner must first add the URL under **Organization settings --> Connectors**. Each user can then connect to it and enable it for a conversation.
 
 See Anthropic's [remote MCP custom connector guide](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp) for the current Claude UI and network requirements.

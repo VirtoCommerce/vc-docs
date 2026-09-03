@@ -16,6 +16,8 @@ To create a new API key:
 	![API Key widget](media/api-key-widget.png)
 1. Click **OK** to save the changes.
 
+The new API key is now ready to authenticate requests on behalf of the user.
+
 !!! note
 	Each API key must be associated with a user account, as all requests with an API key will be authorized on behalf of the user that API key is associated with.
 

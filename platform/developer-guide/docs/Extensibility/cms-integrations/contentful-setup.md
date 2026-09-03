@@ -74,6 +74,7 @@ To synchronize content changes from Contentful with the Virto Commerce Platform,
 
 1. Save the configuration.
 
+Contentful now sends events to Virto Commerce whenever entries are created, updated, or deleted.
 
 ## Configure store settings
 
@@ -162,6 +163,8 @@ To connect Contentful to this endpoint:
     | **Trigger on** | `Entry: Create, Save, Auto save, Archive, Unarchive, Publish, Unpublish, Delete` |
     | **HTTP method** | `POST` |
     | **Content type filter** | `sys.contentType.sys.id` equals the content type ID configured in **Contentful.ContentTypeId**. |
+
+The webhook is now created and ready to send entry events to Virto Commerce.
 
 ## Verify webhook delivery
 

@@ -38,6 +38,8 @@ To switch the Platform to using this provider, edit the `Assets` section of the 
 !!! note
     This mode is good for local development purposes and not recommended for production due to lack of scalability.
 
+The Platform now stores and serves media files from the local file system.
+
 ## Set up Azure Blob Storage in production mode
 
 To set up Azure Blob Storage:
@@ -66,6 +68,7 @@ To set up Azure Blob Storage:
 !!! note
     This mode is recommended for use in a production environment, since it enables sharing the asset storage across multiple Platform instances.
 
+The Platform now stores and serves media files from Azure Blob Storage.
 
 <br>
 <br>

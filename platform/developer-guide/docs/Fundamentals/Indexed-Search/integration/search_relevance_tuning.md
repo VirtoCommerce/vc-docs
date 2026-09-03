@@ -68,6 +68,8 @@ To manage curations using Kibana:
 
 	![Curation applied](media/curation-applied.png){: style="display: block; margin: 0 auto;" }
 
+The promoted products now receive the highest relevance score for the **office printer** query.
+
 !!! note
 	Currently, Elastic App Search offers an upgrade to the **Platinum** subscription to harness the power of machine learning. By analyzing your engine’s analytics, App Search is able to suggest new or updated curations. This way, you can effortlessly help your users find exactly what they are looking for.
 

@@ -79,6 +79,8 @@ To create a role:
 1. Create a system role named **Vault Editor** for frontend operations. This role will be responsible for sending card data to Skyflow.
 1. When creating a connection, the second system role is automatically generated and associated with the connection.
 
+The required roles are now created in Skyflow Portal.
+
 #### Create Authorize.NET connectors
 
 To create Authorize.NET connectors:
@@ -88,6 +90,8 @@ To create Authorize.NET connectors:
   * If default connections are not suitable (e.g., mismatched card number format), modify the connector via RestAPI.
   * Use the **Update Outbound Connection** endpoint to adjust the connector's configuration according to your requirements.
 1. Generate and save credentials file.
+
+The Authorize.NET connectors are now created and ready for use with Skyflow.
 
 ### Configure Virto Commerce
 

@@ -45,6 +45,8 @@ All settings may have default values that can be used for default methods if not
 
 [![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-shipping/blob/master/src/VirtoCommerce.ShippingModule.Data/FixedRateShippingMethod.cs)
 
+The new shipping method is now registered and ready for use in the Platform.
+
 ## Enable and configure shipping method for store
 
 After your module is installed in your target system, all your shipping methods should appear and be available for configuration in every store in your system under the `Store->Shipping methods` widget. You can also configure shipping methods for each store individually:

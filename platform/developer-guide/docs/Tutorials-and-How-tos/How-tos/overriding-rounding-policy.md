@@ -28,6 +28,7 @@ To customize the rounding behavior in your application:
 
 1. Ensure to replace the placeholder with your actual rounding logic in the `RoundMoney` method.
 
+The application now applies your custom rounding policy to all money calculations.
 
 <br>
 <br>

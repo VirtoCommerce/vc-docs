@@ -59,6 +59,8 @@ To configure multiple stores with their own domains in Virto Commerce:
     !!! note
         Each store should have its own domain name, such as https://store2-domain.com.
 
+Multiple stores are now configured, each with its own domain and theme.
+
 ## Share theme across multiple stores
 
 It is possible to share the same theme across multiple stores by using the `LiquidThemeEngine:BaseThemePath` setting on the Frontend **appsettings.json** file.

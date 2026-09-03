@@ -51,6 +51,8 @@ To switch providers after initial setup:
 1. Run `stop-VC-solution.ps1` (if currently running).
 1. Run `start-VC-solution.ps1`.
 
+The solution now runs with the selected database provider.
+
 Each provider stores its data in a separate Docker volume. Switching providers does not remove the previous provider's data. When you switch back, your data is still there. Only `remove-VC-solution.ps1` removes all volumes.
 
 ## Install sample data
@@ -104,6 +106,8 @@ For initial configuration:
 1. Navigate to the Search Index section and ensure that all indexes are built successfully.
 1. Open the Virto Commerce Frontend to view and explore the sample data.
 
+The Platform is now configured and ready to use.
+
 ## Install manually
 
 The manual installation steps are as follows:
@@ -126,6 +130,8 @@ The manual installation steps are as follows:
 `start-VC-solution.ps1` accepts a `skipSampleData` parameter. When invoked directly (not via `build-VC-solution.ps1`), it defaults to `$true`, sample data is not installed on a bare start run. Pass `-skipSampleData $false` if you want to install sample data on a direct start.
 
 Use `stop-VC-solution.ps1` to pause containers while preserving your data.
+
+The solution is now installed and running.
 
 ## Version configuration
 
@@ -176,6 +182,8 @@ Recommended upgrade path:
 1. Start the old version and export anything you need (catalog data, modules, etc.).
 1. Run `remove-VC-solution.ps1` on the old version to clean up orphan volumes.
 1. Rerun the initial setup with the new version.
+
+The solution is now running the new version.
 
 If you prefer to keep the old data in place and start fresh, the old volumes can be identified with `docker volume ls` and removed manually when you are sure they are no longer needed.
 

@@ -68,6 +68,8 @@ To inspect the extension points on a page:
 1. Paste the snippet into your module and adjust the parameters as needed.
 1. Run `vcExt.hide()` to remove the overlay.
 
+The extension points on the page are now inspected and the corresponding registration snippet is ready to use.
+
 The available commands are:
 
 | Command        | Purpose                                                  |

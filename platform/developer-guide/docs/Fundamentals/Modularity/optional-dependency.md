@@ -51,6 +51,8 @@ To add an optional dependency:
     </dependencies> 
     ```
 
+The optional dependency is now declared in the module manifest.
+
 ### Resolve optional dependency in C# code
 
 !!! info 
@@ -70,7 +72,8 @@ To add an optional dependency:
     1. Then in C# code you can call `HasValue` and `Value` to resolve optional dependency by demand.
     1. Alternatively, you can add default null value to the parameter in the constructor `ctor(ISomeService someService = null)` to mark this service as optional in DI. Note that all optional parameters must appear after all required parameters 
 
- 
+The optional dependency is now resolved safely in your C# code.
+
 ### Resolve optional dependency in AngularJS code
 
 There are 2 common ways a dependent module can use AngularJS services, factories, or controllers in an optional module: 
@@ -88,6 +91,8 @@ You can resolve these dependencies as follows:
         You cannot create controller instances with the `$injector` service.
 
 1. In case of button/widgets/etc. which use controllers from the optional module, you can declare them after the `$injector.modules['angularModuleName']`check. 
+
+The optional dependency is now resolved safely in your AngularJS code.
 
 ### Configure Virto Commerce CLI package 
 

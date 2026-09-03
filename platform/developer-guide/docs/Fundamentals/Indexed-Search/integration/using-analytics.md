@@ -27,7 +27,7 @@ To view analytics:
 
 	![Query Analytics](media/query-analytics.png){: style="display: block; margin: 0 auto;" }
 
-
+You can now review search analytics to understand and improve customer search experience.
 
 <br>
 <br>

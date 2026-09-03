@@ -235,6 +235,7 @@ The minimum set of environment variables for a Google Cloud deployment:
 1. Deploy the Virto image, point it at the dependencies via environment variables, and verify by accessing the Admin UI.
 1. Reach out to your Virto Commerce account team to validate the topology against the latest Platform release.
 
+The Platform is now deployed on GCP and ready for further tuning.
 
 <br>
 <br>

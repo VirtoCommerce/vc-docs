@@ -52,6 +52,7 @@ Click the link to start using Builder.io:
 
 ![Builder.io link](media/builder-io-link.png){: style="display: block; margin: 0 auto;" }
 
+Builder.io is now enabled for the store.
 
 ## Integration with Virto Frontend
 

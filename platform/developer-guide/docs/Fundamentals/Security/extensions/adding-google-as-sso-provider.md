@@ -32,6 +32,8 @@ To create credentials for your project:
 1.  Click **CREATE**.
 1.   Save **Client ID** and **Client Secret** to use them in the module.
 
+The Google OAuth 2.0 client is now created, with a Client ID and Client Secret ready for use.
+
 ## Configure Google sign-in
 
 !!! note
@@ -148,6 +150,8 @@ Store Google Client ID, secret values and other sensitive settings in **KeyVault
     }
     ```
 
+Google is now available as a sign-in option in the Platform.
+
 ## Sign in with Google
 
 1. Run the Platform and open **Log in**. 
@@ -158,7 +162,7 @@ Store Google Client ID, secret values and other sensitive settings in **KeyVault
 
 1. Click **Sign in with Google.**
 
-
+The user is now signed in to the Platform with their Google account.
 
 <br>
 <br>

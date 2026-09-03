@@ -48,6 +48,8 @@ On the Virto Commerce side, configure the Event Bus module to push the events yo
 
 ![Readmore](media/readmore.png){: width="25"} [Event Bus configuration](../../Fundamentals/Event-Driven-Development/event-bus-configuration.md)
 
+Virto Commerce now publishes the selected events to the Azure Event Grid topic.
+
 ## Understand CloudEvent payload
 
 Virto's default payload follows the CloudEvents 1.0 envelope. The `data` field carries the Virto-specific structure:
@@ -137,6 +139,7 @@ For long-running work, queue the work onto Azure Queue Storage or Service Bus fr
 1. Inspect the invocation logs. The `cloudEvent.type` should match the Virto event class name; the `cloudEvent.data.ObjectId` should match the ID of the object you mutated.
 1. If no invocation appears, check the Event Grid topic's **Metrics** blade for delivery failures. Common causes are: the Function deployment slot is not running, a schema mismatch (Virto sending CloudEvents 1.0 but the topic configured for the legacy Event Grid schema), or Function authentication blocking inbound Event Grid traffic.
 
+The connection between Virto Commerce and the Azure Function is now verified.
 
 ## Next steps
 

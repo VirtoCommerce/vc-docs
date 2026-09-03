@@ -46,6 +46,8 @@ This code shows how Serilog is being initialized in the Platform:
     }
     ```
 
+Your custom logging configuration service is now registered and applied by the Platform.
+
 ## References
 
 * [Serilog library](http://serilog.net/)

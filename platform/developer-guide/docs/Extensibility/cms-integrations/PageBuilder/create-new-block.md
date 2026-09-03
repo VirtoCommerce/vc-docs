@@ -101,6 +101,8 @@ The layout defines the HTML structure and logic for our block. Since we use a Vu
     yarn run build
     ```
 
+The block layout is now implemented and registered in the Frontend.
+
 ## Add block to page
 
 To add the newly created block to a page:

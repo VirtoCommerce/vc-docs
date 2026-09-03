@@ -12,14 +12,14 @@ Before installing, make sure your computer meets these minimum requirements:
 | Number of cores   | Dual core     |
 | Processor type    | x64-compatible only |
 
-## Supported operation systems for .NET 8
+## Supported operating systems for .NET 10
 
 !!! note
     Virto Commerce (3.1000+) introduces a significant technical update by transitioning the Platform from .NET 8 to .NET 10. 
 
     ![Readmore](media/readmore.png){: width="25"} [Read more about upgrading to .NET 10](../Tutorials-and-How-tos/How-tos/upgrading-to-dot-net-10.md)    
 
-The Virto Platform runs on .NET 10. [.NET 10](https://github.com/dotnet/core/blob/main/release-notes/8.0/README.md) is a [Long Term Support (LTS)](https://github.com/dotnet/core/blob/main/release-policies.md) release and is [supported](https://github.com/dotnet/core/blob/main/support.md) on multiple operating systems per their lifecycle policy.
+The Virto Platform runs on .NET 10. [.NET 10](https://github.com/dotnet/core/blob/main/release-notes/10.0/README.md) is a [Long Term Support (LTS)](https://github.com/dotnet/core/blob/main/release-policies.md) release and is [supported](https://github.com/dotnet/core/blob/main/support.md) on multiple operating systems per their lifecycle policy.
 
 For issues with .NET on operating systems not listed here, open a GitHub issue in the appropriate .NET repository or contact the OS maintainer community. 
 <br>

@@ -38,6 +38,7 @@ To enable logging:
 
 ![Readmore](media/readmore.png){: width="25"} [Comparison of Seq and Application Insights solutions](https://datalust.co/app-insights)
 
+The Platform now writes logs to Seq through the Serilog sink.
 
 <br>
 <br>

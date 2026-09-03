@@ -66,6 +66,8 @@ Widget options:
 |isVisible    |Toggles widget visibility (a widget get invisible if this option is set to **false**). Set to **true** by default.|
 |template     |Template URL for the widget. Check our [Style Guide](../style-guide.md) for details.|
 
+The widget is now registered and displayed inside the specified widget container.
+
 ## Widget visibility and permissions
 
 Widget visibility is controlled by defining the `isVisible` method in widget registration options. There are at least two use cases when limiting visibility is required:

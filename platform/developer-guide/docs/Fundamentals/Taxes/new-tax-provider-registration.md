@@ -45,6 +45,8 @@ All settings may have default values that can be used for default methods if not
 
 [![Sample code](media/sample-code.png)](https://github.com/VirtoCommerce/vc-module-tax/blob/master/src/VirtoCommerce.TaxModule.Data/Provider/FixedRateTaxProvider.cs)
 
+The new tax provider is now registered and ready for use in the Platform.
+
 ## Enable and configure tax provider for store
 
 After your module is installed in your target system, all tax providers should appear and be available for configuration in every store in your system (**Store --> Tax providers --> widget**). You can configure tax provider for each store individually:

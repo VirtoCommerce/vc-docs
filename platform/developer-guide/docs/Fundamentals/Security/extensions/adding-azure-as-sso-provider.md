@@ -66,6 +66,8 @@ To set up the Azure Active Directory based authentication in Virto Commerce Plat
 
     ![Enable-token](media/enable-token.png)
 
+The Virto Commerce Platform application is now registered in Azure Active Directory.
+
 ### Configure Virto Commerce Platform to use Azure AD Authentication
 
 To configure Virto Commerce Platform to use Azure AD authentication:
@@ -109,6 +111,7 @@ To configure Virto Commerce Platform to use Azure AD authentication:
 
 1. Restart your Virto Commerce Platform instance to apply the updated settings.
 
+Virto Commerce Platform is now configured to use Azure AD authentication.
 
 ### Test
 

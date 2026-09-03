@@ -57,6 +57,7 @@ By default, PostgreSQL performs case-sensitive string comparisons, unlike SQL Se
 
 1. Build and install the module. Verify that EF Core Contains() and equality (==) operations are now case-insensitive for the configured properties.
 
+The module now performs case-insensitive searches on the configured PostgreSQL properties.
 
 <br>
 <br>

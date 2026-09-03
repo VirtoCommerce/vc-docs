@@ -38,6 +38,8 @@ Environments are predefined sets of variables that allow you to configure and sw
 
 ![environment](media/create-new-environment.gif)
 
+The environment is now ready to use for your queries and mutations.
+
 **Example**
 
 This example illustrates how query responses can be adapted to meet specific requirements using variables.

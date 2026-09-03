@@ -48,6 +48,8 @@ In your [Sanity Studio](https://www.sanity.io/docs/sanity-studio-quickstart/sett
     export const schemaTypes = [virtoPageType]
     ```
 
+The virtoPage document type is now available in Sanity Studio.
+
 ## Configure permissions
 
 The webhook endpoint requires an API key for a Virto Commerce user with the following permissions:
@@ -77,6 +79,8 @@ To connect Sanity to this endpoint:
     | **URL**         | `https://<your-domain>/api/pages/sanity?storeId=<StoreId>&cultureName=<cultureName>&api_key=<your-api-key>` |
     | **Trigger on**  | `Create, Update, Delete`                                                                                    |
     | **HTTP method** | `POST`                                                                                                      |
+
+The webhook now sends page events from Sanity to Virto Commerce.
 
 ## Verify webhook delivery
 

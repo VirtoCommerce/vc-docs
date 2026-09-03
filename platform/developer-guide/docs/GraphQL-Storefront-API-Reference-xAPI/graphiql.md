@@ -45,6 +45,7 @@ By default, GraphiQL is disabled. To enable it, configure the following setting 
 
 1. Execute your query or mutation by clicking the **Play** button.
 
+The query or mutation result appears in the right panel.
 
 ## Partial GraphQL schema
 

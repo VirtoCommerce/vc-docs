@@ -29,6 +29,8 @@ The release has undergone extensive testing, including unit, end-to-end, regress
 !!! note
     By default, Virto Commerce Platform on .NET10 is backwards compatible with previous platform stable releases on .NET8 (3.800+). However, it is recommended to update custom modules to the latest versions to leverage new features and improvements.
 
+Virto Commerce Platform and its modules are now updated to .NET 10.
+
 ## Known limitations and breaking changes
 
 This section outlines known limitations and breaking changes introduced with the .NET 10 upgrade that may require adjustments to existing solutions or custom module.
@@ -197,11 +199,14 @@ If you develop a custom module, we recommend updating it to the .NET10 version.
     * Updating other third-party dependencies to the version used by Virto Commerce Platform .NET10.
     * Updating the module.manifest file to align with the changes in .NET 10.
 
+The solution is now aligned with .NET 10.
+
 ### Build solution
 
 1. Build the solution and meticulously address any compilation errors and warnings if required. This step ensures that the solution is compatible with the updated framework.
 1. Verify Tests for Issues, perform a thorough verification of tests to identify and address any issues introduced by the update. This step guarantees that the updated solution maintains the expected functionality and performance.
 
+The solution now builds successfully on .NET 10.
 
 ### Create module package
 

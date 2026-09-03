@@ -6,7 +6,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 === "Required software components"
 
-    * [ASP.NET Core Runtime 8.0.0.](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+    * [ASP.NET Core Runtime 10.0.0.](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
     * [Virto Commerce CLI](https://github.com/VirtoCommerce/vc-build), our proprietary command line interface that enables automating the installation process and updating the dependencies.
     * [MS SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) / [MySQL](https://dev.mysql.com/downloads/installer/) / [PostgreSQL.](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
@@ -18,7 +18,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 === "Optional software components"
 
     * For VirtoCommerce 3.800 or higher, install MS Visual Studio 2022 (version 17.8 or higher). 
-    * To edit the source code, install [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0 "Installing .NET 6 SDK").
+    * To edit the source code, install [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0 "Installing .NET 10 SDK").
     * For better search capabilities, install [Elasticsearch 8.12](https://www.elastic.co/downloads/past-releases/elasticsearch-8-12-0). 
 
         !!! note
@@ -71,6 +71,7 @@ To use Virto Commerce CLI (vc-build):
 
 ![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](/platform/developer-guide/CLI-tools/package-management)
 
+The Platform and its modules are now installed using Virto Commerce CLI.
 
 ## Set up Platform
 
@@ -127,6 +128,8 @@ To configure application strings:
 
 1. Save the **appsettings.json** file to apply the configurations.
 
+The application strings are now configured.
+
 ### Run Platform
 
 You can run the Platform:
@@ -162,6 +165,8 @@ You can run the Platform:
     ```console
     dotnet VirtoCommerce.Platform.Web.dll --urls=http://localhost:5000
     ```
+
+The Platform is now up and running.
 
 ### Perform initial sign-in
 

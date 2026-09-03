@@ -81,6 +81,8 @@ Below is a snippet from the German translation file demonstrating the structure:
 }
 ```
 
+The country and region names now appear translated in the Platform UI.
+
 ## Localize modules
 
 In addition to core Platform localization, Virto Commerce supports localization at the module level. Each module stores its localization files in its GitHub repository (**src** --> **web** --> **Localizations**). By contributing new or updated translations, you can extend the Platform to support additional languages. Each Virto Commerce module contains JSON files, one per language. For example, **en.json** for English, **de.json** for German, etc. The Platform loads these files automatically after they are merged into the module repository.
@@ -93,6 +95,8 @@ To add a new language to a module:
 1. Use an AI tool (such as ChatGPT or Grok) to translate it. The simplest prompt is **“Localize this JSON into ...”**.
 1. Review and adjust the translation for accuracy and terminology consistency.
 1. Save the translated file as **<language_code>.json**, for example: **sv.json**.
+
+The module now has a ready-to-submit localization file for the new language.
 
 ### Contribute 
 

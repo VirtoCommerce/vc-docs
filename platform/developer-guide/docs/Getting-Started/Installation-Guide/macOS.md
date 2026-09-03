@@ -4,7 +4,7 @@ Use this guide to deploy and configure precompiled Virto Commerce Platform V3.
 
 ## Prerequisites
 
-* [.NET8 SDK on Mac OS.](https://docs.microsoft.com/en-us/dotnet/core/install/macos)
+* [.NET 10 SDK on Mac OS.](https://docs.microsoft.com/en-us/dotnet/core/install/macos)
 
     1. [Download .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core).
     1. Install the LTS version, it will include components for build and launch runtime application.
@@ -25,8 +25,10 @@ To install LibSass:
 1. Move the library to dotnet location path. You can find the location of dotnet using CLI **dotnet --info**  
 
     ```console
-    sudo cp libsass/runtimes/osx-x64/native/libsass.dylib /usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.x.x/
+    sudo cp libsass/runtimes/osx-x64/native/libsass.dylib /usr/local/share/dotnet/shared/Microsoft.NETCore.App/10.x.x/
     ```
+
+LibSass is now installed.
 
 ## Download precompiled binaries
 
@@ -78,6 +80,8 @@ To use Virto Commerce CLI (vc-build):
     ```
 
 ![Readmore](media/readmore.png){: width="25"} [VC-Build for Packages Management](https://github.com/VirtoCommerce/vc-build/blob/main/docs/CLI-tools/package-management.md)
+
+The Platform and its modules are now installed using Virto Commerce CLI.
 
 ## Set up Platform
 
@@ -131,6 +135,7 @@ To configure application strings:
 
 1. Save the **appsettings.json** file to apply the configurations.
 
+The application strings are now configured.
 
 ### Run Platform
 
@@ -165,6 +170,8 @@ To run the Platform by CLI:
     Now listening on: http://[::]:5000
     Now listening on: https://[::]:5001
     ```
+
+The Platform is now up and running.
 
 ### Perform initial sign-in
 

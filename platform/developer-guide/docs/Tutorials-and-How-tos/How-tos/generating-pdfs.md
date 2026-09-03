@@ -17,6 +17,7 @@ To add support for PDF file generation:
 
 ![Readmore](media/readmore.png){: width="25"} [WkHtmlToPdf manual](https://wkhtmltopdf.org/index.html)
 
+The application can now generate PDF files from HTML content.
 
 
 <br>

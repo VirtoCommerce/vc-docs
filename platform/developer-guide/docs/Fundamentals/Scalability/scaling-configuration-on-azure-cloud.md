@@ -161,6 +161,8 @@ To configure the Authoring App:
 
     ```
 
+The Authoring App is now configured.
+
 ### Commerce service app
 
 To configure the Commerce Service App:
@@ -198,6 +200,8 @@ To configure the Commerce Service App:
 
     ```
 
+The Commerce Service App is now configured.
+
 ### Frontend app
 
 To configure the Frontend App:
@@ -219,6 +223,8 @@ To configure the Frontend App:
         },
         ...
     ```
+
+The Frontend App is now configured.
 
 ![Readmore](media/readmore.png){: width="25"} [Scalability options](scalability-options.md)
 

@@ -35,6 +35,7 @@ You can use this command to:
 * Initialize a new Platform in an empty directory.
 * Install according to the existing **vc-package.json** manifest.
 
+The Platform and its modules are now installed in the new directory.
 
 ### Install from manifest
 

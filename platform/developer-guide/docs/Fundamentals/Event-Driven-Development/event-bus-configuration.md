@@ -138,6 +138,8 @@ To view the fail log:
 
 Response records are always sorted by date of occurrence in descending order.
 
+The fail log now shows the requested errors.
+
 ## Current list of events
 
 To see the full list of the existing events to properly create a subscription:
@@ -154,6 +156,8 @@ To see the full list of the existing events to properly create a subscription:
     ...
     ]
     ```
+
+You now have the full list of events available for creating a subscription.
 
 ## Destination providers. Azure Event grid
 

@@ -86,6 +86,8 @@ Virto Commerce Frontend exposes the `/storefrontapi/content/reset-cache` endpoin
 
 ![Cache invalidation](media/cache-invalidation.png){: style="display: block; margin: 0 auto;" width="550"}
 
+The storefront cache is now invalidated automatically whenever page content changes.
+
 ## Enable iFrame preview
 
 To allow the Page Builder to display a live preview of your site inside its editor, your storefront must permit itself to be embedded in an iframe. Add the following headers to your server configuration:

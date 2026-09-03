@@ -53,6 +53,8 @@ The Platform Manager allows you to preview index document data without writing a
 
 ![Viewing index document](media/04-viewing-index-document.png){: style="display: block; margin: 0 auto;" }
 
+The raw index document for the selected product is now visible for review.
+
 ## Incremental index updates
 
 Virto Commerce can update search indexes incrementally in the background by tracking entity changes and injecting changed entities into the index.

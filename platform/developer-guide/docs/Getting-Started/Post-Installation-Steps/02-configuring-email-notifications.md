@@ -38,6 +38,8 @@ To enable sending notifications through Gmail:
 !!! warning
     After modifying the **appsettings.json** file, restart the application to apply the changes.
 
+After the restart, the Platform sends email notifications through the Gmail SMTP server.
+
 ## Configure SendGrid email settings
 To work with the SendGrid settings:
 
@@ -57,6 +59,8 @@ To work with the SendGrid settings:
     ....
     ```
 
+The Platform is now configured to send email notifications through SendGrid.
+
 ## Test notification sending process
 
 To test your notifications, use REST Admin API queries that require a valid access token.
@@ -73,7 +77,7 @@ To test whether an email has been sent successfully:
 
 ![Notification activity feed](media/05-notification-activity-feed.png)
 
-
+The email notification setup is now verified as working.
 
 <br>
 <br>

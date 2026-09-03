@@ -60,6 +60,8 @@ To register a new query or mutation:
     }
     ```
 
+The new query or mutation is now part of the root GraphQL schema.
+
 ## Extend existing schema type with new properties
 
 To extend the existing GraphQL type:
@@ -89,6 +91,8 @@ To extend the existing GraphQL type:
     }
     ```
 
+The existing GraphQL type now includes the new property.
+
 ## Extend existing graph type using IGraphTypeHook
 
 `IGraphTypeHook` is a lightweight extension point that lets a module add, remove, or modify fields on an existing GraphQL type before the schema is initialized. Unlike the type-override approach, it requires no subclassing and no dependency on the extensibility framework: the hook runs as part of schema initialization and the target graph type is left untouched.
@@ -104,6 +108,8 @@ Implementation steps:
 1. Create a hook class. Create a new class that implements `IGraphTypeHook` and inject any services your field resolver will need via the constructor.
 1. Implement the field modifications. Inside `ExecuteAsync`, locate the target graph type using `schema.FindType<T>()`, then use `FieldCreator.CreateFieldAsync` to define the new field and add, remove, or modify fields on the type.
 1. Register the hook. In **module.cs**, register your hook inside the `GraphQLBuilder` block using `builder.AddGraphTypeHook<YourHook>()`, before calling `builder.AddSchema(...)`.
+
+The target graph type now exposes the fields contributed by the hook.
 
 ### Use case
 
@@ -376,6 +382,8 @@ In the system, the Platform's abstract type factory is employed to create instan
         }
     ```
 
+The custom validator now replaces the original one for the validated type.
+
 ## Extend generic behavior pipelines
 
 xAPI extension points extend beyond data structure modifications. You can also modify behavior and business logic without altering the original source code.
@@ -433,6 +441,8 @@ services.AddPipeline<SearchProductResponse>(builder =>
                 });
     ```
 
+The pipeline now runs the custom middleware as part of its processing.
+
 ## Replace command/ query handlers
 
 xAPI is built using the clean architecture based on CQRS (Command Query Responsibility Segregation, separate models and handlers for reads and writes) and DDD principles, where each command and query has its own handler responsible for processing incoming actions. You can easily override and substitute any existing handler with your implementation, thereby changing the default behavior.
@@ -465,6 +475,8 @@ To replace an existing command with your implementation:
     ```csharp title="module.cs" linenums="1"
     services.OverrideCommandType<RemoveCartCommand, RemoveCartCommandExtended>().WithCommandHandler<RemoveCartCommandHandlerExtended>();
     ```
+
+The command now runs through your custom implementation and handler.
 
 <br>
 <br>

@@ -12,6 +12,8 @@ To regenerate the certificate:
 1. Clear the `ServerCertificate` table in the database.
 1. Run the Platform again.
 
+The Platform now generates and stores a new self-signed certificate.
+
 ## Register certificate (recommended for production-ready scenarios)
 
 To register a custom certificate, do the following:
@@ -34,6 +36,7 @@ To register a custom certificate, do the following:
 !!! note
 	You can delete certificate files and remove keys from the configuration for safety reason.
 
+The Platform now uses your custom certificate for encryption and signing.
 
 <br>
 <br>
