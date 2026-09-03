@@ -30,7 +30,7 @@ Your modifications have been applied.
 
 Google Tag Manager provides a centralized way to manage all your tracking tags without code changes. It is recommended for advanced tracking. Use this option if you need:
 
-* Multiple tracking tools (GA4, Facebook Pixel, LinkedIn Insight, etc.)
+* Multiple tracking tools (GA4, Facebook Pixel, LinkedIn Insight, etc.), each configured as its own tag inside GTM. Virto Commerce has no first-party Meta Pixel, Conversions API, or A/B testing feature. GTM is the integration point for adding them yourself.
 * Custom event tracking and triggers.
 * A/B testing tools.
 * Enhanced flexibility for marketing teams. 

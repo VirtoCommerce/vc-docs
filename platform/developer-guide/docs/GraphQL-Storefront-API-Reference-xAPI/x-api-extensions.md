@@ -435,7 +435,9 @@ services.AddPipeline<SearchProductResponse>(builder =>
 
 ## Replace command/ query handlers
 
-xAPI is built using the clean architecture based on CQRS and DDD principles, where each command and query has its own handler responsible for processing incoming actions. You can easily override and substitute any existing handler with your implementation, thereby changing the default behavior.
+xAPI is built using the clean architecture based on CQRS (Command Query Responsibility Segregation, separate models and handlers for reads and writes) and DDD principles, where each command and query has its own handler responsible for processing incoming actions. You can easily override and substitute any existing handler with your implementation, thereby changing the default behavior.
+
+This command/query handler pattern is built on MediatR, which is also used for domain event handling in custom integration code across the Platform, not only within xAPI. For how domain events fit into the Platform's error-handling model, see [Integration failure handling](../Operations/integration-failure-handling.md#what-platform-does-not-provide).
 
 It is just enough to replace the required handler in the DI container with your own implementation:
 

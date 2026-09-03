@@ -4,7 +4,7 @@ The process of loading modules into the Virto Platform application process is ma
 
 After the pipeline completes, the host is built and the remaining initialization phases run in sequence. The full process consists of four phases:
 
-![Module loading process](media/loading-modules-into-application-process.png){: style="display: block; margin: 0 auto;" width="800"}
+![Module loading process](media/loading-modules-into-application-process.png){: style="display: block; margin: 0 auto;" width="950"}
 
 * [Module discovery and loading.](#module-discovery-and-loading)
 * [Host building.](#host-building)

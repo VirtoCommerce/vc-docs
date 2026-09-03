@@ -50,7 +50,7 @@ The code with a our extension looks as follows:
     CacheKey.With(GetType(), nameof(GetDataById), "123"); /* => "TypeName:GetDataById-123" */
     ```
 
-* Cache keys for complex object types. Most of the Platform types are derived from the `Entity` or `ValueObject` classes. They implement the `ICacheKey` interface that contains the `GetCacheKey()` method. It can be used for cache key generation:
+* Cache keys for complex object types. Most of the Platform types are derived from the `Entity` or `ValueObject` classes: `Entity` for domain types with an identity, `ValueObject` for the DDD value-object pattern, identity-less types compared by their property values (for example, Money, Address). They implement the `ICacheKey` interface that contains the `GetCacheKey()` method. It can be used for cache key generation:
 
     ``` csharp
     class ComplexValueObject : ValueObject

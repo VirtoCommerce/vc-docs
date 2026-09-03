@@ -1,7 +1,9 @@
 # Extend Domain Models
 VirtoCommerce supports extension of managed code domain types. This article will show you how to use various techniques to extend an existing domain type without direct code modification.
 
-To view or download our sample code, click [here](https://github.com/VirtoCommerce/vc-module-order/tree/dev/samples/VirtoCommerce.OrdersModule2.Web).
+Some of the DDD building blocks these domain types rely on are named in code even where this guide doesn't spell them out: `IAggregateRoot` marks a domain type as a consistency boundary and transactional root, and `ISpecification<T>` (with a single `IsSatisfiedBy(T obj)` method) is Virto's implementation of the specification pattern for combinable business rules.
+
+[View or download our sample code](https://github.com/VirtoCommerce/vc-module-order/tree/dev/samples/VirtoCommerce.OrdersModule2.Web)
 
 ## Extend through type inheritance
 
@@ -48,7 +50,7 @@ Each piece of code that should support domain type extensions must use `Abstract
 
 When you need to override any base type with another derived type, you must call   `AbstractTypeFactory<BaseType>.OverrideType<BaseType, DerivedType>()`; each  call of  `AbstractTypeFactory< BaseType>.TryCreateInstance()` will return your `DerivedType` object instance instead of `BaseType`.
 
-This is how the type extension magic works.
+This is how the type extension magic works. It's Virto's mechanism for runtime polymorphism: code that calls `TryCreateInstance()` gets whichever type was registered via `OverrideType<>()`, without knowing about the derived type at compile time.
 
 ## Persistent layer extension schema
 
@@ -79,10 +81,14 @@ We just extended the existing `CustomerOrder` class with a new `CustomerOrder2` 
 
 In Virto, for persistence logic we use the **[Data Mapper](https://www.martinfowler.com/eaaCatalog/dataMapper.html)** pattern, which helps to completely isolate your domain from the persistence layer. Leveraging this pattern gives one more benefits with keeping domain contracts in a more stable state. It also enables changing the persistence schema without affecting the domain used for public contracts.
 
+On top of the Data Mapper layer, access to each domain type goes through a repository, for example, `IOrderRepository`, coordinated by a unit of work, `IUnitOfWork`. These are the Repository and Unit of Work patterns.
+
 Each domain type has its own representation in the database, namely dedicated `DataEntitity` classes that are defined in EF Core's `DbContext` through fluent syntax.Such classes have three methods:
 
 + `ToModel` and `FromModel`, which map domain type objects to persistent ones, and vice versa;
 + `Patch`, which applies changes to the specified columns only. This method is crucial for implementing partial update logic.
+
+`ToModel`/`FromModel` also play the role of an anti-corruption layer between the domain model and the persistence schema: the domain type, `CustomerOrder` here, never depends on `CustomerOrderEntity` directly, so the persistence schema can change without corrupting the domain contract. The `CustomerOrderEntity` naming is itself a source of ambiguity worth flagging: it is a persistence (ORM) entity, distinct from a DDD domain entity such as `CustomerOrder`, even though both use the word "Entity" in Virto Commerce code and docs.
 
 Now let’s define the new persistence `CustomerOrder2Entity` type that will represent the persistence schema model of the new `CustomerOrder2` class:
 

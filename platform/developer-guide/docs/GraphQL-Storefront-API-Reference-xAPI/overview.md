@@ -17,19 +17,23 @@ It is closely associated with a particular user or touch point experience and en
 
 The xAPI module sits between the Frontend and the Platform, acting as a GraphQL backend for frontend (BFF). It exposes a single `/graphql` endpoint and one merged schema. Reads are served from the search index, while writes and business logic are delegated to the Platform.
 
-![xAPI module architecture](media/xAPI-module-architecture.png){: style="display: block; margin: 0 auto;" }
+![xAPI module architecture](media/xAPI-module-architecture.png){: style="display: block; margin: 0 auto;" width="800"}
 
 ## GraphQL vs REST
 
 GraphQL is a an API standard that provides a more efficient, powerful, and flexible alternative to REST. When the concept of REST was developed, client applications were relatively simple, and the development pace wasn't nearly where it is today. However, the API landscape has radically changed over the last years. In response to these evolving demands, GraphQL has emerged as a more adaptable solution. With GraphQL, each client can request precisely the data it needs, allowing for more tailored responses. In contrast, REST APIs often provide fixed sets of data, potentially leading to over-fetching or under-fetching of information. 
 
-![graphQL-Rest](media/rest-graphQL.png){: style="display: block; margin: 0 auto;" }
+![graphQL-Rest](media/rest-graphQL.png){: style="display: block; margin: 0 auto;" width="700"}
 
 Virto Commerce intentionally keeps both GraphQL and REST, each for different purposes.
 
 | GraphQL is used for:|	REST is used for:|
 | --------------------| -----------------|
 |  Frontend applications. <br> Customer-facing experiences. <br> Business workflows (browse, search, cart, checkout). <br> Aggregated, contextual data. <br> High-performance read/write scenarios.| System integrations. <br> ERP synchronization. <br> Bulk data import/export. <br> Back-office operations. <br> Data migration and administrative APIs.|
+
+Because xAPI is a standard GraphQL endpoint, any GraphQL client can consume it, including native mobile app clients. Virto Commerce does not provide a first-party mobile SDK.
+
+Pagination follows the same split. GraphQL queries use Relay-style cursor pagination (`PageInfo`, `before`/`after` arguments), while REST search endpoints use offset pagination (`skip` and `take` parameters, bounded by `MaxResultWindow`). Use cursor pagination for GraphQL clients and offset pagination for REST clients; the two are not interchangeable within the same API.
 
 ## GraphQL core components
 

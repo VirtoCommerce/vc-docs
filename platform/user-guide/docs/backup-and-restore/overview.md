@@ -8,6 +8,8 @@ The **Backup and Restore** module allows you to securely export and restore Plat
 
 Any module that supports export and import automatically participates in a backup, so its data is included alongside the Platform entries without extra configuration.
 
+This is an on-demand, application-level export and import tool. It does not provide automated backup scheduling, point-in-time recovery, or cross-region failover. Plan database and asset-storage backup and disaster recovery separately at the infrastructure level.
+
 ## Key features
 
 With the Backup and Restore module, you can:

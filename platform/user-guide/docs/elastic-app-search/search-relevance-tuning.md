@@ -17,6 +17,8 @@ To start improving search relevance:
 
 Now you can proceed to configuring synonyms, curations, and relevance search.
 
+Synonyms, curations, relevance tuning, and the zero-result report on this page are Elastic App Search features. They are not available when a store uses a different search provider, for example, Elasticsearch, OpenSearch, or Azure Cognitive Search.
+
 ## Synonyms
 
 Sometimes, users use different terminology than your context might expect. In the **Top queries with no results** section, you can find query results:
@@ -48,7 +50,7 @@ For even more precise and curated results, explore the **Curations** section.
 
 ## Curations
 
-Curations allow search operators to customize search results for specific queries.
+Curations allow search operators to customize search results for specific queries. This is Virto Commerce's version of what other platforms call merchandising rules: promoting, demoting, or hiding products for a given query.
 
 For example, you can use promoted products to ensure that the specified products always match a query and receive the highest relevance scores. Imagine an ecommerce store with featured product results.
 

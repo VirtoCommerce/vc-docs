@@ -14,6 +14,8 @@ To simplify the user experience for those managing contracts, there is an option
 
 You can also use the same contract for multiple organizations, which is especially valuable for companies that sell goods or services to companies with complicated organizational structures.
 
+A contract governs pricing, not payment terms: Virto Commerce has no net-terms (net-30/60/90) or credit-limit setting on a contract or organization.
+
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-contract)
 
 [![Download](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-contract/releases)

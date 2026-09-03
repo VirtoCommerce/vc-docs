@@ -114,19 +114,19 @@ To configure Virto Commerce Platform to use Azure AD authentication:
 
 1. Navigate to the login page of Virto Commerce Platform Manager and locate the **Sign in with Azure Active Directory** link:
 
-    ![Sign in](media/sign-in-page.png)
+    ![Sign in](media/sign-in-page.png){: style="display: block; margin: 0 auto;" }
 
 1. Click the link to be redirected to the Microsoft sign-in page. You might be asked to sign in with your Microsoft account if you did not sign in with it earlier. Sign in with your Azure account credentials. Make sure this account belongs to the same domain where you registered the application.
 
-    ![Sign in with MS account](media/sign-in-with-ms-account.png)
+    ![Sign in with MS account](media/sign-in-with-ms-account.png){: style="display: block; margin: 0 auto;" }
 
 1. If prompted, grant permission for the application to sign you in and read your account information.
 
-    ![Grant permissions](media/grant-permissions.png)
+    ![Grant permissions](media/grant-permissions.png){: style="display: block; margin: 0 auto;" }
 
 1. Upon successful sign-in, you will be redirected back to Virto Commerce Platform Manager, where you will be authenticated:
 
-    ![Signed in platform](media/signed-in-platform.png)
+    ![Signed in platform](media/signed-in-platform.png){: style="display: block; margin: 0 auto;" }
 
 
     !!! note

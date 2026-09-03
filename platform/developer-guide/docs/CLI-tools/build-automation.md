@@ -77,6 +77,8 @@ vc-build test
 
 This command also generates a test coverage and overall stats report.
 
+The `Category!=IntegrationTest` example filters on an xUnit trait. Mark a test with `[Trait("Category", "IntegrationTest")]` to exclude it from this filter, the convention this repository uses to separate integration tests from unit tests.
+
 ??? Example
 
     ```console

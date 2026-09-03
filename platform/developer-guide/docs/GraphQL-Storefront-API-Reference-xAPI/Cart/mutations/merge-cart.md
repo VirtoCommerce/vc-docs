@@ -1,6 +1,8 @@
 # mergeCart ==~mutation~==
 
-This mutation merges two carts. You can use it to merge an anonymous cart with a user cart after user authentication.
+This mutation merges two carts. You can use it to merge an anonymous cart with a user cart after user authentication. 
+
+See [Anonymous authentication](/storefront/developer-guide/latest/authentication/anonymous-authentication) for the guest-checkout flow this fits into.
 
 ## Arguments
 

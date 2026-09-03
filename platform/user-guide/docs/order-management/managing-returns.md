@@ -1,5 +1,7 @@
 # Manage Returns
 
+A return is created by an operator against an existing order in the Admin UI. This is not a customer-facing self-service return flow, and it is not an in-store return (BORIS) channel.
+
 Managing returns includes:
 
 * [Creating returns.](managing-returns.md#create-return)

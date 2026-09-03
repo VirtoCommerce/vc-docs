@@ -16,7 +16,7 @@ The diagram below illustrates the interconnections among various key entities wi
 
 The Contacts module features are:
 
-* **Many-to-many company entity hierarchy:** Each company entity can contain multiple companies, along with individual users.
+* **Many-to-many company entity hierarchy:** Each company entity can contain multiple companies, along with individual users. This is Virto Commerce's parent/child organization structure, often called account hierarchy elsewhere.
 * **Link to user accounts:** You can link your contact profiles to the account credentials (e.g. email or username) they use to shop in your store.
 * **Easy contact management:** You can create, link, edit, or remove your contacts with just a few clicks.
 * [User groups](../catalog-personalization/user-groups.md): You can create groups that include specific users. This can be useful for targeting promotions, offering special prices to specific customers, etc. 

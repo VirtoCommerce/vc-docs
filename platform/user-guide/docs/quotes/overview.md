@@ -13,6 +13,8 @@ With the Quote module, users get:
 * Unlimited number of tiers.
 * Discounts per tier or for the whole quote.
 * Full line items' management even after the initial quote was created.
+
+This is a quote-negotiation tool, not a CPQ (Configure, Price, Quote) system: it doesn't generate a quote from product configuration rules or pricing guidance. For guided product configuration, see [Managing product configurations](/platform/user-guide/latest/catalog/managing-product-configurations).
 * Attachments, dynamic properties support.
 * Regular orders creation once the quote is confirmed by a customer.
 

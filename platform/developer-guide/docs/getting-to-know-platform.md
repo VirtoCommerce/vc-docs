@@ -45,6 +45,9 @@ You can integrate it into an existing architecture as a central system, or use i
     * Caching, transactions, and data consistency are all handled seamlessly.
     * Stable operation across distributed environments.
 
+### Architecture vocabulary
+
+The Platform is a [modular monolith](Fundamentals/Modularity/01-overview.md#virto-architecture-plugins-or-modules), not a microservices architecture: modules run in one process and are deployed together. It is not a member of the MACH Alliance and doesn't use that label. There is no service mesh (Istio, Linkerd) because there's a single process to route to, and no edge-compute layer (Cloudflare Workers, Vercel Edge Functions). The Frontend SPA served from a CDN, with optional Prerender.io, is how it addresses latency instead. Security is built from named, individually documented pieces, OIDC, ASP.NET Core policy-based authorization, scope-based permissions, rather than framed under a "zero-trust" label.
 
 ## Core components
 
@@ -110,6 +113,8 @@ Virto Commerce uses a **modular versioning** strategy. The ecosystem includes ov
     * Released more frequently.
     * Include the latest features and fixes.
     * Less testing depth than stable releases.
+
+This versioning strategy applies to Platform and module releases. The REST and GraphQL APIs do not have a separate URL or header-based versioning scheme, for example, no `/api/v1` prefix or `API-Version` header. A client talks to whichever API shape ships with the Platform and module versions installed on that deployment.
 
 Choose **Stable** for reliability or **Edge** for faster iteration and access to cutting-edge features.
 

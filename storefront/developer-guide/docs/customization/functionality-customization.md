@@ -26,6 +26,8 @@ The [manifest.webmanifest](https://github.com/VirtoCommerce/vc-frontend/blob/dev
 | `theme_color`      | Sets the color for the browser UI elements <br>(status bar, address bar) and splash screen.                         |
 | `icons`            | Defines icons for the PWA on different devices and screen sizes.<br> SVG, PNG, or other formats can be used.        |
 
+The manifest controls installation and home-screen appearance only. The default Frontend does not include a service worker, so it does not provide offline caching, background sync, or push notification delivery through the PWA layer. Add a service worker to the theme project to implement these capabilities.
+
 **Example. Setting default language**
 
 <div class="grid" markdown>

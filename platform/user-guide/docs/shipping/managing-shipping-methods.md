@@ -1,5 +1,7 @@
 # Manage Shipping Methods
 
+Virto Commerce calls in-store pickup BOPIS (Buy Online, Pick up In Store). It is the same feature other regions call click-and-collect.
+
 Managing shipping methods includes:
 
 * [Viewing available shipping methods from the list.](#view-shipping-methods)

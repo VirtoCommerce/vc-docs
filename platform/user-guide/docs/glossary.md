@@ -24,6 +24,12 @@ Same as **Admin UI** and **Platform**. An administrative interface of the Virto 
 ## Bill of materials
 A special type of Product that is actually a list of materials required for a specific item purchased by the customer that can be created for internal purposes.
 
+Equivalent in other ecommerce platforms:
+
+| Virto Commerce | Shopify | Adobe Commerce (Magento) | commercetools | BigCommerce |
+| --- | --- | --- | --- | --- |
+| Bill of materials | Bundle | Bundle Product | n/a (uses Line Items) | Product Bundles |
+
 ## Catalog
 A module offered by the Virto Commerce Platform that allows you to create your own product catalog linked to one or more stores. A typical catalog houses various categories of products and their variations.
 
@@ -61,6 +67,12 @@ A product type that lets customers choose from predefined options or attributes 
 
 ## Customers
 The companies and contacts to whom the contract prices apply.
+
+## DAM, or Digital Asset Management
+A digital asset management system centralizes and organizes media files such as product images, videos, and documents. Virto Commerce does not use this term but delivers the core mechanics:
+
+* **Centralized storage** → the [Assets](assets/overview.md) module, backed by file system or Azure Blob Storage.
+* **Image variants** → the [Thumbnails](thumbnails/overview.md) module, which generates resized versions of an image on upload or on a schedule.
 
 ## Digital product
 Any tangible product that the store owner can list in the Store. Digital products have unique attributes such as download type, maximum downloads, etc., unlike physical products; no shipping or inventory attributes may apply to such products.
@@ -130,11 +142,28 @@ Equivalent in other ecommerce platforms:
 | --- | --- | --- | --- | --- |
 | Module | n/a (uses Apps) | Extension | n/a (composable architecture) | n/a (uses Apps) |
 
+## MOQ, or Minimum Order Quantity
+Virto Commerce does not have a single minimum-order-quantity setting. The requirement is assembled from separate mechanisms:
+
+* **Per-product order limits** → the `minQuantity` and `maxQuantity` fields on a product, enforced through the xAPI Catalog schema.
+* **Order multiples** → pack size, which rounds ordered quantities to a fixed step. See [Set up product pack size](catalog/managing-products.md#set-up-product-pack-size).
+* **Quantity-tiered pricing** → the minimum quantity set on a price list entry, which selects a price breakpoint rather than blocking a smaller order. See [Creating a new price list](pricing/creating-new-price-list.md).
+
 ## Organization
 Same as **Company**. A profile for an entire company, within which you can store employee profiles, other company profiles, and those of individual customers related to that company.
 
 ## Physical product
 Any tangible product that the shop owner can list in the shop. Physical products have a unique Track Inventory attribute that digital products do not have. Shipping and Fulfillment Center attributes are also relevant to them.
+
+## PIM, or Product Information Management
+Virto Commerce packages Product Information Management as the [PIM Packaged Business Capability](/platform/developer-guide/latest/Updating-Virto-Commerce-Based-Project/pbcs), built on the Catalog module rather than a separate product. Its Admin UI pieces map to catalog features documented elsewhere in this guide:
+
+* **Attribute management** → [Catalog property](#catalog-property) and [Dynamic property](#dynamic-property), including multilingual and dictionary-lookup values.
+* **Variant and SKU management** → [Variation](#variation).
+* **Catalog structure** → [Catalog](#catalog) and [Category](#category).
+* **Bulk onboarding** → [CSV catalog import](catalog-csv-export-import/overview.md).
+
+The term also appears as a category of third-party system that Virto Commerce integrates with in multi-region deployments; see [B2B Multi-Regional eCommerce Architecture](multiregional-ecommerce.md).
 
 ## Platform
 Same as **Admin UI** and **Back office**. An administrative interface where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
@@ -207,6 +236,6 @@ Same as **Fulfillment center**. Processing unit involved in receiving, processin
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../ada-compliance">← ADA and WCAG compliance</a>
+    <a href="../ada-compliance">← Accessibility</a>
     <a href="../platform-overview">Modules overview →</a>
 </div>

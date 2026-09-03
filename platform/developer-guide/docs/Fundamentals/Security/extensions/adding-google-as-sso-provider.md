@@ -153,7 +153,9 @@ Store Google Client ID, secret values and other sensitive settings in **KeyVault
 1. Run the Platform and open **Log in**. 
 1. Select **Google**. You will be redirected to Google for authentication. 
 1. Enter your Google credentials. You will be redirected back to the Platform:
-![Platform login](../media/google-sso-login.png)
+
+    ![Platform login](../media/google-sso-login.png){: style="display: block; margin: 0 auto;" }
+
 1. Click **Sign in with Google.**
 
 

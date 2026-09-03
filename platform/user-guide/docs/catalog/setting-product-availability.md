@@ -11,6 +11,8 @@ The product's availability displayed on the Frontend is determined by the inform
 * The **Catalog** module, where availability settings are established using switches.
 * The **Inventory** module, storing the actual quantity of the product in stock. 
 
+Preorder and backorder are a separate capability from the switches below. They are exposed as the `allowPreorder`, `allowBackorder`, `preorderAvailabilityDate`, and `backorderAvailabilityDate` fields on a product's inventory info, available through the xAPI Catalog schema.
+
 ??? "See details"
 
     The diagram below illustrates the sequential process of how the product's availability is initially defined in the **Catalog** module through the use of switches, and then updated in the **Inventory** module with the specific stock quantity.

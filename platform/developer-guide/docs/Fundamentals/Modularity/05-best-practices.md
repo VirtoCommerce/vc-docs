@@ -4,6 +4,8 @@ When it comes to identifying model boundaries and size for each module, the goal
 
 The emphasis is not on the size but on business capabilities. In addition, if you need cohesion for a certain area of the application based on a high number of dependencies, this means you need a single module, too. Cohesion is a way to identify how to break modules apart or group them together. Ultimately, while you gain more knowledge about the domain, you should adapt the size of your module, iteratively.
 
+This is the same reasoning DDD calls identifying bounded contexts: a module's boundary should follow a meaningful business capability, not an arbitrary technical split.
+
 !!! warning
     A Virto module basically represents a unit for compilation and distribution of functionality, which means it has exactly one deployment unit. Please do not consider any module as a single possible way of separation of domains and business logic. You might organize a well designed multiple domain architecture within a single module.
 
@@ -15,7 +17,7 @@ Implementing your entire custom solution into a single module will be a good cho
 * Most of your business logic is based on the core Virto modules and simply extends them.
 * You do not have any strict scale requirement that causes your solution to run some modules independently as standalone services.
     
-![Chart: Module structure for custom solution](media/05-module-best-practices.png){: style="display: block; margin: 0 auto;" width="600"}
+![Chart: Module structure for custom solution](media/05-module-best-practices.png){: style="display: block; margin: 0 auto;" width="750"}
 
 One can draw parallels between how your code can be distributed among Virto modules and how the same code can be arranged in poly or mono repositories.
 

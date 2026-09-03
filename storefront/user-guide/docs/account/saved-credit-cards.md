@@ -5,6 +5,8 @@ In the **Saved credit cards** section, you can:
 * View the list of the saved cards to be selected from the dropdown list when [paying for orders](../shopping/checkout-process.md).
 * Delete cards from the list.
 
+This page only covers customer-initiated card selection at checkout. For recurring, subscription-based billing, see the [Subscription module](/platform/user-guide/latest/subscription/overview).
+
 ![Saved cards](../media/saved-credit-card.png){: style="display: block; margin: 0 auto;" width="600"}
 
 

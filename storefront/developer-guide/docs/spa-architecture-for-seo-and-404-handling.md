@@ -36,6 +36,8 @@ This works as follows:
 * Normal users continue to get the SPA experience.
 
 This hybrid approach ensures bots receive meaningful content while keeping performance high for users.
+
+Virto Commerce does not use a server-side rendering (SSR) framework, static site generation (SSG), or incremental static regeneration (ISR), the approaches used by frameworks such as Next.js or Nuxt.js. Prerender.io gives bots the SEO benefits of server-rendered HTML without requiring the Frontend to run an SSR framework for regular users.
 <br>
 
 ![Readmore](media/readmore.png){: width="25"} [Setting up Prerender.io with Azure Application Gateway](/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/setting-up-prerender-io-with-azure-app-gateway)
@@ -157,6 +159,10 @@ The **Social share image URL** field sets `og:image`, **Tagline** sets `og:title
 Both the JSON-LD block and the Open Graph tags appear in the rendered home page source:
 
 ![Organization JSON-LD and Open Graph tags in the home page source](media/json-organization-schema-on-frontpage.png){: style="display: block; margin: 0 auto;" }
+
+### Canonical URLs
+
+The default Frontend does not set a `rel="canonical"` link tag. Add one with `useHead` if you need to declare a preferred URL for pages reachable through more than one path, for example, a product reachable from multiple categories.
 
 
 ## Handling 404s in SPA

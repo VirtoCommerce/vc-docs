@@ -73,6 +73,8 @@ The **Open Telemetry** module provides OpenTelemetry observability for Virto Com
 - **Logging**: Structured logs are forwarded to the OTLP endpoint via Serilog with trace/span ID fields for correlation with distributed traces.
 - **Conditional activation**: Only enabled when explicitly configured.
 
+The instrumentation table above maps to standard SRE metric taxonomies rather than a Virto-specific one: the ASP.NET Core and HTTP Client rows give RED signals (rate, errors, duration) for incoming and outgoing requests, and the .NET Runtime and Process rows give USE signals (utilization, saturation) for the host. There is no separate RED/USE dashboard; query the OTLP-exported metrics directly in your backend.
+
 ## Module structure
 
 ```

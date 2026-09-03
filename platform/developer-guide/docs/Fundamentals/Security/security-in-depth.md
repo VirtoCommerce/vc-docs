@@ -21,7 +21,7 @@ To enable token authentication, ASP.NET Core supports multiple options for using
 
 Adding an **OpenID Connect** server to the Platform allows you to support token authentication, as well as to manage all your users using a local password or an external identity provider (e.g. Azure Active Directory) for all your applications in a single place, with the power to control who can access your API and the information that is exposed to each client. 
 
-![OpenID Connect chart](media/openid-chart.png)
+![OpenID Connect chart](media/openid-chart.png){: style="display: block; margin: 0 auto;" width="500"}
 
 Virto Platform uses JWT token authentication and OAuth2 Password, Client Credentials and Refresh token flows to issue and consume authorization token for clients.
 
@@ -38,6 +38,14 @@ Virto Platform uses JWT token authentication and OAuth2 Password, Client Credent
 ![Readmore](media/readmore.png){: width="25"} [Role-based authorization](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
 ![Readmore](media/readmore.png){: width="25"} [Custom policy-based authorization](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
+
+## OWASP Top 10
+
+Virto Commerce does not publish an OWASP Top 10 mapping. Some of the categories are addressed by framework defaults rather than Platform-specific code: EF Core's parameterized queries mitigate SQL injection in first-party modules, and Razor's automatic output encoding mitigates cross-site scripting in server-rendered views. JWT bearer authentication removes the cookie-based CSRF vector for API calls, as noted above. The cookie-based admin session path is hardened separately.
+
+![Readmore](media/readmore.png){: width="25"} [Session revocation and cookie hardening](#session-revocation-and-cookie-hardening)
+
+Custom modules that build raw SQL or render unescaped user input are responsible for their own mitigations.
 
 ## Session revocation and cookie hardening
 

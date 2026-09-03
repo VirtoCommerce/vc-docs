@@ -218,6 +218,14 @@ Fargate profiles in EKS can run the Virto pod, but EFS-backed PVCs work differen
 
 Virto Commerce does not publish a public Helm chart for self-hosted deployments. Virto Cloud (the managed-hosting product) maintains an internal Helm chart and Terraform stack, but those artifacts are tied to Virto Cloud's specific infrastructure and are not made available for self-hosted AWS use. Wrap the manifest above in your own chart, or use Kustomize.
 
+## Health, autoscaling, and session affinity
+
+The examples above are minimal starting points. Configure health checks, autoscaling, and session affinity before going to production.
+
+* **Health checks**: Point the ALB target group health check (ECS, Beanstalk) or the Kubernetes `readinessProbe`/`livenessProbe` (EKS) at `/health`. See [Health checks](health-checks.md).
+* **Autoscaling**: ECS supports target-tracking scaling policies on the service. EKS supports a `HorizontalPodAutoscaler` against CPU or memory. Virto Commerce does not publish reference thresholds; size them against your own workload.
+* **Session affinity**: If you run more than one instance of the tier that serves the Platform Manager UI, SignalR push notifications require sticky sessions, the same requirement documented for [Azure App Service](../../Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md#session-affinity-sticky-sessions). On an Application Load Balancer, enable target-group stickiness with a duration-based cookie.
+
 ## Configuration reference
 
 The Virto Commerce Platform reads configuration through standard ASP.NET Core conventions. Environment variables override the **appsettings.json** values using the `__` (double underscore) separator for nested keys.

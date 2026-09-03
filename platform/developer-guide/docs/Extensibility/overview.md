@@ -62,7 +62,7 @@ With a custom module, you can extend every layer:
 
 For example, on the chart below, the Price module extension extends the default Virto Commerce Price module with the *Recommended price* property, with this new property being visible on every layer.
 
-![Price module extension](media/05-price-extension-module.png){: style="display: block; margin: 0 auto;" }
+![Price module extension](media/05-price-extension-module.png){: style="display: block; margin: 0 auto;" width="800"}
 
 
 ### Do not modify code you do not own

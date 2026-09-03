@@ -2,6 +2,8 @@
 
 In case your customers have any shippable products to choose from, they can also choose a shipping option during checkout.
 
+Virto Commerce ships Fixed Rate, BOPIS, and ShipStation (order sync only, not live rate-shopping) out of the box. There is no first-party UPS, FedEx, DHL, USPS, EasyPost, or Shippo rate-shopping integration, and no shipping-zone or weight/dimension rate-table editor in the Admin UI. Implement a carrier integration or a zone-based rate table as a `ShippingMethod`.
+
 ## Define new shipping method
 
 To define a new shipping method:

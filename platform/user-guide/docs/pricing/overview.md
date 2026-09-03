@@ -13,6 +13,8 @@ The Pricing module includes the following entities:
 * Price lists that store prices in a single currency.
 * Price list assignments that enable associating specific price lists with catalogs based on the relevant rules and conditions.
 
+This rule-based assignment is what Virto Commerce calls dynamic pricing elsewhere in its materials. It selects which price list applies to a shopper; it is not real-time or algorithmic price calculation, and there is no separate catalog-price-rule engine that recalculates a price from a formula.
+
 ## Key features 
 
 The diagram below illustrates the interconnections among various key entities within the Pricing module:

@@ -22,7 +22,7 @@ To complete your order:
 
     ![Cart details](../media/cart-details.png)
 
-    The cart page may also show recently browsed products if this [feature is enabled](/platform/user-guide/latest/recommend/overview#get-started).
+    The cart page may also show recently browsed products if this [feature is enabled](/platform/user-guide/latest/recommend/overview#get-started). This reflects the shopper's own browsing history rather than cross-sell or upsell suggestions. For those, see [Dynamic associations](/platform/user-guide/latest/dynamic-associations/overview).
 
     ![Recently browsed products](../media/recently-browsed-products.png){: width="850"}
 

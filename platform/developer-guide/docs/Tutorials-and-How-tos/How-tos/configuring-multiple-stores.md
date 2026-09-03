@@ -1,6 +1,6 @@
 # Configure Multiple Stores with Multiple Domains
 
-With Virto Commerce, you can configure multiple stores with multiple domains in the same environment. This means you can build and manage different websites for various brands or business entities using a single platform and codebase. 
+With Virto Commerce, you can configure multiple stores with multiple domains in the same environment. This means you can build and manage different websites for various brands or business entities using a single platform and codebase. This is how you set up a multi-brand storefront: one store, domain, catalog, and theme per brand.
 Configuring multiple stores with multiple domains provides great flexibility and convenience for managing distinct web experiences on the same platform. You can easily set up and configure multiple stores with their own domain names, assign catalogs and price lists, and upload custom themes. 
 
 Additionally, you have the option to share themes between stores to streamline development efforts. With Virto Commerce, you can create a cohesive and efficient multi-store environment to meet the unique needs of your business.

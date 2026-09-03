@@ -1,4 +1,4 @@
-# Including Module Data in Backups
+# Include Module Data in Backups
 
 The **Backup and Restore** module exports the Platform entries (security, settings, dynamic properties, and binary data) together with the data of any installed module that opts in. Your custom module can join a backup so that its data is exported and restored alongside the rest of the Platform. Backup and Restore uses your module's export and import implementations both when creating a backup and when restoring one.
 
@@ -6,7 +6,7 @@ A module opts in by implementing two interfaces on its module class, `IExportSup
 
 When your module implements both interfaces, it appears in the **Choose modules to back up** and **Choose modules to restore** lists, and its data is written to its own JSON file inside the backup ZIP. The Backup and Restore module handles the manifest, optional AES-256 encryption, and progress orchestration. You only read and write your own data.
 
-!!! note "How it works"
+!!! note
 	The Backup and Restore module does not keep a list of participating modules. When a backup or restore runs, it asks the module service for every installed module and keeps the ones whose module instance implements the export or import interface:
 
 	```csharp

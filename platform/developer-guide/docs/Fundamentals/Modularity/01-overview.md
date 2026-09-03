@@ -13,7 +13,7 @@ Modules are independent of one another but can communicate with each other in a 
 
 The following chart shows the overall design concept of the Platform application:
 
-![Overall Platform design chart](media/01-overall-design-chart.png){: style="display: block; margin: 0 auto;" width="600"}
+![Overall Platform design chart](media/01-overall-design-chart.png){: style="display: block; margin: 0 auto;" width="750"}
 
 * **Platform application:** Works as a runtime environment that hosts the modules running within the same process and having access to shared resources and dependencies.
     

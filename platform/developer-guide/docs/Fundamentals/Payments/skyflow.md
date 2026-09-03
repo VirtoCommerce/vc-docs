@@ -9,7 +9,7 @@ The **Skyflow** module facilitates seamless integration with [Skyflow](https://w
 ## Key features
 
 * **Unified credit card user experience:** Enhance user payment journeys with a consistent credit card transaction experience across multiple payment providers.
-* **PCI compliance:** Ensure PCI compliance with Skyflow, simplifying adherence to industry standards for secure payment data handling.
+* **PCI compliance:** Ensure PCI compliance with Skyflow, simplifying adherence to industry standards for secure payment data handling. Card data is tokenized in Skyflow's vault rather than stored in the Platform; Virto Commerce does not publish its own PCI DSS attestation of compliance or state a SAQ level, since Skyflow holds the cardholder-data boundary.
 * **Integration with Virto Commerce Frontend:** Seamlessly integrate with [Virto Frontend Application](https://github.com/VirtoCommerce/vc-theme-b2b-vue) to provide a cohesive ecommerce experience.
 * **Flexible customization:** Utilize the flexibility of the Virto Commerce Native Extensibility Framework and Skyflow to tailor integrations with a variety of payment providers to meet your specific requirements.
 * **Optimized for marketplaces:** Streamline marketplace operations by effortlessly connecting with multiple Payment Service Providers, catering to diverse payment preferences for customers and suppliers.
@@ -110,12 +110,12 @@ To setup Virto Commerce back office:
 1. In the next blade, select a store.
 1. In the **Store details** blade,  click the **Payment methods** widget.
 
-    ![Back office 1](media/configure-backoffice-1.png)
+    ![Back office 1](media/configure-backoffice-1.png){: style="display: block; margin: 0 auto;" }
 
 1. In the **Payment methods** blade, select **Skyflow**.
 1. In the **Edit payment method** blade, activate the Skyflow payment method.
 
-    ![Back office 2](media/configure-backoffice-2.png)
+    ![Back office 2](media/configure-backoffice-2.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

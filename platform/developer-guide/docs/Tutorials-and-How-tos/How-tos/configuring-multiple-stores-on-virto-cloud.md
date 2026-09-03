@@ -2,6 +2,8 @@
 
 Virto Commerce lets you run multiple websites (stores) on a single platform instance, each with its domain, theme, and configurations while sharing the same catalogs and customer data. In practice, you create separate stores in the Virto Commerce Manager, assign catalogs/pricing, and upload individual themes. The new Virto Commerce frontend is fully headless and composable, so you can flexibly add any number of front-end sites. 
 
+This is store-level separation, not tenant-level data isolation: all stores on the same platform instance share one database and one customer pool. For per-organization data isolation within a single deployment, see the [Intent Search module's multi-tenant design](../../Fundamentals/Intent-Search/overview.md#architecture), which isolates each organization's data in its own Weaviate tenant.
+
 Below is a step-by-step guide to set up multiple stores on Virto Cloud.
 
 ## Prerequisites

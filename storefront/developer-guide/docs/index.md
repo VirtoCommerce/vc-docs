@@ -47,7 +47,7 @@
 
 - **Development performance**: Achieve rapid development using the most effective solution. Deploy the SPA in seconds and start modifying code with [HMR features](https://vitejs.dev/guide/api-hmr).
 
-- **Client performance**: Reach and maintain high performance metrics as provided by Google PageSpeed Insights.
+- **Client performance**: Reach and maintain high performance metrics as provided by Google PageSpeed Insights. To monitor the underlying Core Web Vitals (FCP, LCP, CLS, INP, TTFB) in production, use the [useWebVitals](/platform/developer-guide/latest/custom-apps-development/vc-shell/composables/utilities/useWebVitals) composable.
 
 - **[Atomic design pattern](/platform/developer-guide/latest/Back-End-Architecture/atomic-architecture)**: Base the UI on Atoms, Molecules, and Organisms, combined within Pages and shared Components for high code reusability.
 

@@ -2,6 +2,8 @@
 
 The **vc-build** tool provides a set of targets that allow you to easily [install](package-management.md#install), [update](package-management.md#update), and [uninstall](package-management.md#uninstall) Platform dependencies using simple CLI commands (applies to module and Platform releases). There is also a `configure` target that allows to [configure the Platform's connection strings](package-management.md#configure).
 
+Virto Commerce modules are not published to nuget.org. A module is distributed as a versioned zip artifact referenced from **vc-package.json**, sourced from GitHub Releases, Azure Artifacts, GitLab job artifacts, Azure Blob, or a local path; `vc-build` fetches and installs it. NuGet package references still apply at the `.csproj` level for a module's own .NET dependencies.
+
 ## Install
 
 !!! note

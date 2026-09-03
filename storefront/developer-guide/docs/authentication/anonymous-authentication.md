@@ -17,6 +17,8 @@ Anonymous authentication can be used for:
 * **Guest checkout**: Users can shop without logging in and still have their carts preserved across browsing sessions.
 * **Abandoned cart recovery**: If a user adds items to their cart and leaves without logging in, their cart can be retained when they return, potentially leading to higher conversion rates.
 
+When a guest signs in or registers, call the [mergeCart mutation](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/mutations/merge-cart) with the anonymous cart as `secondCartId` and the user's cart as `cartId` to combine the two into a single cart.
+
 <br>
 <br>
 ********

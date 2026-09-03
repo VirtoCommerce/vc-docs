@@ -92,6 +92,7 @@ To create a new refund document:
 
     ![Refund details](media/refund-document.png){: style="display: block; margin: 0 auto;" width="400"}
 
+Entering an amount less than the full paid total is how you issue a partial refund. This is a merchant-initiated refund against a paid order.
 
 ## Get invoice PDF
 

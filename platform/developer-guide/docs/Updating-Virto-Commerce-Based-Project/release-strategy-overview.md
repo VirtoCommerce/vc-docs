@@ -28,7 +28,7 @@ Depending on your needs and development cycle, you can choose a release strategy
 
 ### Stable releases
 
-Releases in the **Stable** channel have passed our full regression, E2E and load testing and are recommended for all users to avoid issues and maximize functionality.
+Releases in the **Stable** channel have passed our full regression, E2E and load testing and are recommended for all users to avoid issues and maximize functionality. This is Virto Commerce's internal release gate: it doesn't ship a load-testing toolkit or scripts for your own deployment. Bring your own tool, for example, k6 or JMeter, to load-test your specific configuration and infrastructure.
 
 By default, Virto Commerce CLI runs on stable releases.
 

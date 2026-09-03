@@ -7,6 +7,8 @@ By default, the Platform allows you to configure one of the following blob stora
 * [FileSystem.](03-configuring-asset-blob-storage.md#setting-up-filesystem-asset-storage-in-development-mode)
 * [Azure Blob Storage.](03-configuring-asset-blob-storage.md#setting-up-azure-blob-storage-in-production-mode)
 
+For an Amazon S3-backed setup, see [Storage strategy](/platform/developer-guide/latest/Tutorials-and-How-tos/How-tos/deploy-platform-on-aws#storage-strategy) in the AWS deployment guide.
+
 ## Set up FileSystem asset storage in development mode
 
 The FileSystem provider uses the local file system to store media files and make them publicly accessible. This mode implements [Static files in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-6.0) with all files stored within the app local directory. The FileSystem storage provides public access to the files via relative URIs. 

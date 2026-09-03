@@ -8,6 +8,8 @@ The **Catalog Personalization** module is designed to personalize the online sho
 
 The **User groups** feature allows you to associate specific user groups with a product or category. This association can determine which user groups have access to view or interact with the products within that category.
 
+This is what other platforms call a contract catalog: a customer-specific product assortment. It's a separate concept from contract pricing, which the [Contracts](/platform/user-guide/latest/contracts/overview) module handles.
+
 [![Part1](media/video-tutorial1.png)](https://www.youtube.com/watch?v=kujqWb0HDEc)
 
 [![Part2](media/video-tutorial2.png)](https://www.youtube.com/watch?v=H3H8E7RbOCE)

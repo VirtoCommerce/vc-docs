@@ -15,7 +15,7 @@ This solution targets multi-regional support with a unified master catalog and c
 
 ![B2B Multiregional Architecture](media/multiregional-ecommerce.png){: style="display: block; margin: 0 auto;" }
 
-The architecture diagram shows three web stores aimed at different regions, all interfacing with a shared Virto Commerce backend that is integrated with various third-party systems such as ERPs or PIMs.
+The architecture diagram shows three web stores aimed at different regions, all interfacing with a shared Virto Commerce backend that is integrated with various third-party systems such as ERPs or [PIMs](glossary.md#pim-or-product-information-management).
 
 Each web store serves as a sales point tailored to its respective region, employing localized language, [catalog properties](glossary.md#catalog-property), descriptions, and currency pricing.
 

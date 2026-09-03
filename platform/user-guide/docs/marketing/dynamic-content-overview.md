@@ -2,6 +2,8 @@
 
 With the Dynamic Content feature you can create personalized shopping experiences for your customers. You can deliver customized elements of the shopping journey based on specific conditions or context.
 
+Targeting here, and in [Promotion rules](promotion-rules.md), works off admin-maintained [User groups](/platform/user-guide/latest/contacts/overview), Virto Commerce's equivalent of what other personalization tools call customer segments. There is no separate segments UI with a rule builder for recency, frequency, or purchase-history-based segmentation; a user's group membership is set directly, not computed from behavior.
+
 When presenting Dynamic Content to your customers, consider the following:
 
 * The type of content you intend to display.

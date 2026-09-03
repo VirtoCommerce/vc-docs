@@ -121,6 +121,7 @@ For operators sizing the Platform against an integration-heavy environment, the 
 * No central integration-failure dashboard. Three or four surfaces to check and no unified view across them.
 * No first-class dead-letter queue. Failed jobs and webhook deliveries persist, but there is no quarantine, no DLQ-specific tooling, and no built-in replay-from-DLQ workflow.
 * No transactional outbox. Domain events are in-process and not persisted with the database transaction, so a committed change is not guaranteed to reach an external system. See [Transactional delivery and the outbox pattern](#transactional-delivery-and-the-outbox-pattern).
+* No event sourcing. State is stored as current-value rows via EF Core. Domain events are in-process notifications, not the system of record.
 * No native EDI, cXML, or OCI punchout. B2B e-procurement integrations are delivered through partner solutions rather than a first-party connector.
 * No gRPC service interface. The Platform's programmatic surfaces are REST and GraphQL (xAPI).
 * No first-party alerting policy. No default alert rules ship with the Platform; alerting is delegated to Application Insights or Seq and configured per deployment.

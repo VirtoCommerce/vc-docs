@@ -38,13 +38,15 @@ This solution has the following benefits:
 * You can redefine a role by changing its permissions.
 * You can implement the administration UI to easily edit roles and permissions.
 
+This permission-and-role model, together with the store-level scopes described below, covers what other systems call role-based and policy-based authorization. Virto Commerce does not implement attribute-based access control (ABAC) as a separate model, where access is decided from arbitrary resource or environment attributes at evaluation time.
+
 The Virto Commerce Platform supports two main authorization strategy types for permission authorization:
 
 * **Permission:** Basic right or permission. The system has a global list of predefined permissions . You can assign permissions to users via group permissions by creating a role and then assigning that role to a user.
 	* [**Global permissions:**](global-permissions.md) Permissions that are checked without taking the requested resources into account. To check this sort of permissions, you need to operate permission names only, for example, `Authorize("{permission}")`.
 	* [**Scoped**, **Imperative**, or **Resource-based permissions:**](scope-based-permissions.md) Whether the permissions are checked depends upon the resource being accessed. Consider a document that has an author property. Only the author is allowed to update the document. Consequently, the document must be retrieved from the data store before the authorization evaluation can occur. 
      
-        ![Readmore](media/readmore.png){: width="25"} [Resource-based Authorization in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-3.1).
+        ![Readmore](media/readmore.png){: width="25"} [Resource-based Authorization in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-3.1)
 
 * **Role:** A collection of permissions that could be assigned to roles (in their turn, roles  are assigned to users). Rather than assigning individual permissions directly to each user, permissions are grouped into roles. You can define one or more roles on your site, and then grant permissions to each role.
 

@@ -1,6 +1,9 @@
 # Promotion Rules
 
 Promotion rules, or conditions, define the behavior and effects of your promotions. Similar to the [publish conditions](publish-conditions.md) that you use to customize the display of your content, promotion rules allow you to customize your campaign to target specific customers, match different catalog and cart conditions, and offer specific rewards.
+
+Catalog conditions are the equivalent of what other platforms call catalog price rules: they match products independently of what is in the cart. Cart conditions are the equivalent of cart price rules: they match on the contents or subtotal of the cart, and are where coupon-gated rewards apply.
+
 The following conditions can be configured:
 
 | Condition 	| Description                                 											| Options                                                                                        |
@@ -14,6 +17,8 @@ The following conditions can be configured:
     Select **yes** to apply the **Apply to all product variants** condition to all the product variations. By default, it is set to **no**, meaning that the condition applies only to the selected product variation:
 
     ![Product variations](media/product-variations-rule.png){: style="display: block; margin: 0 auto;" }
+
+Virto Commerce has no setting labeled "free shipping threshold." Build one from a Cart condition (**Cart subtotal is... at least $...**) combined with a **% off for shipping at ...** reward set to 100%.
 
 ## Example
 

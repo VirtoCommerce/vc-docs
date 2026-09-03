@@ -149,6 +149,12 @@ You have now made your first xAPI call.
 
 Some GraphQL queries and mutations require a signed-in user. See [Authentication](authentication.md) for how to obtain a token and pass it in your requests.
 
+## Rate limits and idempotency
+
+xAPI does not enforce rate limiting or request quotas by default. Because each deployment runs on its own Platform instance rather than a shared multi-tenant service, throttling inbound traffic is the deploying organization's responsibility, for example, at the load balancer or API gateway layer.
+
+xAPI does not support idempotency keys on mutations. If a client needs to guard against duplicate submissions, for example, a checkout retried after a timeout, implement deduplication on the client or in a custom extension.
+
 
 <br>
 <br>

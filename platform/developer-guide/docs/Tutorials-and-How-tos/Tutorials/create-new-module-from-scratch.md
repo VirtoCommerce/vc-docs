@@ -12,7 +12,7 @@ This guide explores how to create a new module from scratch using Visual Studio,
         * **DummyModule.Web**: ASP.NET Core Web Application (Empty template).
     1. Delete the auto-generated `Class1.cs` from all projects.
     1. In the **tests** folder, add a project:
-        * **DummyModule.Tests**: xUnit Test Project (.NET Core).
+        * **DummyModule.Tests**: xUnit Test Project (.NET Core). xUnit is the Platform's standard test framework; pair it with Moq to mock dependencies such as repositories and services.
 1. Set **Target framework** to **.NET 8.0** for all projects.
 1. Set project references and NuGet package references as outlined in the guide:
     1. **References to Projects:**

@@ -2,6 +2,8 @@
 
 In order to calculate taxes in Virto Commerce, register at least one `TaxProvider` implementation.
 
+Virto Commerce ships a Fixed Rate provider and a first-party Avalara AvaTax integration. There is no first-party TaxJar, Vertex, or Sovos provider, and no built-in EU VAT/VIES validation or India/Australia/Canada GST-HST-PST-QST calculation. Implement any of these as a `TaxProvider`, following the same pattern as the Avalara module.
+
 ## Define new tax provider
 
 To define a new tax provider, you need to:

@@ -37,7 +37,7 @@ Every AI surface that wants to sell a store's products used to need its own adap
 
 Agents connect to a single verified MCP endpoint. This UCP adapter delegates to existing Virto Commerce capabilities, with no data duplication and no parallel checkout.
 
-![How it fits your stack](media/how-it-fits-stack.png){: style="display: block; margin: 0 auto;" }
+![How it fits your stack](media/how-it-fits-stack.png){: style="display: block; margin: 0 auto;" width="700"}
 
 ## Supported ecommerce flow
 

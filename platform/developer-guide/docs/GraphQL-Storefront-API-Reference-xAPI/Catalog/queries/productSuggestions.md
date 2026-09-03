@@ -2,6 +2,8 @@
 
 This query provides product name suggestions based on partial user input. It is typically used for autocomplete functionality in search fields.
 
+Virto Commerce does not have a "did you mean" style spell-correction feature that suggests an alternate query string. The closest equivalent is [fuzzy search](../examples/fuzzy-search.md) on the `products` query, which matches products despite typos in the original query rather than proposing a corrected one.
+
 ## Arguments
 
 | Argument              | Description                                               |

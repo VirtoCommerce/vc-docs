@@ -33,7 +33,7 @@ With the toolbar, you can:
 
 * View the current quote status.
 * Reset changes in the quote.
-* Submit your proposals to potential buyers based on their quote.
+* Submit your proposals to potential buyers based on their quote. This request-then-counter-proposal cycle is Virto Commerce's quote negotiation flow: the buyer submits an RFQ, the seller edits line items and pricing and submits a proposal, and the buyer places an order to accept it.
 * Pause/resume the processing of a quote.
 * Cancel a quote with a comment.
 * Delete a quote.

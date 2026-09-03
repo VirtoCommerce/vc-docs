@@ -192,6 +192,14 @@ spec:
 
 Use Cloud Run for the **storefront API tier** (xCatalog, xCart) where requests are short and stateless. Run the **Admin Platform** on GKE or GCE where module installation, Hangfire jobs, and long-running operations can persist properly. Both tiers point at the same Cloud SQL, Memorystore, and search backend.
 
+## Health, autoscaling, and session affinity
+
+The examples above are minimal starting points. Configure health checks, autoscaling, and session affinity before going to production.
+
+* **Health checks**: Cloud Run supports container startup and liveness probes; on GKE, use the Kubernetes `readinessProbe`/`livenessProbe`. Point both at `/health`. See [Health checks](health-checks.md).
+* **Autoscaling**: Cloud Run scales on concurrent requests by default. GKE supports a `HorizontalPodAutoscaler` against CPU or memory. Virto Commerce does not publish reference thresholds; size them against your own workload.
+* **Session affinity**: If you run more than one instance of the tier that serves the Platform Manager UI, SignalR push notifications require sticky sessions, the same requirement documented for [Azure App Service](../../Fundamentals/Scalability/scaling-configuration-on-azure-cloud.md#session-affinity-sticky-sessions). On GKE behind an HTTP(S) Load Balancer, configure `sessionAffinity: GENERATED_COOKIE` on the `BackendConfig`. This guide already keeps the Admin Platform off Cloud Run, so this mainly applies to GKE.
+
 ## Configuration reference
 
 The Virto Commerce Platform reads configuration through standard ASP.NET Core conventions. Environment variables override the **appsettings.json** values using the `__` (double underscore) separator for nested keys.

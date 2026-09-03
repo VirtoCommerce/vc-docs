@@ -13,7 +13,7 @@ Virto Commerce supports both off-site and on-site payment method implementations
 
 This chart shows how the off-site payment method works:
 
-![Offside payment method](media/01-offsite-payment-method-chart.png){: style="display: block; margin: 0 auto;" width="700"}
+![Offside payment method](media/01-offsite-payment-method-chart.png){: style="display: block; margin: 0 auto;" width="500"}
 
 ## Define new payment method
 

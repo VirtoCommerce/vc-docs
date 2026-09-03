@@ -13,7 +13,7 @@ After [creating a price list](../pricing/creating-new-price-list.md), you can fi
 1. Drag and drop or browse your CSV file in the next blade. 
 
     !!! note
-        The **SKU**, **Min quantity**, **List price**, and **Sale price** fields are required. 
+        The **SKU**, **Min quantity**, **List price**, and **Sale price** fields are required. Importing multiple rows for the same SKU with different **Min quantity** values is how you set up tier (volume) pricing, also called quantity-break pricing, for that product.
 
     !!! note
         Use semicolon as a delimiter in your CSV file.

@@ -57,9 +57,13 @@ Virto Search is a search component that gives developers infrastructure, APIs, a
     * [Elastic Search](https://github.com/VirtoCommerce/vc-module-elastic-search): Version compatible with Elasticsearch 7.x.
     * [Azure Cognitive Search](https://github.com/VirtoCommerce/vc-module-azure-search): A fully managed cloud search service offered by Microsoft Azure that enables developers to build powerful search capabilities into applications without the need for managing infrastructure. 
     * [Algolia](https://github.com/VirtoCommerce/vc-module-algolia-search): A cloud-based search platform that provides developers with a set of APIs to easily implement fast and relevant search experiences in their applications. 
+    * [OpenSearch](https://github.com/VirtoCommerce/vc-module-open-search): Implements the same `ISearchProvider` interface against the OpenSearch engine, self-hosted or as Amazon OpenSearch Service.
 
     !!! note
         There should be at least one search engine installed.
+
+    !!! note
+        Typesense and Meilisearch are not among the ready-made integrations above. Implementing `ISearchProvider` against either is possible but not something Virto Commerce ships or maintains.
 
     !!! note
         You have two installation options for search providers:

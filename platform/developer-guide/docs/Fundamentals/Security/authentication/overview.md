@@ -12,6 +12,10 @@ The Virto Commerce Platform supports the following authentication methods:
 
 These options provide flexibility, catering to both standalone authentication setups and modern, federated identity solutions.
 
+Enterprise single sign-on is available through OpenID Connect only; SAML is not supported. To connect an identity provider that offers both protocols, for example, Okta or Azure AD, use its OIDC application type.
+
+The Platform exposes a `twoFactorEnabled` flag on `ApplicationUser`, returned as `twoFactorEnabled` on the xAPI `UserType`. There is no built-in TOTP, WebAuthn, or passkey enrollment flow; implement multi-factor authentication through your OIDC identity provider instead.
+
 
 <br>
 <br>

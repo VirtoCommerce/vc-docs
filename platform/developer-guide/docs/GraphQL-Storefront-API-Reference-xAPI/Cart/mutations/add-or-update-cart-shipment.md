@@ -5,6 +5,8 @@ This mutation:
 * Adds or updates cart shipping methods. 
 * Supports partial update, with all fields in `command.shipment` and `command.shipment.deliveryAddress` being optional.
 
+`InputShipmentType` carries a fulfillment center reference, which is what makes split shipments, fulfilling one cart from more than one fulfillment center, possible at the data-model level.
+
 ## Arguments
 
 The `InputAddOrUpdateCartShipmentType` represents the input object type used for adding or updating a shipment for a cart. 

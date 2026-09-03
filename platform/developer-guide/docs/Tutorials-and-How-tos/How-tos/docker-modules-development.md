@@ -10,7 +10,7 @@ The Virto Commerce team has developed a [docker-compose.yml](https://github.com/
 
 The VC Platform Manager web app has been containerized into multiple services, including the web service (Platform Manager) and external services for MS SQL Server, Elastic Search, and Redis. These services are orchestrated as a multi-container application using Docker Compose.
 
-![Developing inside a Container](media/developing-inside-container.png){: style="display: block; margin: 0 auto;" }
+![Developing inside a Container](media/developing-inside-container.png){: style="display: block; margin: 0 auto;" width="850"}}
 
 !!! note
     The solution does not include the Frontend Application components.

@@ -2413,6 +2413,8 @@ This node configures security-related HTTP headers in the Virto Commerce Platfor
 | FrameOptions   | "Deny"                  | Specifies the `X-Frame-Options` header configuration. Allowed values are `Deny` (default), `SameOrigin`, or a custom URI.|
 | FrameAncestors | "None"                  | Configures the `FrameAncestors` directive within the `Content-Security-Policy` header. Allowed values are `None` (default), `Self`, or a custom URI. |
 
+`FrameOptions` and `FrameAncestors` are the only configurable security headers. Other `Content-Security-Policy` directives, for example, `script-src`, `default-src`, or `connect-src`, are not exposed here; set them at the reverse proxy or CDN if you need them.
+
 **Example**
 
 ```json title="appsettings.json"

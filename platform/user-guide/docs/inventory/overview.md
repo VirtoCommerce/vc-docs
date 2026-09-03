@@ -2,6 +2,8 @@
 
 The **Inventory** module enables tracking the stock level and managing fulfillment centers.
 
+This is not a WMS (Warehouse Management System): it tracks a stock quantity per fulfillment center, not bin locations, putaway, pick lists, wave picking, or cycle counts. For those, integrate a dedicated WMS against the fulfillment center as the shared location reference.
+
 In the ecommerce sector, day-to-day inventory management helps increase business intelligence and visibility. eCommerce business owners have better ongoing control when they constantly keep an eye on their inventory.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-inventory)
