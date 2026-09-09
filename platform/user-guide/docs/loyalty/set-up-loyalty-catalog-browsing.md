@@ -26,7 +26,7 @@ To set up loyalty catalog browsing:
 
 1. [Enable loyalty and set the mode.](#enable-loyalty-and-set-mode)
 1. [Create a points price list and price your products.](#create-points-price-list-and-price-your-products)
-1. [Create loyalty programs.](create-loyalty-program.md)
+1. [Create loyalty programs.](enable-and-configure-loyalty-programs.md)
 
 ### Enable loyalty and set mode
 
@@ -84,6 +84,6 @@ Your points price list has been created.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../enable-and-configure-loyalty-programs">← Enabling and configuring loyalty programs</a>
-    <a href="../configuring-loyalty-points-per-product">Configuring loyalty points per product →</a>
+    <a href="../configuring-loyalty-points-per-product">← Configuring loyalty points per product</a>
+    <a href="../loyalty-points-history">Loyalty points history →</a>
 </div>

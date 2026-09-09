@@ -27,6 +27,6 @@ Try our interactive demo to explore key scenario:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../back-in-stock-list">← Back-in-stock list</a>
+    <a href="../missions">← Missions and challenges</a>
     <a href="../notifications">Notifications →</a>
 </div>

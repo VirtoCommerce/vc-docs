@@ -1,33 +1,9 @@
-# Enable and Create Loyalty Programs
+# Create Loyalty Programs
 
-To start using loyalty features:
+To start using loyalty features, create one or both program types:
 
-1. [Enable loyalty on the store.](#enable-loyalty-on-the-store)
-1. Create one or both program types:
-
-    * [Order loyalty.](#create-order-loyalty-program)
-    * [Product points loyalty.](#create-product-points-loyalty-program)
-
-## Enable loyalty on the store
-
-Enable loyalty in the store settings:
-
-1. In the main menu, click **Stores**.
-1. Select your store.
-1. In the next blade, click the **Settings** widget.
-1. Turn the **Loyalty enabled** option to on, then click **OK**.
-1. Click **Save** in the toolbar.
-
-![Loyalty enabled](media/loyalty-enabled.png){: style="display: block; margin: 0 auto;" }
-
-To let customers pay with points, activate the loyalty payment method:
-
-1. In the store settings blade, click the **Payment methods** widget.
-1. Select **Loyalty payment method**.
-1. Turn the **Is active** option to on.
-1. Click **Save** in the toolbar.
-
-![Payment activated](media/loyalty-activated.png){: style="display: block; margin: 0 auto;" width="800"}
+* [Order loyalty.](#create-order-loyalty-program)
+* [Product points loyalty.](#create-product-points-loyalty-program)
 
 ## Create order loyalty program
 
@@ -93,6 +69,6 @@ Now, you can set the per-product multiply factors that determine how many points
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../overview">← Loyalty module overview</a>
-    <a href="../set-up-loyalty-catalog-browsing">Set up loyalty catalog browsing →</a>
+    <a href="../enable-loyalty">← Enabling loyalty features</a>
+    <a href="../configuring-loyalty-points-per-product">Configuring loyalty points per product →</a>
 </div>

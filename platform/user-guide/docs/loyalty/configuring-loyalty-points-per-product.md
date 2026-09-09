@@ -58,6 +58,6 @@ The factor used at runtime depends on which program matches the customer's group
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../set-up-loyalty-catalog-browsing">← Setting up loyalty catalog browsing</a>
-    <a href="../loyalty-points-history">Loyalty points history →</a>
+    <a href="../enable-and-configure-loyalty-programs">← Creating loyalty programs</a>
+    <a href="../set-up-loyalty-catalog-browsing">Setting up loyalty catalog browsing →</a>
 </div>

@@ -1,6 +1,11 @@
 # Overview
 
-The **Loyalty** module provides a flexible loyalty program management system for the Virto Commerce Platform. It enables store managers to define loyalty programs, reward customers with points, track transactions, and allow customers to pay for their orders using loyalty points.
+The **Loyalty** module provides a flexible loyalty program and mission management system for the Virto Commerce Platform. It enables store managers to create loyalty programs, launch goal-based missions, reward customers with points, and track loyalty transactions. Customers can earn points through purchases and completed missions, view their available rewards, and use loyalty points to pay for eligible orders.
+
+The module includes two complementary loyalty mechanisms:
+
+* [Loyalty programs](enable-and-configure-loyalty-programs.md): Configurable programs that award points based on order conditions or purchases of specific products.
+* [Loyalty missions](managing-loyalty-missions.md): Goal-driven campaigns that automatically award a predefined number of points when customers achieve a specific target, such as reaching an order value, placing a certain number of orders, or purchasing specific SKUs.
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-loyalty)
 
@@ -8,26 +13,40 @@ The **Loyalty** module provides a flexible loyalty program management system for
 
 ## Key features
 
-The diagram below illustrates the payment options within the Virto Commerce Platform:
+The Loyalty module provides the following capabilities:
+
+* **Manage loyalty programs**: Create and configure two program types:
+
+    * **Order Loyalty** rewards customers based on order conditions.
+    * **Product Points Loyalty** rewards customers for purchasing specific products.
+
+  Both program types support conditions, reward rules (fixed points or a percentage of the order value), priorities, activation periods, and localized names.
+
+* **Manage loyalty missions**: Create goal-based campaigns that monitor customer orders and automatically award points when customers complete a defined goal.
+
+* **Reward specific products**: Assign per-product multiplier factors and vary them by customer group. For example, VIP or LUX customers can earn points at different rates for the same product.
+
+* **Show earnable points**: Display the number of loyalty points a customer can earn for a product while browsing the catalog.
+
+* **Offer a loyalty catalog**: Provide a dedicated catalog where products are priced in loyalty points instead of the store's standard currency.
+
+* **Track loyalty transactions**: Record point accruals and redemptions and monitor customer activity, including changes to loyalty balances.
+
+* **Enable loyalty payments**: Use the built-in **LoyaltyPaymentMethod** to allow customers to pay for orders with loyalty points.
+
+    * Customers can use points only when their balance fully covers the order amount.
+    * The conversion rate is **1 point = 1 unit of order currency**.
+
+
+The diagram below illustrates the key functionalities of the Virto Commerce Loyalty module:
 
 ![Payment options](media/key-entities.png)
-
-With the Loyalty module, users can:
-
-* **Manage programs**: Create and configure two program types. **Order Loyalty** rewards customers based on order conditions, and **Product Points Loyalty** rewards them with points for purchasing specific products. Both support conditions, reward rules (fixed points or % of order value), priorities, activation periods, and localized names.
-* **Reward specific products**: Assign per-product multiply factors and vary them by customer group, so different tiers, for example VIP or LUX, earn points at different rates.
-* **Show earnable points**: Display how many points a customer can earn for a product while browsing the catalog.
-* **Offer a loyalty catalog**: Present a dedicated catalog where products are priced in loyalty points instead of the store's standard currency.
-* **Track transactions**: Log point accruals and redemptions, and monitor customer activity and balance changes.
-* **Enable loyalty payments**: Use the built-in **LoyaltyPaymentMethod** to let customers pay with points at checkout.
-    * Points can only be used if the balance fully covers the order amount.
-    * Conversion rate: **1 point = 1 unit of order currency**.
 
 <br>
 <br>
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../intent-search/overview">← Intent Search module overview</a>
-    <a href="../enable-and-configure-loyalty-programs">Enabling and configuring loyalty programs →</a>
+    <a href="../../generic-export/overview">← Generic Export module overview</a>
+    <a href="../enable-loyalty">Enabling loyalty features →</a>
 </div>

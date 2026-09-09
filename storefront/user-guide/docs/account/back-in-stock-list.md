@@ -15,5 +15,5 @@ Once the product is back in stock, users can add it to their cart from the list:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../saved-for-later">← Saved for later</a>
-    <a href="../coupons">Coupons and promotions →</a>
+    <a href="../missions">Missions and challenges →</a>
 </div>

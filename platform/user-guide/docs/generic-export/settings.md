@@ -20,5 +20,5 @@ Your modifications have been applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../advanced-filtering">← Advanced filtering</a>
-    <a href="../../intent-search/overview">Intent Search module overview→</a>
+    <a href="../../loyalty/overview">Loyalty module overview→</a>
 </div>

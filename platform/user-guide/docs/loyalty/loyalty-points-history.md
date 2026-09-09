@@ -20,6 +20,6 @@ The user's loyalty points history is now displayed.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../configuring-loyalty-points-per-product">← Configuring loyalty points per product</a>
-    <a href="../../news/overview">News module overview →</a>
+    <a href="../set-up-loyalty-catalog-browsing">← Setting up loyalty catalog browsing</a>
+    <a href="../managing-loyalty-missions">Managing loyalty missions →</a>
 </div>
