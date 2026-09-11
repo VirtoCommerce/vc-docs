@@ -10,6 +10,10 @@ To upload a document:
 
     ![Documents library](media/documents-library.png){: style="display: block; margin: 0 auto;" width="600"}
 
+    On the Frontend, uploaded files appear on the dashboard and are organized by category:
+
+    ![Frontend view](media/files-categories-frontend.png){: style="display: block; margin: 0 auto;" }
+
 1. Click **Upload** in the toolbar.
 
 The document is now available to advanced sales representatives on the Frontend.

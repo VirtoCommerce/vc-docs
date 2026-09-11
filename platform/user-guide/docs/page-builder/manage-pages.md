@@ -3,7 +3,7 @@
 Managing pages through the Content module includes:
 
 * [Creating new pages.](#create-new-page)
-* [Adding content to pages.](#add-content-to-page)
+* [Adding content to pages.](configure-content-block.md)
 * [Publishing and unpublishing pages.](#publish-or-unpublish-pages)
 
 ## Create new page
@@ -55,119 +55,6 @@ To create a new page in HTML or Markdown:
     <div> <script async src="https://js.storylane.io/js/v2/storylane.js"></script> <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)"> <iframe loading="lazy" class="sl-demo" src="https://virtocommerce.storylane.io/demo/cgsl3bn1htcy?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe> </div> </div>
 
 Now, you can [publish your page](#publish-or-unpublish-pages).
-
-## Add content to page
-
-To add content to your page:
-
-1. Select your page from the list.
-1. In the next blade, click **Design** to open your page in Page Builder.
-1. In Page Builder, click **Add block** in the left menu to open the block library. The available blocks are as follows:
-
-
-    <div class="grid cards" markdown>
-
-    -   __Call to action:__
-
-        ---
-
-        ![Inline mode](media/call-to-action-sample.png)
-
-    -   __Call to action with image:__
-
-        ---
-
-        ![Popup mode](media/call-to-action-with-image.png)
-
-    -   __Category:__
-
-        ---
-
-        ![Custom categories](media/custom-categories.png)
-
-    -   __Favorite products:__
-
-        ---
-
-        ![Favorite products](media/favorite-products.png)
-
-    -   __Features:__
-
-        ---
-
-        ![Features](media/features.png)
-
-    -   __Image:__
-
-        ---
-
-        ![Image](media/image.png)
-
-    -   __Login:__
-
-        ---
-
-        ![Login](media/Login.png)
-
-    -   __Predefined products:__
-
-        ---
-
-        ![Predefined products](media/predefined-products.png)
-
-    -   __Products:__
-
-        ---
-
-        ![Products](media/products.png)
-
-    -   __Products carousel:__
-
-        ---
-
-        ![Products carousel](media/products-carousel.png)
-
-    -   __Slider:__
-
-        ---
-
-        ![Slider](media/slider.png)
-
-    -   __Subscribe form:__
-
-        ---
-
-        ![Subscribe form](media/subscribe-form.png)
-
-    -   __Text:__
-
-        ---
-
-        ![Text](media/text.png)
-
-    -   __Title:__
-
-        ---
-
-        ![Subtitle](media/title.png)
-
-    </div>
-
-    !!! note 
-    
-        To add products to the **Predefined products** or **Products carousel** blocks, enter the products' SKUs:
-
-        ![Predefined products](media/predefined-products.gif){: style="display: block; margin: 0 auto;" }
-    
-1. Click the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
-
-    ![Call to action](media/call-to-action.png){: style="display: block; margin: 0 auto;" }
-
-1. Click **Save** to save the changes.
-
-The added content is saved. Continue adding content until your page is ready for publishing. 
-
-
 
 ## Publish or unpublish pages
 

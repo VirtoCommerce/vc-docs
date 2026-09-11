@@ -29,6 +29,8 @@ Select the tab with the required provider setup information:
         },
         ```
 
+    ![Readmore](media/readmore.png){: width="20"} [Configure Microsoft Entra-only authentication for Azure SQL](azure-sql-entra-only-authentication.md)
+
 === "MySql"
 
     **Supported version**: MySql Server 5.7 or higher.
@@ -92,5 +94,5 @@ Select the tab with the required provider setup information:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← DB agnostic architecture overview</a>
-    <a href="../creating-custom-module">Creating custom module →</a>
+    <a href="../azure-sql-entra-only-authentication">Configuring Microsoft Entra-only authentication for Azure SQL →</a>
 </div>

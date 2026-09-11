@@ -62,6 +62,6 @@ Try our interactive demo to explore the flow in action:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../manage-pages">← Managing pages via Page Builder office </a>
+    <a href="../configure-content-block">← Configuring content blocks in Designer </a>
     <a href="../settings">Settings →</a>
 </div>

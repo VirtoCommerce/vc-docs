@@ -35,6 +35,10 @@ These **required** settings represent connection strings for VC Platform and mod
     "VirtoCommerce": "Data Source=(local);Initial Catalog=VirtoCommerce3.net8;Persist Security Info=True;User ID=virto;Password=virto;Connect Timeout=30;TrustServerCertificate=True;"
 ```
 
+The example above authenticates with a **UserID** and **Password**. On Azure SQL, the connection string can instead point to a managed identity, with no password stored anywhere.
+
+![Readmore](media/readmore.png){: width="20"} [Configure Microsoft Entra-only authentication for Azure SQL](../Fundamentals/Persistence/DB-Agnostic/azure-sql-entra-only-authentication.md)
+
 ###  VirtoCommerce
 
 This configuration node defines the system settings of the VC Platform.

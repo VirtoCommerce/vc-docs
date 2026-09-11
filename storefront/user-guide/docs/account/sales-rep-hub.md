@@ -8,9 +8,18 @@ The **Dashboard** is the hub's landing page. It shows KPI cards summarizing the 
 
 ![Dashboard](../media/sales-rep-dashboard.png){: style="display: block; margin: 0 auto;" }
 
-The dashboard can be edited as follows:
+The dashboard can be edited by clicking **Edit layout** button:
 
-![Dashboard edition](../media/edit-dashboard.gif)
+* Stats widgets can be hidden or made visible again by dragging and dropping to the corresponding field.
+* The number of recent orders and top sellers displayed can be set.
+* The **Documents library** widget can be hidden and shown:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/qrchrtzewywg?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
 
 ## My customers
 
@@ -26,11 +35,11 @@ The customers can be edited as follows:
 
 The **Document library** page lists the sales materials that are available to the rep with advanced permissions, for example product images, brochures, and price sheets.
 
-The rep can browse and search the list, then open or download any accessible document. Supported file types are JPEG, PNG, ZIP, PDF, WEBP, XLS, TXT, and DOC:
+The rep can browse and search the list, then open or download any accessible document. The uploaded documents are organized into categories. Supported file types are JPEG, PNG, ZIP, PDF, WEBP, XLS, TXT, and DOC:
 
 ![Document library](../media/document-library.png)
 
-![Readmore](../media/readmore.png){: width="25"} [Uploading documents to the library](/platform/user-guide/latest/sales-rep/document-library)
+![Readmore](../media/readmore.png){: width="20"} [Uploading documents to the library](/platform/user-guide/latest/sales-rep/document-library)
 
 
 <br>

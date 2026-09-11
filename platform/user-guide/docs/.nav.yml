@@ -118,6 +118,7 @@ nav:
                       - Overview: page-builder/overview.md
                       - Managing Pages via Content Module: page-builder/manage-pages.md
                       - Managing Pages via Page Builder Office: page-builder/manage-pages-via-office.md
+                      - Configure Content Blocks in Designer: page-builder/configure-content-block.md
                       - Preview as User: page-builder/preview-as-user.md
                       - Settings: page-builder/settings.md
                 - Pages:

@@ -7,6 +7,12 @@ For developer vocabulary, such as DDD patterns, .NET interfaces, or extensibilit
 ## Admin UI
 Same as **Platform** and **Back office**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 
+## Applications menu
+
+The back-office navigation menu that provides access to the applications installed on the Virto Commerce Platform:
+
+![App menu](media/app-menu.gif){: style="display: block; margin: 0 auto;" }
+
 ## Approval workflow
 A multi-step process where a cart requires authorization before becoming a confirmed order. In Virto Commerce, the approval-bearing object is the [Quote](#quote), not the cart itself. A buyer, or a sales rep using [Login on behalf](security/login-on-behalf.md), converts the cart into a [Quote Request](/storefront/user-guide/latest/shopping/submit-quotes/) and submits it. The Quote then moves through **Processing**, **Proposal sent**, and finally **Ordered** or **Declined**.
 

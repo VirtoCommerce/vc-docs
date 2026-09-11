@@ -5,7 +5,7 @@ Managing pages via Page Builder Office includes:
 * [Creating new pages.](#create-new-page)
 * [Publishing and unpublishing pages.](#publish-or-unpublish-pages)
 * [Archiving pages.](#archive-page)
-* [Adding content to pages.](#add-content-to-page)
+* [Adding content to pages.](configure-content-block.md)
 * [Exporting pages.](#export-page)
 * [Importing pages.](#import-page)
 * [Cloning pages.](#clone-page)
@@ -105,111 +105,6 @@ To clone a page:
 
 The cloning has been completed successfully.
 
-## Add content to page
-
-To add content to your page:
-
-1. Select your page from the list.
-1. In the next blade, click **Open designer** to open your page in Page Builder.
-1. In Page Builder, click **Add block** in the left menu to open the block library. The available blocks are as follows:
-
-    <div class="grid cards" markdown>
-
-    -   __Call to action:__
-
-        ---
-
-        ![Inline mode](media/call-to-action-sample.png)
-
-    -   __Call to action with image:__
-
-        ---
-
-        ![Popup mode](media/call-to-action-with-image.png)
-
-    -   __Category:__
-
-        ---
-
-        ![Custom categories](media/custom-categories.png)
-
-    -   __Favorite products:__
-
-        ---
-
-        ![Favorite products](media/favorite-products.png)
-
-    -   __Features:__
-
-        ---
-
-        ![Features](media/features.png)
-
-    -   __Image:__
-
-        ---
-
-        ![Image](media/image.png)
-
-    -   __Login:__
-
-        ---
-
-        ![Login](media/Login.png)
-
-    -   __Predefined products:__
-
-        ---
-
-        ![Predefined products](media/predefined-products.png)
-
-    -   __Products:__
-
-        ---
-
-        ![Products](media/products.png)
-
-    -   __Products carousel:__
-
-        ---
-
-        ![Products carousel](media/products-carousel.png)
-
-    -   __Slider:__
-
-        ---
-
-        ![Slider](media/slider.png)
-
-    -   __Subscribe form:__
-
-        ---
-
-        ![Subscribe form](media/subscribe-form.png)
-
-    -   __Text:__
-
-        ---
-
-        ![Text](media/text.png)
-
-    -   __Title:__
-
-        ---
-
-        ![Subtitle](media/title.png)
-
-    </div>
-
-
-1. Click the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
-
-    ![Call to action](media/call-to-action.png){: style="display: block; margin: 0 auto;" }
-
-1. Click **Save** to save the changes.
-
-The added content is saved. Continue adding content until your page is ready for publishing.
-
 ## Customize pages for specific users
 
 Users can customize pages for different organizations so that each organization’s users see only the content intended specifically for them.
@@ -256,5 +151,5 @@ Back in Page Builder Office, you will see the name of the page(s) where the imag
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../manage-pages">← Managing pages via Content module </a>
-    <a href="../preview-as-user">Preview as user →</a>
+    <a href="../configure-content-block">Configure content blocks in Designer →</a>
 </div>

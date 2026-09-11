@@ -66,6 +66,6 @@ The template key features  are:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../configuring-vc-with-db-providers">← Configure VC with DB Providers</a>
+    <a href="../azure-sql-entra-only-authentication">← Configuring Microsoft Entra-only authentication for Azure SQL</a>
     <a href="../transforming-custom-module">Transforming custom modules →</a>
 </div>

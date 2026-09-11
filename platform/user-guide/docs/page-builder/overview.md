@@ -2,7 +2,9 @@
 
 The **Page Builder** module allows you to create ecommerce pages from blocks and edit them using a visual editor. Unlike the Content module, which only supports creating and editing pages using Markdown and HTML, the Page Builder module provides a more intuitive, visual approach. However, it is required to have the [Content module](../content/overview.md#installation) installed first, as the Page Builder module is accessed through the Content module interface. 
 
-[Contact us to install Page Builder](https://virtocommerce.com/contact-us)
+[![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-pagebuilder)
+
+[![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-pagebuilder/releases)
 
 ![Readmore](media/readmore.png){: width="25"} [Page Builder setup](/platform/developer-guide/latest/Extensibility/cms-integrations/PageBuilder/overview)
 

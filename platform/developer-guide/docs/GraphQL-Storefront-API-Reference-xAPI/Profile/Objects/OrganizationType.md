@@ -24,7 +24,8 @@ This type contains various fields providing information about the organization.
 | `BusinessCategory`  ==String==                                                                      	| The business category of the organization.            	|
 | `ownerId`  ==String==                                                                             	| The ID of the owner of the organization.               	|
 | `parentId`  ==String==                                                                             	| The ID of the parent organization, if applicable.      	|
-| `contacts(...)` [ ==ContactConnection== ](ContactConnection.md)                                      	| A connection to a list of contacts associated with the organization.	|
+| `contacts(...)` [ ==ContactConnection== ](ContactConnection.md)                                      	| A connection to a list of contacts associated with the organization. Supports filtering by role and status so only members holding an allowed role or status are returned.	|
+| `contactRoles(...)` [ ==[RoleType]== ](RoleType.md)                                                   | The distinct set of roles held by at least one member of the organization. Includes membership, organization, and global roles. Populates the role filter facet on the company members list.	|
 
 <br>
 <br>
