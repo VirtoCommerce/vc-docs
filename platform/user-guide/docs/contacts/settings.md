@@ -71,17 +71,7 @@ To edit store-specific statuses:
 
 ## Roles
 
-To assign a role to organization:
-
-1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Customer** to find the settings related to the module.
-1. Select **Roles**.
-
-
-A whitelist under **Settings → Customer → Roles** controls which roles can be assigned to organizations and to memberships. 
-
-
-For the full procedure, see [Manage organization-scoped roles](managing-organization-roles.md#restrict-roles-assignment).
+For assigning roles and limiting roles lists, see [Manage organization-scoped roles](managing-organization-roles.md).
 
 
 <br>

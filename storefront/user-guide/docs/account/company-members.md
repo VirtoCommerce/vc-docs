@@ -101,6 +101,11 @@ The role has been successfully modified.
 !!! info
     A role change takes effect the next time the member signs in.
 
+<br>
+<br>
+
+![Readmore](../media/readmore.png){: width="20"} [Managing organization-level roles](/platform/user-guide/latest/contacts/managing-organization-roles/)
+
 ### Block, unblock, delete company members
 
 To block, unblock, or delete a company member from the list:
