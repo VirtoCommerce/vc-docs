@@ -11,8 +11,6 @@ To manage the Skyflow payment method:
 
 1. In the **Payment methods** blade, select **SkyFlow**.
 
-    ![Edit payment method](media/configure-backoffice-1.png){: style="display: block; margin: 0 auto;" }
-
 1. In the **Edit payment method** blade, configure the following fields:
 
     ![Edit payment method 2](media/configure-backoffice-2.png){: style="display: block; margin: 0 auto;" }

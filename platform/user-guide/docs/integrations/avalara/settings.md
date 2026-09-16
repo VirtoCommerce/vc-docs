@@ -6,11 +6,11 @@
 1. Click **Avalara Tax Provider**. Make sure the **Is active** option is checked.
 1. In the **Edit tax provider** blade, click **Settings**.
 
-    ![path](../media/avalara-path.png)
+    ![path](../media/avalara-path.png){: style="display: block; margin: 0 auto;" }
 
 1. Fill in the following fields:
 
-    ![Settings](../media/avalara-settings.png){: width="700"}
+    ![Settings](../media/avalara-settings.png){: style="display: block; margin: 0 auto;" width="700"}
 
 1. Click **OK** to save the changes.
 

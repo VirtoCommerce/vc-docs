@@ -6,7 +6,7 @@ To configure the Task module global settings:
 1. In the new blade, type **Task management** to find the settings related to the module.
 1. In the next blade, configure the following:
 
-    ![Settings](media/settings.png)
+    ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

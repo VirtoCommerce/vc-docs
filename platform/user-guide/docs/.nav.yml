@@ -186,7 +186,6 @@ nav:
                 - Managing Personal Data: gdpr/manage-personal-data.md
           - Generic Export:
                 - Overview: generic-export/overview.md
-                - Assigning Permissions: generic-export/assigning-permissions.md
                 - Data Export: generic-export/exporting-data.md
                 - Advanced Filtering: generic-export/advanced-filtering.md
                 - Settings: generic-export/settings.md
@@ -382,6 +381,7 @@ nav:
           - Google Analytics 4:
                 - Overview: integrations/google-analytics/overview.md
                 - Using Google Analytics 4: integrations/google-analytics/integration.md
+                - Settings: integrations/google-analytics/settings.md
           - Hotjar:
                 - Overview: integrations/hotjar/overview.md
                 - Getting Started: integrations/hotjar/getting-started.md

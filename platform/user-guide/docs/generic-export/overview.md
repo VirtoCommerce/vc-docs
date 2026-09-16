@@ -26,5 +26,5 @@ With the Generic Export Module, you can:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../gdpr/overview">← GDPR module overview</a>
-    <a href="../assigning-permissions">Assigning permissions →</a>
+    <a href="../exporting-data">Data export →</a>
 </div>

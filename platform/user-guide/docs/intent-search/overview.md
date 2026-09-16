@@ -3,7 +3,7 @@
 Virto Commerce **Intent Search** is an advanced AI-powered search intent classification and product categorization module that intelligently analyzes search queries and classifies products for ecommerce platforms. Built with enterprise-grade multi-tenancy, performance monitoring, and flexible configuration capabilities, it transforms how your platform understands customer search intent and categorizes products:
 <br>
 <br>
-![Flow](media/flow.png){: style="display: block; margin: 0 auto;" }
+![Flow](media/flow.png){: style="display: block; margin: 0 auto;" width="650"}
 <br>
 <br>
 As a result, the shopper sees more accurate and highly relevant products on the Frontend:

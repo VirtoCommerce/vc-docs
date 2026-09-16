@@ -14,9 +14,6 @@ To start exporting:
 1. In the next blade, check the price list to export.
 1. In the next blade, click the **Prices** widget.
 
-![Export pricelists](media/export-pricelists.png){: style="display: block; margin: 0 auto;" }
-
-
 ## Export all prices from price list
 
 To export all prices from a price list:

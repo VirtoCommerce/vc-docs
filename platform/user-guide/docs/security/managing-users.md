@@ -20,7 +20,7 @@ To create new users and assign roles to them:
 
 1. Fill in the fields. Each user must have at least one role assigned.
 
-	![New user](media/new-account-screen.png){: style="display: block; margin: 0 auto;" }
+	![New user](media/new-account-screen.png){: style="display: block; margin: 0 auto;" width="700"}
 
 1. Click **Create** to save the changes.
 

@@ -11,8 +11,6 @@ To manage Authorize.net payment method:
 
 1. In the **Payment methods** blade, select **Authorize.net**.
 
-    ![Edit payment method](media/configure-backoffice-1.png)
-
 1. In the **Edit payment method** blade, configure the following fields:
 
     ![Edit payment method 2](media/configure-backoffice-2.png)
