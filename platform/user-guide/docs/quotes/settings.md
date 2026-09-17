@@ -13,7 +13,7 @@ To configure the module settings globally:
 1. In the search field of the next blade, type **Quotes** to find the settings related to the module.
 1. In the next blade, configure the following:
 
-    ![Global settings](media/global-settings.png)
+    ![Global settings](media/global-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 
@@ -32,7 +32,7 @@ To configure the store-specific module settings:
 1. Type **Quotes** in the search bar and select the **General** from the list.
 1. In the next blade, configure the following:
 
-    ![Store-specific settings](media/store-specific-settings.png)
+    ![Store-specific settings](media/store-specific-settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **OK**, then **Save** in the toolbar to save the changes.
 

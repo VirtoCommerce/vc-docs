@@ -1,4 +1,4 @@
-# Use Tasks Module
+# Use Tasks Application
 
 To start using the Tasks module, click **Tasks** in the main menu.
 

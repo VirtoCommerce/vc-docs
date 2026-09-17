@@ -8,10 +8,6 @@ Managing dynamic content items includes:
 
 ## Create content items
 
-The first step of bringing marketing content online is creating content items:
-
-![step1](media/step1.png){: style="display: block; margin: 0 auto;" }
-
 To create a dynamic content item:
 
 1. Click **Marketing** in the main menu.

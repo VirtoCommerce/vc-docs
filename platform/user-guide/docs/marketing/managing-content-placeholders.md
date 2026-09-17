@@ -8,10 +8,6 @@ Managing content placeholders includes:
 
 ## Create placeholder
 
-The second step of bringing marketing content online is creating placeholders:
-
-![step1](media/step2.png)
-
 To create a placeholder:
 
 1. Click **Marketing** in the main menu.
@@ -24,7 +20,7 @@ To create a placeholder:
 
 1. Fill in the following fields:
 
-	![fields](media/new-placeholder-fields.png){: width="300"}
+	![fields](media/new-placeholder-fields.png){: style="display: block; margin: 0 auto;" : width="300"}
 
 1. Click **Create** to save the changes.
 

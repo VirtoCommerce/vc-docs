@@ -22,16 +22,12 @@ Dynamic Content consists of four independent components:
 | Content Type        	| Offers a template to define the dynamic content type, that is, how a particular content type is displayed and what is required to display it. 	|
 | Content Placeholder 	| Represents a designated area in a template where dynamic content can be inserted.                                             | 
 
-The process of bringing marketing content online looks as follows:
+The process of bringing marketing content online includes:
 
-![steps](media/steps.png)
-
-Managing dynamic content includes:
-
-* [Managing content items](managing-content-items.md) to create your marketing banners, sliders, etc.
-* [Managing content placeholders](managing-content-placeholders.md) to set content items locations on your website.
-* [Managing content publishing](managing-published-content.md) to configure published content so that your banners or sliders could go online.
-* [Adding advertising spots](advertising-spot.md) to publish your content and make it visible for your customers.
+1. [Managing content items](managing-content-items.md) to create your marketing banners, sliders, etc.
+1. [Managing content placeholders](managing-content-placeholders.md) to set content items locations on your website.
+1. [Managing content publishing](managing-published-content.md) to configure published content so that your banners or sliders could go online.
+1. [Adding advertising spots](advertising-spot.md) to publish your content and make it visible for your customers.
 
 <br>
 <br>
@@ -41,5 +37,3 @@ Managing dynamic content includes:
     <a href="../settings">← Marketing module settings</a>
     <a href="../managing-content-items">Managing content items →</a>
 </div>
-
-

@@ -2,10 +2,6 @@
 
 The published content management feature determines the conditions under which your content is published or displayed on your website or online store.
 
-This is the third step of bringing marketing content online:
-
-![step1](media/step3.png){: style="display: block; margin: 0 auto;" }
-
 ## Add published content
 
 To add a published content item:
