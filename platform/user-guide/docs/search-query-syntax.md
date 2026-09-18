@@ -2,6 +2,10 @@
 
 Virto Commerce supports advanced search capabilities using a flexible query syntax. This guide provides an overview of supported operators, field-based queries, and complex examples to help you craft powerful search expressions for product discovery, catalog filtering, inventory lookup, and more.
 
+!!! note
+    The usable field names depend on the entity being searched. This page focuses on **catalog** search (products, variations, inventory). 
+    For example, the [Push Messages recipients query](push-messages/manage-push-messages.md#recipients-query) targets the **customer (member)** index and exposes a different field set.
+
 
 ## Basic logical operators
 
@@ -46,6 +50,16 @@ Use fielded search to target specific product or inventory attributes.
 | Product identification | Searches for a product by its unique identifiers                                | gtin:1234567890123  <br> sku:ABC-123-XYZ <br> code:PROD-001 <br> itemLineNOM:LINE-99       |
 | Product attributes     | Filters products based on descriptive attributes like name, brand, etc.         | name:iPhone <br> brand:Apple <br> category:Electronics <br> description:smartphone <br> price:999 <br> color:black  <br> size:large  |
 | Inventory fields       | Filters products by inventory-related data such as stock status or quantity     | instock:true <br> quantity:50 <br> warehouse:WH001 <br> availability:available    |
+
+
+## Wildcard searches
+
+A wildcard (`*`) value must be passed as a single quoted value.
+
+| Pattern            | Description                                     | Examples                                              |
+|---------------------|--------------------------------------------------|--------------------------------------------------------|
+| Quoted wildcard     | Works — matches values containing the pattern    | `name:"*phone*"` <br> `sku:"ABC*"`                     |
+| Unquoted wildcard   | Returns no results                                | `name:*phone*` <br> `sku:ABC*`                          |
 
 
 ## Complex real-world scenarios

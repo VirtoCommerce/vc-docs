@@ -30,7 +30,7 @@ To create a new push message:
 1. Click ![Plus](media/plus.png){: width="20"} in the toolbar.
 1. In the next **New push message** blade:
     * Type the message.
-    * Select its recipients from the dropdown list, type their names, or define them dynamically using a [search query expression](../search-query-syntax.md).
+    * Select its recipients from the dropdown list, type their names, or define them dynamically using a [recipients query](#recipients-query).
     * Enable the **Track new recipients** switch to periodically check for new users matching the specified recipient list or query. Such messages are stored in the **Track new recipients** item of the left menu.
     * Specify the topic. 
     * If necessary, schedule the date and time to send the message to the recipients. The scheduled messages are stored in the **Scheduled messages** item of the left menu.
@@ -42,6 +42,75 @@ To create a new push message:
 Your message has been sent to the selected recipients:
 
 ![Message sent](media/sent-message.png)
+
+### Recipients query
+
+When you define recipients dynamically, the query runs against the **customer (member) search index**, not against user accounts.
+
+Follow the following syntax rules when querying recipients:
+
+* Plain words trigger a free-text search, for example `Smith`.
+* `field:value` searches a specific field.
+* For **OR**, separate values with a comma. For example: `field:v1,v2.
+* A wildcard value must be a single value in quotes: 
+    
+    * `emails:"*@example.com"` works.
+    * `emails:*@example.com` returns nothing.
+
+* `AND`, `OR`, and parentheses combine and group conditions.
+* `!` negates a condition.
+* Date ranges are queried as follows: `createddate:[2026-01-01 TO]`.
+* Field names are case-insensitive.
+
+For the general query syntax and more examples, see [Search query syntax and examples](../search-query-syntax.md).
+
+The query can target the following fields from the member index schema: 
+
+* `MemberType`
+* `Name`
+* `FullName`
+* `FirstName`
+* `LastName`
+* `Emails`
+* `Phones`
+* `Login`
+* `Role`
+* `RoleId`
+* `Groups`
+* `ParentOrganizations`
+* `AssociatedOrganizations`
+* `Status`
+* `BusinessCategory`
+* `CreatedDate`
+* `ModifiedDate`
+* Any dynamic (custom) property.
+
+A property name that contains spaces must be quoted, for example `"Default shipping address":text22`.
+
+!!! note
+    Address fields are indexed as free-text content only. They cannot be used as `field:value` — only as part of a plain-word search.
+
+#### Example queries
+
+| Query | Description |
+|---|---|
+| `MemberType:Contact` | All users (there is no `*:*` syntax) |
+| `name:"John Doe"` | Exact name (or `firstname:John AND lastname:Doe`) |
+| `emails:john@example.com` | Specific email |
+| `emails:"*@example.com"` | Email domain (quotes required, single value) |
+| `role:"Sales manager"` | Specific role (or `roleid:<role id>`) |
+| — | Security permission — not supported, permissions are not indexed; query the role that grants the permission instead |
+| `occupation:Engineer` | Property value |
+| `parentorganizations:<orgId1>,<orgId2>` | Users of companies |
+| `groups:"VIP"` | Customer group |
+| `createddate:[2026-01-01 TO]` | Created since |
+
+
+!!! info
+
+    * Recipients resolve to the user accounts of matched customers. A contact without a login does not receive the push message.
+    * Matching happens against the search index, so a newly created or recently changed customer becomes eligible as a recipient only after it has been indexed.
+    * The field list is sourced from `MemberDocumentBuilder.BuildSchemaAsync` in the [Contacts module](../contacts/overview.md).
 
 ## Clone message
 
