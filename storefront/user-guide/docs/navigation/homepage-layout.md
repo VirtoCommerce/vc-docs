@@ -87,18 +87,6 @@ You can use the keyboard to navigate through the store:
 ![Tab navigation](../media/keyboard-interaction.gif)
 
 
-## Mobile version
-
-On the Frontend mobile version, the core principles and functionality remain consistent with the desktop version. Users may notice differences in the layout on their mobile devices, tailored to enhance usability and navigation on smaller screens.
-
-### Homepage
-
-![Mobile homepage](../media/storefront-mobile-homepage.png){: style="display: block; margin: 0 auto;" width="800"}
-
-### Menu
-
-![Catalog](../media/storefront-mobile-catalog.png){: style="display: block; margin: 0 auto;" width="500"}
-
 <br>
 <br>
 ********

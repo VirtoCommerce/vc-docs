@@ -25,7 +25,7 @@ With the Pages module, you can:
 ## Supported CMS platforms
 
 * [Builder.io](../integrations/builder-io/overview.md): Fully supported for integration.
-* [Sanity](../sanity/overview.md)
+* [Sanity.](../sanity/overview.md)
 * [Virto Page Builder.](../page-builder/overview.md)
 * [Contentful.](../contentful/overview.md)
 * **Optimizely**: Coming soon.

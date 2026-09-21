@@ -13,7 +13,7 @@ To configure the module settings globally:
 1. In the search field of the next blade, type **Pages** to find the settings related to the module.
 1. In the next blade,  configure the following:
 
-    ![Global settings](media/settings.png)
+    ![Global settings](media/settings.png){: style="display: block; margin: 0 auto;" }
 
 1. Click **Save** in the toolbar to save the changes.
 

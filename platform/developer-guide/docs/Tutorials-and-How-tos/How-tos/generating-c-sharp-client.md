@@ -8,7 +8,7 @@ To generate C# client code from your Virto Commerce Swagger JSON file:
 1. Load Swagger JSON:
     1. Launch Virto Commerce Platform:
     1. Go to `https://<your_domain>/docs` to view the Swagger UI.
-    1. Select the required module from the drop-down menu.
+    1. Select the required module from the dropdown menu.
     1. Click `https://<your_domain>/docs/VirtoCommerce.Catalog/swagger.json` to view the Swagger specification for `/VirtoCommerce.Catalog module`.
 
         ![Load swagger json](media/load-swagger-json.png)

@@ -21,7 +21,7 @@ To assign user groups to a category:
 
 	![Path](media/user-groups-path.png){: style="display: block; margin: 0 auto;" }
 
-1. In the next blade, fill in the fields. Click **Add** to assign the available user groups from a drop-down list.
+1. In the next blade, fill in the fields. Click **Add** to assign the available user groups from a dropdown list.
 
     ![User groups](media/user-groups-widget.png){: style="display: block; margin: 0 auto;" }
 
@@ -54,7 +54,7 @@ To assign user groups to a product:
 
 	![Path](media/assigning-user-group-to-product.png){: style="display: block; margin: 0 auto;" }
 
-1. In the next blade, fill in the fields. Click **Add** to assign the available user groups from a drop-down list.
+1. In the next blade, fill in the fields. Click **Add** to assign the available user groups from a dropdown list.
 
     ![User groups](media/user-groups-widget.png){: style="display: block; margin: 0 auto;" }
 

@@ -80,7 +80,7 @@ To create a new refund document:
 1. Click the **PaymentIn** widget where all the payment documents for the selected order are stored.
 1. In the next blade, check the payment status. Refunding is possible for the orders with the **Paid** status. 
 1. Click **Refund payment** in the toolbar.
-1. In the next blade, enter the refund amount, the refund message, and select the refund reason from the drop-down list. Click **OK** to save the changes.
+1. In the next blade, enter the refund amount, the refund message, and select the refund reason from the dropdown list. Click **OK** to save the changes.
 
     ![Refund blade](media/create-refund-blade.png){: style="display: block; margin: 0 auto;" width="400"}
 

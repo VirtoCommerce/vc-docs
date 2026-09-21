@@ -43,7 +43,7 @@ It displays:
 * The link to the AvaTax transaction corresponding to the order.
 * Raw AvaTax transaction representation.
 
-![AvaTax transaction details blade](../media/avatax-widget.png){: style="display: block; margin: 0 auto;" width="700"}
+![AvaTax transaction details blade](../media/avatax-widget.png){: style="display: block; margin: 0 auto;" width="850"}
 
 
 
