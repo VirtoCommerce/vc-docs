@@ -20,16 +20,12 @@ To add a new notification template:
 
 	![Notification template list](media/notification-template-path.png){: style="display: block; margin: 0 auto;" }
 
-1. In the next blade, fill in the following fields:
+1. In the next blade, configure your template. In full-screen mode, you won’t need to switch between the **Template** and **Preview** tabs:
 
 	![Notification template options](media/template-fields.png){: style="display: block; margin: 0 auto;" }
 
 	!!! warning
 		The only way to create a new template for the notification you are working with is to create one for a different language. If you create a new template with the same language as the current template, such as Default or EN-US, it will override the current template.
-
-1. Switch to the **Preview** tab on click **Preview** in the toolbar. The notification preview opens in the next blade. 
-
-	![Preview notification](media/preview-notification.png){: style="display: block; margin: 0 auto;" }
 
 	In case of errors, you will see a detailed report on them:
 
