@@ -49,18 +49,17 @@ When you define recipients dynamically, the query runs against the **customer (m
 
 Follow the following syntax rules when querying recipients:
 
-* Plain words trigger a free-text search, for example `Smith`.
-* `field:value` searches a specific field.
-* For **OR**, separate values with a comma. For example: `field:v1,v2.
-* A wildcard value must be a single value in quotes: 
-    
-    * `emails:"*@example.com"` works.
-    * `emails:*@example.com` returns nothing.
+| Rule                    | Syntax                           | Example             |
+| ----------------------- | -------------------------------- | ------------------- |
+| Free-text search        | `word`                           | `Smith`              |
+| Search a specific field | `field:value`                    | `name:Smith`         |
+| **OR**                  | Separate values with a comma     | `field:v1,v2`        |
+| Wildcard                | Use a single value in quotes     |  `emails:"*@example.com"`    |
+| **AND / OR / grouping** | Use `AND`, `OR`, and parentheses | `name:Smith AND (city:Boston OR city:Chicago)` |
+| Negation                | `!condition`                     | `!status:inactive`     |
+| Date range              | `field:[start TO end]`           | `createddate:[2026-01-01 TO]`|
+| Field names             | Case-insensitive                 | `Name:Smith` = `name:Smith`  |
 
-* `AND`, `OR`, and parentheses combine and group conditions.
-* `!` negates a condition.
-* Date ranges are queried as follows: `createddate:[2026-01-01 TO]`.
-* Field names are case-insensitive.
 
 For the general query syntax and more examples, see [Search query syntax and examples](../search-query-syntax.md).
 
@@ -88,7 +87,7 @@ The query can target the following fields from the member index schema:
 A property name that contains spaces must be quoted, for example `"Default shipping address":text22`.
 
 !!! note
-    Address fields are indexed as free-text content only. They cannot be used as `field:value` — only as part of a plain-word search.
+    Address fields are indexed as free-text content only. They cannot be used as `field:value` - only as part of a plain-word search.
 
 #### Example queries
 
