@@ -31,6 +31,18 @@ The customers can be edited as follows:
 
 ![Edit customers](../media/edit-my-customers.gif)
 
+## Calendar
+
+Sales reps can manage their tasks directly from the Sales Rep dashboard and track daily activities and customer follow-ups with the help of **Calendar**:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/dkzn0sczr1nc?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
+
+
 ## Document library
 
 The **Document library** page lists the sales materials that are available to the rep with advanced permissions, for example product images, brochures, and price sheets.
@@ -40,6 +52,8 @@ The rep can browse and search the list, then open or download any accessible doc
 ![Document library](../media/document-library.png)
 
 ![Readmore](../media/readmore.png){: width="20"} [Uploading documents to the library](/platform/user-guide/latest/sales-rep/document-library)
+
+
 
 
 <br>

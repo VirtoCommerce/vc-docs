@@ -14,90 +14,61 @@ To add content to your page in the Designer mode:
 
     -   __Call to action:__
 
-        ---
-
-        ![Inline mode](media/call-to-action-sample.png)
+    -   ![Inline mode](media/call-to-action-sample.png)
 
     -   __Call to action with image:__
 
-        ---
-
-        ![Popup mode](media/call-to-action-with-image.png)
+    -   ![Popup mode](media/call-to-action-with-image.png)
 
     -   __Category:__
 
-        ---
-
-        ![Custom categories](media/custom-categories.png)
+    -   ![Custom categories](media/custom-categories.png)
 
     -   __Favorite products:__
 
-        ---
-
-        ![Favorite products](media/favorite-products.png)
+    -   ![Favorite products](media/favorite-products.png)
 
     -   __Features:__
 
-        ---
-
-        ![Features](media/features.png)
+    -   ![Features](media/features.png)
 
     -   __Image:__
 
-        ---
-
-        ![Image](media/image.png)
+    -   ![Image](media/image.png)
 
     -   __Login:__
 
-        ---
-
-        ![Login](media/Login.png)
+    -   ![Login](media/Login.png)
 
     -   __Predefined products:__
 
-        ---
-
-        ![Predefined products](media/predefined-products.png)
+    -   ![Predefined products](media/predefined-products.png)
 
     -   __Products:__
 
-        ---
-
-        ![Products](media/products.png)
+    -   ![Products](media/products.png)
 
     -   __Products carousel:__
 
-        ---
-
-        ![Products carousel](media/products-carousel.png)
+    -   ![Products carousel](media/products-carousel.png)
 
     -   __Slider:__
 
-        ---
-
-        ![Slider](media/slider.png)
+    -   ![Slider](media/slider.png)
 
     -   __Subscribe form:__
 
-        ---
-
-        ![Subscribe form](media/subscribe-form.png)
+    -   ![Subscribe form](media/subscribe-form.png)
 
     -   __Text:__
 
-        ---
-
-        ![Text](media/text.png)
+    -   ![Text](media/text.png)
 
     -   __Title:__
 
-        ---
-
-        ![Subtitle](media/title.png)
+    -   ![Subtitle](media/title.png)
 
     </div>
-
 
 1. Click the desired block, then click **Add** to add it to the page. For example, let's add **Call to action with image** block:
 
@@ -106,8 +77,6 @@ To add content to your page in the Designer mode:
 1. Click **Save** to save the changes.
 
 The added content is saved. Continue adding content until your page is ready for publishing.
-
-
 
 
 
@@ -161,6 +130,17 @@ Users can add links to selected text within a **Subscribe form** block.
 1. Publish the page.
 
 The link has been added to the selected text and published on the page.
+
+## Create and add shared components
+
+Users can create, add, and delete shared components to be used across multiple pages, with the option to synchronize changes across all instances or edit each copy independently:
+
+<div>
+  <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>
+  <div class="sl-embed" style="position:relative;padding-bottom:calc(49.57% + 25px);width:100%;height:0;transform:scale(1)">
+    <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/dlumb01y2qr0?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
+  </div>
+</div>
 
 <br>
 <br>
