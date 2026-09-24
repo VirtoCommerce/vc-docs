@@ -18,6 +18,7 @@ This type represents the response data for a store, including its basic informat
 | `settings` [==StoreSettingsType!==](StoreSettingsType.md)                             | The settings configuration for the store.                   |
 | `graphQLSettings` [==GraphQLSettingsType!==](GraphQLSettingsType.md)                  | The GraphQL settings configuration for the store.           |
 | `dynamicProperties` [==DynamicPropertyValueType==](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Cart/objects/dynamic-property-value-type)| A collection of dynamic property values assigned to the store. |
+| `plugins(...)` [==[StorePluginType!]!==](StorePluginType.md)                          | The Module Federation plugins registered for the store, so a frontend host app can discover and load remotes at startup. Can be filtered by the `appId` argument to return only the plugins for a specific frontend host app. |
 
 <br>
 <br>
@@ -25,5 +26,5 @@ This type represents the response data for a store, including its basic informat
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../queries/store">← Store query</a>
-    <a href="../LanguageType">LanguageType →</a>
+    <a href="../StorePluginType">StorePluginType →</a>
 </div>

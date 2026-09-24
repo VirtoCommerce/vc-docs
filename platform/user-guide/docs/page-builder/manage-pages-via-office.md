@@ -130,6 +130,9 @@ To reuse files without uploading them again and reduce duplicate media uploads, 
 
     ![Assets library](media/assets-library.png){: style="display: block; margin: 0 auto;" }
 
+    !!! note
+        If a user is trying to upload a file with the same full name (name + extension) as an existing file in the target folder, a confirmation prompt is displayed before anything is written.
+
 In the **Designer** mode, you can use image from the Assets Library or upload new ones:
 
 ![Assets library](media/assets-library-in-designer.png){: style="display: block; margin: 0 auto;" }

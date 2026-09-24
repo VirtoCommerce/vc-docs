@@ -19,8 +19,9 @@ In Virto Commerce, all permissions are defined through the design time (from the
                 public const string Access = "order:access";
                 public const string Delete = "order:delete";
                 public const string ReadPrices = "order:read_prices";
+                public const string DownloadInvoice = "order:invoice:download";
 
-                public static string[] AllPermissions = new[] { Read, Create, Update, Access, Delete, ReadPrices };
+                public static string[] AllPermissions = new[] { Read, Create, Update, Access, Delete, ReadPrices, DownloadInvoice };
             }
         }
 ```
@@ -61,7 +62,8 @@ Here is an example of the localized permission labels:
     "order:update": "Update order related data",
     "order:delete": "Delete order related data",
     "order:access": "Access order related data",
-    "order:read_prices": "View order prices""
+    "order:read_prices": "View order prices",
+    "order:invoice:download": "Download invoice PDF"
   },
 ...
 ```

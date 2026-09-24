@@ -5,7 +5,7 @@ The **Store** module is responsible for managing and providing access to informa
 
 | Queries                      | Objects                      	                                                                                                                    | 
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------	|
-| [Store](queries/store.md)    | [LanguageType](objects/LanguageType.md)<br> [StoreResponseType](objects/StoreResponseType.md)<br> [StoreSettingsType](objects/StoreSettingsType.md)<br>[GraphQLSettingsType](objects/GraphQLSettingsType.md) <br> [PasswordOptionsType](objects/PasswordOptionsType.md)<br> [ModuleSettingsType](objects/ModuleSettingsType.md) <br> [ModuleSettingType](objects/ModuleSettingType.md)|
+| [Store](queries/store.md)    | [LanguageType](objects/LanguageType.md)<br> [StoreResponseType](objects/StoreResponseType.md)<br> [StorePluginType](objects/StorePluginType.md)<br> [StorePluginFileType](objects/StorePluginFileType.md)<br> [StorePluginRemoteType](objects/StorePluginRemoteType.md)<br> [StoreSettingsType](objects/StoreSettingsType.md)<br>[GraphQLSettingsType](objects/GraphQLSettingsType.md) <br> [PasswordOptionsType](objects/PasswordOptionsType.md)<br> [ModuleSettingsType](objects/ModuleSettingsType.md) <br> [ModuleSettingType](objects/ModuleSettingType.md)|
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-store/releases)
 

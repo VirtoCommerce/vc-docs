@@ -8,6 +8,9 @@ Virto Commerce supports extending the existing authorization policies that are d
 
 Suppose you have authorization checks in the **Order Module**, and you want to enhance the default `OrderAuthorizationHandler` associated with the `OrderAuthorizationRequirement`. This extension aims to introduce a new policy that restricts orders based on their statuses, allowing certain users to view orders only with specific status(es).
 
+!!! note
+    To restrict which users can see order **prices** specifically, don't extend `OrderAuthorizationHandler`. That logic now lives in `ICustomerOrderDataProtectionService`, which covers every read and write path, not only the ones routed through authorization. See [Order price visibility](../authorization/order-price-visibility.md).
+
 ![Readmore](../media/readmore.png){: width="25"} [Authorization policies](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/policies?view=aspnetcore-5.0)
 
 ```cs title="OrderModuleController.cs"

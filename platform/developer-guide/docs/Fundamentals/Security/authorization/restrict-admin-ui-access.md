@@ -24,6 +24,6 @@ Access is evaluated in the following order, and the first matching rule decides 
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../scope-based-permissions">← Scope-based permissions </a>
+    <a href="../order-price-visibility">← Order price visibility </a>
     <a href="../../encryption-and-signing-credentials">Encryption and signing credentials →</a>
 </div>

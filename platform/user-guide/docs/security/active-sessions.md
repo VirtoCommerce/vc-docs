@@ -17,5 +17,5 @@ Try our interactive demo to explore key features in action:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../login-on-behalf">← Login on behalf of user</a>
-    <a href="../../seo/overview">SEO module overview →</a>
+    <a href="../sign-in-log">Sign-in log →</a>
 </div>

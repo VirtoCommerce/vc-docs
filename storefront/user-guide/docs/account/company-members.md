@@ -114,7 +114,9 @@ To block, unblock, or delete a company member from the list:
 1. Click **Block**, **Unblock**, or **Delete** from the dropdown menu.
 1. Confirm your action.
 
-Deleting a member sets their status to **Inactive**; their row stays in the list.
+Deleting a member sets their status to **Inactive**. Their row stays in the list. The blocked user will not be able to switch to this organization:
+
+![Blocked user](../media/blocked-user.png){: style="display: block; margin: 0 auto;" }
 
 ### Log in on behalf of company member
 

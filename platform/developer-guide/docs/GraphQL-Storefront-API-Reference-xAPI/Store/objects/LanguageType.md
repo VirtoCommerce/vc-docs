@@ -19,6 +19,6 @@ This type represents information about a language.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../StoreResponseType">← StoreResponseType</a>
+    <a href="../StorePluginRemoteType">← StorePluginRemoteType</a>
     <a href="../StoreSettingsType">StoreSettingsType →</a>
 </div>

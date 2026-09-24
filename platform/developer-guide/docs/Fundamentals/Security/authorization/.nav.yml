@@ -3,4 +3,5 @@ nav:
   - Overview: overview.md
   - Global Permissions: global-permissions.md
   - Scope Based Permissions: scope-based-permissions.md
+  - Order Price Visibility: order-price-visibility.md
   - Restrict Admin UI Access: restrict-admin-ui-access.md

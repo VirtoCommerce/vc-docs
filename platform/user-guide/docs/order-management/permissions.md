@@ -12,9 +12,14 @@ The pre-defined order-related permissions are:
 | order:access           	| Access order related data. 	|
 | order:delete           	| Delete order related data  	|
 | order:read_prices      	| View order prices.         	|
+| order:invoice:download 	| Download invoice PDF.      	|
 | order:update_shipments 	| Update shipments.          	|
 | order:capture_payment  	| Capture payment.           	|
 | order:refund           	| Refund order.              	|
+
+A role without **order:read_prices** still gets full access to orders, but prices are masked everywhere — in the UI, on save, and in exports.
+
+![Readmore](media/readmore.png){: width="25"} [Restrict order prices](order-price-restriction.md)
 
 ## Assign users to proceed orders
 
@@ -39,7 +44,7 @@ Now only the assigned user can process the order.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../notifications">← Managing notifications</a>
-    <a href="../settings">Order module settings →</a>
+    <a href="../order-price-restriction">Restrict order prices →</a>
 </div>
 
 

@@ -288,7 +288,7 @@ To define how products are ordered by default when customers browse categories o
 1. In the next blade, click **Sorting** widget.
 1. In the next blade, you can:
     
-    1. Configure the existing sorting options by dragging and dropping them. The first visible option is the default:
+    1. Configure the existing sorting options by dragging and dropping them. The first visible option is the default. You can sort options by name, number of items, score, or priority:
 
 
         <div class="grid cards" markdown>

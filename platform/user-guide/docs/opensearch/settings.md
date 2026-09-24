@@ -3,7 +3,7 @@
 To open the **OpenSearch** module settings:
 
 1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **OpenSearch** to find the settings related to search modules.
+1. In the search field of the next blade, type **OpenSearch** to find the settings related to the module.
 1. In the next blade, configure the following settings:
 
     ![Settings](media/settings.png){: style="display: block; margin: 0 auto;" }

@@ -62,6 +62,6 @@ Your modifications have been applied.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../permissions">← Managing permissions</a>
+    <a href="../order-price-restriction">← Restrict order prices</a>
     <a href="../../contacts/overview">Contacts module overview →</a>
 </div>

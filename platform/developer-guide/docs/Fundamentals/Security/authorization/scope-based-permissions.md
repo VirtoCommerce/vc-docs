@@ -68,7 +68,7 @@ After these steps, the global `order:read` permission can be further restricted 
 
 Writing a handler for a scope-based authorization is not much different from writing a plain requirement handler. You need to create a custom requirement class and implement a requirement handler class derived from `PermissionAuthorizationHandlerBase`:
 
-```csharp title="VirtoCommerce.OrdersModule.Web/Authorization/OrderAuthorizationHandler.cs"
+```csharp title="VirtoCommerce.OrdersModule.Data/Authorization/OrderAuthorizationHandler.cs"
 public sealed class OrderAuthorizationHandler : PermissionAuthorizationHandlerBase<OrderAuthorizationRequirement>
 {
     ...
@@ -143,6 +143,6 @@ As a result, the authorization handler will check and change the criteria to ret
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../authorization/global-permissions">← Global permissions </a>
-    <a href="../restrict-admin-ui-access">Restrict admin UI access →</a>
+    <a href="../order-price-visibility">Order price visibility →</a>
 </div>
 

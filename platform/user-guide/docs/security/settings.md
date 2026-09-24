@@ -3,7 +3,7 @@
 To open the **Security** module settings:
 
 1. Click **Settings** in the main menu.
-1. In the search field of the next blade, type **Security** to find the settings related to search modules.
+1. In the search field of the next blade, type **Security** to find the settings related to the module.
 1. In the next blade, configure the following settings:
 
     ![General settings](media/security-settings.png){: style="display: block; margin: 0 auto;" }
@@ -18,6 +18,6 @@ Your modifications have been applied.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../managing-search">← Managing search index</a>
+    <a href="../sign-in-log">← Sign-in log</a>
     <a href="../../intent-search/overview">Intent Search module overview →</a>
 </div>
