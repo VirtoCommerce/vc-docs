@@ -32,7 +32,7 @@ jobs:
 
       - name: Build and push
         id: build
-        uses: VirtoCommerce/vc-github-actions/update-virtocommerce-docs-versioned@master
+        uses: VirtoCommerce/.github/actions/update-virtocommerce-docs-versioned@v3.1000.1
         with:
           githubToken: ${{ secrets.REPO_TOKEN }}
           # Pin the build to the commit that triggered this run, not to the
@@ -60,7 +60,7 @@ jobs:
         if: github.ref_name == 'main'
         run: |
           echo "dispatched-at=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
-          gh api repos/VirtoCommerce/vc-github-actions/dispatches \
+          gh api repos/VirtoCommerce/.github/dispatches \
             -f event_type=deploy-docs \
             -f "client_payload[image_tag]=${{ steps.build.outputs.docker-image-tag }}" \
             -f "client_payload[environment]=vcpt-license"
@@ -77,7 +77,7 @@ jobs:
           # 1. Find the downstream run spawned by the dispatch above.
           run_id=""
           for attempt in $(seq 1 30); do
-            run_id=$(gh run list -R VirtoCommerce/vc-github-actions \
+            run_id=$(gh run list -R VirtoCommerce/.github \
               --workflow "Deploy docs to VC Cloud" \
               --event repository_dispatch \
               --created ">=$DISPATCHED_AT" \
@@ -87,15 +87,15 @@ jobs:
             sleep 10
           done
           if [ -z "$run_id" ]; then
-            echo "::error::Cloud deploy run never appeared in VirtoCommerce/vc-github-actions within 5 minutes. The deploy-docs dispatch may have been lost."
+            echo "::error::Cloud deploy run never appeared in VirtoCommerce/.github within 5 minutes. The deploy-docs dispatch may have been lost."
             exit 1
           fi
 
-          run_url="https://github.com/VirtoCommerce/vc-github-actions/actions/runs/$run_id"
+          run_url="https://github.com/VirtoCommerce/.github/actions/runs/$run_id"
           echo "Watching cloud deploy: $run_url"
 
           # 2. Fail this workflow if the downstream deploy fails.
-          if ! gh run watch "$run_id" -R VirtoCommerce/vc-github-actions --interval 30 --exit-status; then
+          if ! gh run watch "$run_id" -R VirtoCommerce/.github --interval 30 --exit-status; then
             echo "::error::Cloud deploy FAILED. The docs image was built and pushed, but prod was NOT updated. Inspect: $run_url"
             exit 1
           fi
