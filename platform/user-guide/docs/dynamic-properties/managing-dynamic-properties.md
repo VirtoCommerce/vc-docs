@@ -19,7 +19,7 @@ A new dynamic property has been added. From now on, when adding a contact, the u
 
 ![Dynamic property added](media/dynamic-property-added.png){: style="display: block; margin: 0 auto;" }
 
-![Read more](media/readmore.png){: width="20"} [Value types](/platform/user-guide/dynamic-properties/managing-dynamic-properties/)
+![Read more](media/readmore.png){: width="20"} [Value types](/platform/user-guide/latest/catalog/managing-properties/#value-type-selection)
 
 ## Edit dynamic property values
 

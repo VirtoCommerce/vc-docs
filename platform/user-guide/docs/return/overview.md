@@ -28,6 +28,6 @@ The diagram below illustrates the functionality of the Return module:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../xrecommend/overview">← Recommendations module overview</a>
+    <a href="../../recommend/overview">← Recommendations module overview</a>
     <a href="../managing-returns">Managing returns →</a>
 </div>

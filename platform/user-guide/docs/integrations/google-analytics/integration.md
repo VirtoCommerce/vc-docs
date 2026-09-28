@@ -81,7 +81,7 @@ Your modifications have been applied.
 
 ## GTM event tracking (optional setup)
 
-The module automatically [tracks a number of ecommerce actions](../../../../../storefront/developer-guide/integrations/google-analytics/ga-events). If you are using GTM, you can capture these events by creating GA4 Event tags in GTM:
+The module automatically [tracks a number of ecommerce actions](/storefront/developer-guide/latest/integrations/google-analytics/ga-events). If you are using GTM, you can capture these events by creating GA4 Event tags in GTM:
 
 * In GTM, create a new **Google Analytics: GA4 Event** tag.
 * Set **Configuration Tag** to your GA4 Configuration tag.

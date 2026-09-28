@@ -65,7 +65,7 @@ In the fulfillment center's **Products** blade:
 
 The selected items appear in the fulfillment center's product list. 
 
-![Readmore](media/readmore.png){: width="20"} [Managing inventory](/platform/user-guide/inventory/managing-inventory)
+![Readmore](media/readmore.png){: width="20"} [Managing inventory](/platform/user-guide/latest/inventory/managing-inventory)
 
 ## Delete fulfillment center
 

@@ -21,7 +21,7 @@ The diagram below illustrates the interconnection of the Intent Search and Searc
 [![Release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-intent-search/releases)
 
 
-![Read more](media/readmore.png){: width="20"} [Intent Search installation](/platform/developer-guide/Fundamentals/Intent-Search/installation-and-configuration)
+![Read more](media/readmore.png){: width="20"} [Intent Search installation](/platform/developer-guide/latest/Fundamentals/Intent-Search/installation-and-configuration)
 
 
 <br>
