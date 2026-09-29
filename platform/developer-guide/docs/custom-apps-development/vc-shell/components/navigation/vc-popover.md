@@ -58,6 +58,7 @@ const open = ref(false);
 | `contentScrollable`   | `boolean`                  | `true`           | Enable scrolling in the content area                                                                                                                                                                                                                                                                                                                                                      |
 | `closeOnClickOutside` | `boolean`                  | `true`           | Close when clicking outside                                                                                                                                                                                                                                                                                                                                                               |
 | `closeOnEscape`       | `boolean`                  | `true`           | Close on Escape key                                                                                                                                                                                                                                                                                                                                                                       |
+| `inert`               | `boolean`                  | `false`          | Hide the panel from assistive technology and keyboard focus while something covers it. The panel is teleported, so it does not inherit `inert` from an ancestor — pass it explicitly                                                                                                                                                                                                      |
 
 ## Events
 
@@ -142,7 +143,7 @@ The panel's z-index comes from the global `--z-critical-floating-panel` token an
 - Escape key dismisses the panel (configurable via `closeOnEscape`)
 - Click-outside detection uses `pointerdown` for reliable z-index handling
 - Supports nested panels via an internal anchor registry -- child panel clicks do not close parent panels
-- Exposes `close()` method via template ref
+- Exposes `close()` and `panelEl` (the teleported panel element) via template ref
 
 ## Related Components
 
