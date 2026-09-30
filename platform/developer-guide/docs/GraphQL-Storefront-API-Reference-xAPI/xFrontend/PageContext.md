@@ -17,7 +17,7 @@ This query retrieves all contextual information required to initialize and rende
 
 | Possible return             | Description                                                    |
 | --------------------------- | -------------------------------------------------------------- |
-| [`PageContextResponseType`](/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/xFrontend/objects/PageContextResponseType) | A combined object containing all contextual data required to initialize and render a storefront page. |
+| [`PageContextResponseType`](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/xFrontend/objects/PageContextResponseType) | A combined object containing all contextual data required to initialize and render a storefront page. |
 
 ## Example
 

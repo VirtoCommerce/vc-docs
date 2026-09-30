@@ -127,7 +127,7 @@ To illustrate configuration setups, here are examples for different components:
 
 To configure the Authoring App:
 
-1. Access the [Authoring App.](https://vc-admin.azurewebsites.net)
+1. Access the Authoring App  at **https://{your-authoring-app}.azurewebsites.net**.
 
 1. Configure Azure app general settings:
 
@@ -152,7 +152,7 @@ To configure the Authoring App:
             ...
     "PushNotifications": {
             "ScalabilityMode": "RedisBackplane",     
-            "HubUrl": "https://vc-admin.azurewebsites.net/pushNotificationHub?api_key=9fde4353-9a4a-4fe3-9a03-a0c80b4220ff",      
+            "HubUrl": "https://{your-authoring-app}.azurewebsites.net/pushNotificationHub?api_key={your-vc-api-key}",      
             "RedisBackplane": {
                 "ChannelName": "VirtoCommerceChannel"
             }
@@ -167,7 +167,7 @@ The Authoring App is now configured.
 
 To configure the Commerce Service App:
 
-1. Access the [Commerce Service App.](https://bff-vc-admin.azurewebsites.net)
+1. Access the Commerce Service App at **https://{your-commerce-service-app}.azurewebsites.net**.
 
 1. Configure Azure app general settings:
 
@@ -202,11 +202,11 @@ To configure the Commerce Service App:
 
 The Commerce Service App is now configured.
 
-### Frontend app
+### Frontend
 
 To configure the Frontend App:
 
-1. Access the [Frontend App.](https://vc-store.azurewebsites.net)
+1. Access the Frontend at **https://{your-frontend-app}.azurewebsites.net**.
 
 1. Configure Azure app general settings:
 
@@ -235,5 +235,5 @@ The Frontend App is now configured.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../scalability-options">← Scalability options </a>
-    <a href="../../Event-Driven-Development/scaling-configuration-on-azure-cloud">Using domain events →</a>
+    <a href="../../Event-Driven-Development/using-domain-events">Using domain events →</a>
 </div>

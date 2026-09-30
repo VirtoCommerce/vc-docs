@@ -79,5 +79,5 @@ If you need a specific version instead of a branch:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../deployment">← Deployment</a>
-    <a href="../theme-customization/theme-customization">Theme customization →</a>
+    <a href="../customization/visual-theme-customization">Theme customization →</a>
 </div>

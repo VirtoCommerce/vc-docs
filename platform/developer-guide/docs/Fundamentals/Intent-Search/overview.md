@@ -19,7 +19,7 @@ The combined workflow is as follows:
 
 <br>
 
-![Read more](media/readmore.png){: width="20"} [How Intent Search works](/platform/user-guide/intent-search/overview)
+![Read more](media/readmore.png){: width="20"} [How Intent Search works](/platform/user-guide/latest/intent-search/overview)
 <br>
 
 ## Key features

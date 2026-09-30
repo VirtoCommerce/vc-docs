@@ -58,5 +58,5 @@ The two subsystems communicate via `window.postMessage()` to synchronize edits a
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../builder-io-setup">← Builder.io setup</a>
-    <a href="../page-builder-setup">Page Builder setup →</a>
+    <a href="../page-builder-extension">Adding blocks to Page Builder →</a>
 </div>

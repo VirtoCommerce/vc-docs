@@ -36,6 +36,6 @@ The existing **Image** block is replaced with the new one. The new **Image2** bl
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../extending-application-user">← Extending application user </a>
-    <a href="../../Operations/maintenance-tasks-for-sql">Maintenance tasks for SQL  →</a>
+    <a href="../overview">← Page Builder overview </a>
+    <a href="../page-builder-setup">Page Builder setup →</a>
 </div>

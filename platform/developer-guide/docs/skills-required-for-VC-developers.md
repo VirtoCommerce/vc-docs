@@ -137,6 +137,6 @@ To make the results easier to present, you can download this list and fill it ou
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../getting-started/installation-guide/windows">← Installation guide</a>
-    <a href="../../../../back-end-architecture/atomic-architecture">Virto Atomic Architecture →</a>
+    <a href="../Getting-Started/Installation-Guide/windows">← Installation guide</a>
+    <a href="../Back-End-Architecture/atomic-architecture">Virto Atomic Architecture →</a>
 </div>

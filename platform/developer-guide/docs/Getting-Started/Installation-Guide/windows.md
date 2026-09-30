@@ -69,7 +69,7 @@ To use Virto Commerce CLI (vc-build):
     `vc-build` should not be executed with the user profile directory as the build root. A dedicated deployment directory must be used via `--root`.
 
 
-![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](/platform/developer-guide/CLI-tools/package-management)
+![Readmore](media/readmore.png){: width="25"} [Vc-build for packages management](/platform/developer-guide/latest/CLI-tools/package-management)
 
 The Platform and its modules are now installed using Virto Commerce CLI.
 

@@ -56,7 +56,7 @@ Your changes have been applied.
 
 ## Apply theme color scheme
 
-You can personalize your store by applying a [custom theme](/storefront/developer-guide/latest/theme-customization/theme-customization) or choosing from the ready-to-use color schemes designed by Virto Commerce. Each release includes a set of default color presets, with new ones added several times a year. To access the latest default color presets, users can simply download the updated theme. Currently, the following out-of-the-box color schemes can be applied to your store:
+You can personalize your store by applying a [custom theme](/storefront/developer-guide/latest/customization/visual-theme-customization) or choosing from the ready-to-use color schemes designed by Virto Commerce. Each release includes a set of default color presets, with new ones added several times a year. To access the latest default color presets, users can simply download the updated theme. Currently, the following out-of-the-box color schemes can be applied to your store:
 
 === "purple-pink"
 
@@ -92,7 +92,7 @@ You can personalize your store by applying a [custom theme](/storefront/develope
     Dark mode is available for **Mercury** (default), **Coffee**, **Watermelon**, **Black-Gold**, **Red** themes. 
 
 
-![Readmore](media/readmore.png){: width="25"} [Theme customization](/storefront/developer-guide/latest/theme-customization/theme-customization)
+![Readmore](media/readmore.png){: width="25"} [Theme customization](/storefront/developer-guide/latest/customization/visual-theme-customization)
 
 
 For the purpose of this guide, a color scheme named **safco** has been created by the developers. To apply a new color scheme to your store:

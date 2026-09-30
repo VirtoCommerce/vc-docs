@@ -13,7 +13,7 @@ properties.Age = "New Value"; // Set value of the dynamic property named "Age"
 string age = properties.Age;  // Get value of the dynamic property named "Age"
 ```
 
-![Read more](media/readmore.png){: width="20"} [Managing dynamic properties via Platform](/platform/user-guide/dynamic-properties/managing-dynamic-properties/)
+![Read more](media/readmore.png){: width="20"} [Managing dynamic properties via Platform](/platform/user-guide/latest/dynamic-properties/managing-dynamic-properties/)
 
 ## Read values with a default fallback
 

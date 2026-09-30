@@ -35,7 +35,7 @@ This type contains various fields or attributes that provide information about t
 | `status`  ==String==                          | The status of the quote.                                                          |
 | `storeId`  ==String!==                        | The Id for the store where the quote was placed.                                  |
 | `tag`  ==String==                             | A tag or label associated with the quote.                                         |   
-| `currency` [ ==CurrencyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/quote/objects/currency-type) | The currency used for financial transactions within the quote. |
+| `currency` [ ==CurrencyType== ](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/Order/objects/currency-type) | The currency used for financial transactions within the quote. |
 | `manualRelDiscountAmount`  ==MoneyType==      | The manually applied relative discount amount.                                    |
 | `manualShippingTotal`  ==MoneyType==          | The manually calculated shipping total for the quote.                             |
 | `manualSubTotal`  ==MoneyType==               | The manually calculated subtotal for the quote.                                   |

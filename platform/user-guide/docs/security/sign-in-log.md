@@ -1,6 +1,6 @@
 # Sign-in Log
 
-The platform now keeps a durable record of every successful and failed sign-in attempt including sessions started through **Login on behalf**. 
+The Platform now keeps a durable record of every successful and failed sign-in attempt including sessions started through **Login on behalf**. 
 
 The following logs are recorded:
 

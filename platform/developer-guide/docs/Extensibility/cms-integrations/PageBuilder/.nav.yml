@@ -1,6 +1,7 @@
 title: Page Builder
 nav:
   - Overview: overview.md
+  - Add Blocks to Page Builder: page-builder-extension.md
   - Setup: page-builder-setup.md
   - Creating New Block: create-new-block.md
   - Server Descriptors: server-descriptors.md

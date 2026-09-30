@@ -151,6 +151,6 @@ Now you are ready to create and manage content pages:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../overview">← Page Builder overview </a>
+    <a href="../page-builder-extension">← Adding blocks to Page Builder </a>
     <a href="../create-new-block">Creating new block →</a>
 </div>

@@ -12,7 +12,7 @@ The **xFrontend** module extends the Virto Commerce GraphQL schema and aggregate
 
 | Queries    | Objects       | 
 | -----------| ------------- | 
-| [PageContext](/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/xFrontend/PageContext) | [PageContextResponseType](/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/xFrontend/objects/PageContextResponseType) | 
+| [PageContext](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/xFrontend/PageContext) | [PageContextResponseType](/platform/developer-guide/latest/GraphQL-Storefront-API-Reference-xAPI/xFrontend/objects/PageContextResponseType) | 
 
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-x-frontend/releases)

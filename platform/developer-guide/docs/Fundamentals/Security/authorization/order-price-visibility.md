@@ -33,7 +33,11 @@ The method is called per order. The rule can depend on the order itself: its sto
 ### Related extension points
 
 * `RemovePrices` / `RestorePrices`: override either to change which fields count as prices.
-* `OrderAuthorizationHandler` lives in `...Data.Authorization` and is not sealed, so you can extend it to add your own scope rules. See [Authorization policies extension](../../extensions/extending-authorization-policies.md). Price visibility does not go through this handler; use the data protection service above for that.
+* `OrderAuthorizationHandler` lives in `...Data.Authorization` and is not sealed, so you can extend it to add your own scope rules. 
+
+  ![Read more](media/readmore.png){: width="20"} [Authorization policies extension](../extensions/extending-authorization-policies.md) 
+  
+  Price visibility does not go through this handler; use the data protection service above for that.
 
 ## Apply the same pattern to another module
 

@@ -9,7 +9,7 @@ The module supports the following OpenSearch deployment options:
 * [OpenSearch.](https://opensearch.org/)
 * [Amazon OpenSearch Service.](https://aws.amazon.com/opensearch-service/)
 
-![Read more](media/readmore.png){: width="20"} [How OpenSearch works](/platform/user-guide/opensearch/overview)
+![Read more](media/readmore.png){: width="20"} [How OpenSearch works](/platform/user-guide/latest/opensearch/overview)
 
 ## Configuration
 
