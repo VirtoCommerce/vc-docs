@@ -5,7 +5,6 @@ nav:
   - UI Composables: ui-composables-overview.md
   - useBreadcrumbs: useBreadcrumbs.md
   - useLoading: useLoading.md
-  - useMenuExpanded: useMenuExpanded.md
   - useResponsive: useResponsive.md
   - useSidebarState: useSidebarState.md
   - useTheme: useTheme.md
