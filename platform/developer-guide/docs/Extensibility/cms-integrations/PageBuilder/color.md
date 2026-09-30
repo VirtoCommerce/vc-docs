@@ -50,7 +50,7 @@ This control uses the [ngx-color](https://ngx-color.vercel.app/) color picker. T
             },
             ...
         ]
-    ```
+```
 
 ...
 ```

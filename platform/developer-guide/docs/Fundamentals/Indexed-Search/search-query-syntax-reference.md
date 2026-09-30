@@ -156,9 +156,9 @@ Within a single phrase or phrase terms, you can use:
     Inside the double quotes block, you may use any unsafe characters.
     
     To escape double quote character, use backslash (`\`):
-        ```
-        `\"my cool property\":\"&~!'\"`
-        ```
+    ```
+    `\"my cool property\":\"&~!'\"`
+    ```
 
 **Example**
 

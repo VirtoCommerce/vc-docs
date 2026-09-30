@@ -50,15 +50,15 @@ The template key features  are:
 
     Below is an example implementing this interface for `CurrencyEntity`:
 
-        ```csharp
-        public class CurrencyEntityConfiguration : IEntityTypeConfiguration<CurrencyEntity>
+    ```csharp
+    public class CurrencyEntityConfiguration : IEntityTypeConfiguration<CurrencyEntity>
+    {
+        public void Configure(EntityTypeBuilder<CurrencyEntity> builder)
         {
-            public void Configure(EntityTypeBuilder<CurrencyEntity> builder)
-            {
-                builder.Property(x => x.ExchangeRate).HasColumnType("decimal").HasPrecision(18, 4);
-            }
+            builder.Property(x => x.ExchangeRate).HasColumnType("decimal").HasPrecision(18, 4);
         }
-        ```
+    }
+    ```
 
 
 <br>

@@ -69,7 +69,7 @@ AzureBlobAssets, updated to version 3.1006.0, removes the dead `ConvertToBlobInf
 
 ### Search module
 
-ElasticSearch8, updated to version 3.1006.0, removes obsolete overloads. Use the `documentType`-parameter overloads or `IElasticSearchDocumentConverter`.
+Elasticsearch 8, updated to version 3.1006.0, removes obsolete overloads. Use the `documentType`-parameter overloads or `IElasticSearchDocumentConverter`.
 
 | Removed member | Replacement |
 | --- | --- |

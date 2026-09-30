@@ -1909,7 +1909,7 @@ This node configures full text search for the Virto Commerce Search module.
 
 | Node                        | Default or sample value   | Description                                                                                       |
 | ----------------------------| ------------------------- | ------------------------------------------------------------------------------------------------- |
-| Provider                    | "Lucene"<br>"ElasticSearch"<br>"ElasticAppSearch"<br>"ElasticSearch8"<br>"AzureSearch"<br>"AlgoliaSearch"                     | This **required** setting specifies the current search provider.  |
+| Provider                    | "ElasticSearch"<br> "ElasticSearch8"<br> "ElasticSearch9"<br> "ElasticAppSearch"<br> "AzureSearch"<br> "AlgoliaSearch" <br> "Lucene"  | This **required** setting specifies the current search provider.  |
 | Scope                       | "default"               | This setting determines the scope to use and is **required**.    |
 
 

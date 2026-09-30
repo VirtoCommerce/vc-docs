@@ -2,7 +2,7 @@
 
 The Virto Commerce **Elastic App Search** module enables integrating  [Azure Cognitive Search](https://azure.microsoft.com/en-us/services/search/) as a [search engine](https://doc.oroinc.com/backend/architecture/tech-stack/search-index/#search-index-overview).
 
-Elastic App Search provides search, aggregation, and analytic capabilities as a service, on top of ElasticSearch. It also supplies tools that can help you tune search result sets without development:
+Elastic App Search provides search, aggregation, and analytic capabilities as a service, on top of Elasticsearch. It also supplies tools that can help you tune search result sets without development:
 
 * [Relevance tuning.](https://www.elastic.co/guide/en/app-search/current/precision-tuning.html)
 * [Synonyms.](https://www.elastic.co/guide/en/app-search/current/synonyms-guide.html)

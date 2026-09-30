@@ -86,7 +86,7 @@ To configure Virto Commerce Platform to use Azure AD authentication:
         "DefaultUserType": "Manager",
         "UsePreferredUsername": false
     }
-	```
+    ```
 
 1. Modify the following settings:
     1. Set `Enabled` to `true`.
@@ -107,7 +107,7 @@ To configure Virto Commerce Platform to use Azure AD authentication:
         "UsePreferredUsername": false,
         "Priority": 0
     }
-	```
+    ```
 
 1. Restart your Virto Commerce Platform instance to apply the updated settings.
 

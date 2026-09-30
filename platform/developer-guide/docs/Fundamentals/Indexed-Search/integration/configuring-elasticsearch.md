@@ -2,7 +2,7 @@
 
 The Virto Commerce **Elasticsearch** module enables integrating [Elasticsearch](https://www.elastic.co/products/elasticsearch) as a [search engine](https://doc.oroinc.com/backend/architecture/tech-stack/search-index/#search-index-overview).
 
-ElasticSearch implements **ISearchProvider** defined in the Virto Commerce Search module and uses the Elasticsearch engine, which stores indexed documents on:
+Elasticsearch implements **ISearchProvider** defined in the Virto Commerce Search module and uses the Elasticsearch engine, which stores indexed documents on:
 
 * Standalone [Elasticsearch.](https://www.elastic.co/products/elasticsearch "https://www.elastic.co/products/elasticsearch")
 * [Elastic Cloud.](https://cloud.elastic.co/ "https://cloud.elastic.co/")
