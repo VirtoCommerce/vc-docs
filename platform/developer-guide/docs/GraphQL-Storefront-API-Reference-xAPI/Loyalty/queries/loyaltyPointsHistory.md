@@ -2,10 +2,23 @@
 
 This query allows you to retrieve the history of loyalty point transactions for a specific user. The results include details about earned and redeemed points, with support for pagination, filtering, and sorting.
 
+Under [Organization mode](../overview.md#organization-mode), the query returns every member's pooled activity for the caller's organization. No field on the result identifies which member caused a given row, so this query cannot drive a "my points only" view while a store is in Organization mode.
+
+## Breaking changes
+
+* `storeId` is now a required argument. Omitting it fails with:
+
+    ```
+    Argument 'storeId' of type 'String!' is required for field 'loyaltyPointsHistory' but not provided.
+    ```
+
+    Add `storeId` to every existing call to this query before upgrading to a Loyalty release that includes this change.
+
 ## Arguments
 
 | Argument                    | Description                                                                                                        |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `storeId` ==String!==      | The Id of the store to query the loyalty history for. Required.                                                    |
 | `after` ==String==         | Returns only edges after the specified cursor (for pagination).                                                    |
 | `first` ==Int==            | The maximum number of edges to return. Works with `after` for paginated results, or from the beginning if not set. |
 | `keyword` ==String==       | A keyword to filter the history records.                                                                           |
@@ -26,6 +39,7 @@ This query allows you to retrieve the history of loyalty point transactions for 
 ```graphql title="Query"
 {
     loyaltyPointsHistory(
+    storeId: "b2b-store"
     userId: "9c6a2f1a-24e7-4b2c-bb5d-ef5e2ad7c111"
     first: 5
     sort: "createdDate:desc"

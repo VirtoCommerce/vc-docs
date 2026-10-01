@@ -12,7 +12,6 @@ To create a mission:
 
 1. Configure target audience.
 
-
 1. Set the mission goal. You can set only one goal per mission:
 
     | Goal type| What you fill in|
@@ -40,6 +39,33 @@ Try our interactive demo to explore key features in action:
     <iframe loading="lazy" class="sl-demo" src="https://app.storylane.io/demo/qeencyrcfkdv?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
   </div>
 </div>
+
+
+## Switch between individual and organization missions
+
+Your store can pool loyalty points at :
+
+* Individual level, when points earned by a customer are available only to that customer.
+* Organization level when points earned by any member of a company are spendable by every member of that company.
+
+To select the option suitable for your store:
+
+1. Click **Stores** in the main menu.
+1. Select your store.
+1. In the next blade, click the **Settings** widget.
+1. In the next blade, type **Loyalty** to find settings related to the feature.
+1. Select **Missions** settings. 
+1. From the **Points calculation mode** dropdown, select:
+
+    * Customer for individual missions.
+    * Organization for organization-level missions.
+
+    ![Ind or org missions](media/ind-or-org-missions.png)
+
+1. Click **OK**.
+1. Click **Save** in the toolbar.
+
+Your modifications have been saved.
 
 
 <br>

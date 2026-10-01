@@ -38,6 +38,12 @@ In a mixed `USD` and `PTS` cart, the points appear as a separate bucket with `di
 
 To add a points-priced product, pass [`itemCurrencyCode`](../Cart/mutations/add-item.md) on the `addItem` mutation.
 
+## Organization mode
+
+Under Organization mode, [`loyaltyBalance`](queries/loyaltyBalance.md) and [`loyaltyPointsHistory`](queries/loyaltyPointsHistory.md) return the calling member's organization pool rather than a personal balance. Scope is resolved server-side from the caller's organization membership, so neither query takes an `organizationId` argument. A caller-supplied organization cannot be forged either: the server silently rewrites it to the caller's own organization.
+
+One consequence of pooling is that `loyaltyPointsHistory` returns every member's activity with no field identifying which member caused a given row. Do not build a "my points only" view against this query while a store is in Organization mode.
+
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-loyalty)
 
 [![Latest release](media/latest_release.png)](https://github.com/VirtoCommerce/vc-module-loyalty/releases)

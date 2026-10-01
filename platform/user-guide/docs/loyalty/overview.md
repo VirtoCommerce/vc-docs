@@ -5,7 +5,9 @@ The **Loyalty** module provides a flexible loyalty program and mission managemen
 The module includes two complementary loyalty mechanisms:
 
 * [Loyalty programs](enable-and-configure-loyalty-programs.md): Configurable programs that award points based on order conditions or purchases of specific products.
-* [Loyalty missions](managing-loyalty-missions.md): Goal-driven campaigns that automatically award a predefined number of points when customers achieve a specific target, such as reaching an order value, placing a certain number of orders, or purchasing specific SKUs.
+* [Loyalty missions for individuals or organizations](managing-loyalty-missions.md): Goal-driven campaigns that automatically award a predefined number of points when customers achieve a specific target, such as reaching an order value, placing a certain number of orders, or purchasing specific SKUs atan individual or
+organization level.
+
 
 [![Source code](media/source_code.png)](https://github.com/VirtoCommerce/vc-module-loyalty)
 
@@ -17,12 +19,12 @@ The Loyalty module provides the following capabilities:
 
 * **Manage loyalty programs**: Create and configure two program types:
 
-    * **Order Loyalty** rewards customers based on order conditions.
-    * **Product Points Loyalty** rewards customers for purchasing specific products.
+    * **Order loyalty** rewards customers based on order conditions.
+    * **Product points loyalty** rewards customers for purchasing specific products.
 
   Both program types support conditions, reward rules (fixed points or a percentage of the order value), priorities, activation periods, and localized names.
 
-* **Manage loyalty missions**: Create goal-based campaigns that monitor customer orders and automatically award points when customers complete a defined goal.
+* **Manage loyalty missions**: Create goal-based campaigns that monitor customer orders and automatically award points when customers complete a defined goal at individual and organization levels.
 
 * **Reward specific products**: Assign per-product multiplier factors and vary them by customer group. For example, VIP or LUX customers can earn points at different rates for the same product.
 
