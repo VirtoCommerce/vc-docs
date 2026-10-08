@@ -2,23 +2,33 @@
 
 To sign in into the account:
 
-1. Open the Frontend Application and click **Sign in** in the top right corner.
+1. Open the Frontend and click **Sign in** in the top right corner.
 
     ![Sign in](../media/sign-in.png){: style="display: block; margin: 0 auto;" }
 
-1. Enter you email and password:
+1. Use either sign-in option:
 
-    ![Sign-in-form](../media/sign-in-form.png){: style="display: block; margin: 0 auto;" width="500"}
+    1. Sign in with your email and password:
 
-    !!! note
-        Check **Remember me** to save your credentials.
+        ![Sign-in-form](../media/sign-in-form.png){: style="display: block; margin: 0 auto;" width="500"}
 
-1. Click **Log in**.
+        !!! note
+            Check **Remember me** to save your credentials.
 
-You can now use the Frontend Application as a registered user. 
+    1. Sign in with Entra Id or Google:
+
+        ![Entra or google](../media/entra-or-google.png){: style="display: block; margin: 0 auto;" }
+
+    1.  Sign in with a one-time code sent to your email:
+
+        ![OTP](../media/otp.png){: style="display: block; margin: 0 auto;" width="500"}
+
+1. Click **Sign in**.
+
+You can now use the Frontend as a registered user. 
 
 !!! note
-    Contact the site administrator if you see the following screen when you try to log in: 
+    Contact the site administrator if you see the following screen when you try to sign in: 
 
     ![Blocked](../media/blocked-page.png){: style="display: block; margin: 0 auto;" width="500"}
 

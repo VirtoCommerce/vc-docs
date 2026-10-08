@@ -20,5 +20,5 @@ The modifications have been successfully applied.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Azure AD module overview</a>
-    <a href="../../back-in-stock/overview">Back-in-Stock module overview →</a>
+    <a href="../../otp/overview">OTP module overview →</a>
 </div>

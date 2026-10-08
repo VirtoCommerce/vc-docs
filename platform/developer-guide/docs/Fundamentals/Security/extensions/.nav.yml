@@ -4,3 +4,4 @@ nav:
   - Extending ASP.NET Identity UserManager and RoleManager: extending-usermanager-and-rolemanager.md
   - Adding Azure AD as SSO Provider: adding-azure-as-sso-provider.md
   - Adding Google as SSO Provider: adding-google-as-sso-provider.md
+  - Adding a Custom Grant Type: adding-custom-grant-type.md

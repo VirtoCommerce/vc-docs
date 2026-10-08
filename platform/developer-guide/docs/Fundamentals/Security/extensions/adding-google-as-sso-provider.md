@@ -170,6 +170,6 @@ The user is now signed in to the Platform with their Google account.
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../adding-azure-as-sso-provider">← Azure AD as SSO provider </a>
-    <a href="../../security-in-depth ">Security in Depth →</a>
+    <a href="../adding-custom-grant-type">Adding a custom grant type →</a>
 </div>
 

@@ -5,6 +5,10 @@ The Virto Commerce OAuth 2.0 service provides the following authentication flows
 *   [Client credentials](https://oauth.net/2/grant-types/client-credentials/): Creates a token for an API client.
 *   [Password flow](https://oauth.net/2/grant-types/password): Creates a token through the user login credentials; used by operations scoped to a specific user session.
 *   [Refresh token flow](https://oauth.net/2/grant-types/refresh-token/): Refreshes an access token.
+
+A module can add further grant types beyond these three, for example the OTP module's one-time passcode sign-in.
+
+![Readmore](../media/readmore.png){: width="25"} [Adding a custom grant type](../extensions/adding-custom-grant-type.md)
     
 ## Resource owner password credential flow
 

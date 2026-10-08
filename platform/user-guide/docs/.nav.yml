@@ -143,6 +143,9 @@ nav:
                 - Google SSO: google-sso/overview.md
                 - Azure AD: azure-ad/overview.md
                 - Enabling Authentication Types: azure-ad/enabling-authentication-types.md
+                - OTP:
+                      - Overview: otp/overview.md
+                      - Enabling OTP Sign-In: otp/enabling-otp.md
           - Back-in-Stock:
                   - Overview: back-in-stock/overview.md
                   - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md
