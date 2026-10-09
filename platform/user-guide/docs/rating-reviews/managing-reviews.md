@@ -26,7 +26,7 @@ To see product reviews right after the product description on the Frontend, enab
 
 The reviews are now displayed after product description on the Frontend:
 
-![Reviews displayed](media/reviews-on-frontend.png){: style="display: block; margin: 0 auto;" }
+![Reviews displayed](media/reviews-on-frontend.png){: style="display: block; margin: 0 auto;" width="700"}
 
 ## View reviews
 
