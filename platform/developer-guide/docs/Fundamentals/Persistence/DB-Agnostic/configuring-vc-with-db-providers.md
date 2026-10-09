@@ -33,7 +33,7 @@ Select the tab with the required provider setup information:
 
 === "MySql"
 
-    **Supported version**: MySql Server 5.7 or higher.
+    **Supported version**: MySql Server 8.4 or higher.
 
     To setup DB Provider:
 

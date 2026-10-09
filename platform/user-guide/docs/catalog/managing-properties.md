@@ -317,7 +317,6 @@ To define how products are ordered by default when customers browse categories o
 
 The sorting options appear on the Frontend.
 
-
 ## Set property priority
 
 The priority of properties defines the order in which they are displayed on the Frontend. For example, to set the priority of fabrics for a men’s hat:
@@ -450,5 +449,5 @@ The grouped properties appear on the frontend. The ungrouped properties are adde
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../setting-product-availability">← Managing product availability</a>
-    <a href="../managing-SEO">Managing SEO →</a>
+    <a href="../configuring-barcode-scanner-search">Configuring barcode scanner search →</a>
 </div>

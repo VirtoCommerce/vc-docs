@@ -173,6 +173,20 @@ Within a single phrase or phrase terms, you can use:
 | `Da?? Red*`                      	| `?` replaces a single character.<br>`*` replaces zero or more characters. 	|
 | `color:Black price:[100 TO 200)` 	| Combine keywords and filters.                                             	|
 
+## Barcode search
+
+A scanned barcode is submitted as a single virtual filter term, `barcode:"<value>"`. If the store has [barcode scanner search configured](/platform/user-guide/latest/catalog/configuring-barcode-scanner-search), the term is expanded server-side into an exact-match filter against the store's chosen fields. If no field is configured, the term is left as a literal filter on a field named `barcode` and normally matches nothing.
+
+With a single configured field such as `gtin`, the term becomes `gtin:"<value>"`. With several configured fields such as `gtin` and `code`, the expansion ORs across all of them.
+
+The expansion also widens the default `is:product` scope to `is:product,variation`, so a variation-only code is found. This does not happen if the request already sent an explicit `is:` term.
+
+Every expanded field is reported back in the response's `filters` with `isGenerated: true`, and the original `barcode` term is removed from the reported user filters. The same expansion applies inside facet aggregations, so facet counts match the filtered result.
+
+!!! note
+    `*` and `?` inside a barcode value act as wildcards, not literal characters. Do not rely on character-for-character comparison for a value that contains them.
+
+A scanned value matches regardless of letter case on Elasticsearch. This has not been verified on the Lucene provider.
 
 <br>
 <br>

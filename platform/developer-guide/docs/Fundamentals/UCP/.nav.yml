@@ -3,6 +3,7 @@ nav:
   - Overview: overview.md
   - Quickstart: quickstart.md
   - Configuration: configuration.md
+  - Authenticating MCP Clients: authenticated-buyer-setup.md
   - Web API: web-api.md
   - MCP Server: mcp-server.md
   - Build and Test: build-and-test.md

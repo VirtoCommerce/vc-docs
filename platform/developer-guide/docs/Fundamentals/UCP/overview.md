@@ -65,12 +65,12 @@ The module provides the following capabilities:
 * **Order tracking**: order status, totals, line items, and shipment tracking by order id, order number, or cart id after handoff.
 * **Geography lookup**: country and region resolution through the platform `ICountriesService` for checkout address normalization.
 * **Streamable HTTP MCP server**: `/ucp/mcp` with typed UCP commerce tools for the installed Frontend, built on the official C# MCP SDK.
-* **Buyer context propagation**: header-based B2B buyer delegation through `X-Buyer-User-Id` and `X-Buyer-Organization-Id`.
+* **Buyer context propagation**: header-based B2B buyer delegation through `X-Buyer-User-Id` and `X-Buyer-Organization-Id`, or an OAuth-linked signed-in buyer through the MCP server's `link_buyer_identity` tool. See [MCP Server](mcp-server.md).
 * **Structured UCP errors**: machine-readable error codes with correlation id support.
 * **OpenTelemetry observability**: correlated tracing and metrics across the UCP operation, the xAPI call, and downstream dependencies. See [Observability](configuration.md#observability).
 
 !!! note
-    New UCP features are coming soon: delivery and payment method selection, carrier-level shipment tracking, faceted catalog filters, and OAuth2 or OIDC buyer delegation.
+    New UCP features are coming soon: delivery and payment method selection, carrier-level shipment tracking, and faceted catalog filters.
 
 ## Architecture
 

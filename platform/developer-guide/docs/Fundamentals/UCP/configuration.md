@@ -16,6 +16,22 @@ The module registers the following platform setting.
 | --- | --- | --- | --- |
 | `UCP.Enabled` | Boolean | `false` | Enables UCP module functionality. Registered in the platform settings under **UCP > General**. Not yet enforced by the current preview endpoints. |
 
+## OAuth-protected MCP resource
+
+Linking a signed-in buyer through [`link_buyer_identity`](mcp-server.md#anonymous-and-authenticated-buyers) requires the MCP endpoint to be declared as an OAuth-protected resource. This is a Platform configuration change, not an Admin SPA setting: add the endpoint to `Authorization:Resources` in **appsettings.json** or your environment configuration.
+
+```yaml title="environments.yml"
+Authorization__Resources__0: "https://store.example.com/ucp/mcp"
+```
+
+If `Resources` already lists other addresses, append this one rather than replacing the list. The setting is read at startup, so restart the Platform after changing it. 
+
+<br>
+
+![Read more](media/readmore.png){: width="20"} [Authorization: Resources](../../Configuration-Reference/appsettingsjson.md#authorization)
+
+![Read more](media/readmore.png){: width="20"} [Authenticating MCP clients](authenticated-buyer-setup.md) 
+
 ## Permissions
 
 The module registers the following permissions in the **UCP** group.
@@ -60,5 +76,5 @@ Two `UCP.Observability` settings tune what gets recorded:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../quickstart">← Quickstart</a>
-    <a href="../web-api">Web API →</a>
+    <a href="../authenticated-buyer-setup">Authenticating MCP clients →</a>
 </div>

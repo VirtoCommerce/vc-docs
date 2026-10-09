@@ -58,18 +58,32 @@ The barcode scanner provides immediate access to product details, inventory leve
 
     | **Barcode Type** | **Structure**  | **Capacity**              | **Usage** |
     |-----------------|--------------|----------------------|-------------------------------------------------------------|
-    | **UPC-A**   | GTIN-12   | 12 digits            | Commonly used on retail products in North America. |
-    | **UPC-E**   | GTIN-12   | 12 digits            | Suitable for small packages or retail products such as cosmetics, packs of chewing gum, and cigarettes in North America. |
-    | **EAN-13**  | GTIN-13   | 13 digits            | Primarily used for retail products such as periodicals, magazines, and books outside of North America. |
-    | **EAN-8**   | GTIN-8    | 8 digits             | Designed for small packages or retail products such as cosmetics, packs of chewing gum, and cigarettes outside of North America. |
-    | **Code 39** | Non-GTIN  | 43 characters        | Commonly found in warehousing and industrial applications, including automotive and electronics. It supports letters and numbers. |
-    | **Code 128**| Non-GTIN  | 48 characters        | Used in industries like warehousing, apparel, food processing, pharmaceuticals, and medical equipment. Code 128 offers the highest character density per inch and is 20-30% smaller than Code 39. It supports letters, numbers, special characters, and control codes. |
+    | **UPC-A**   | GTIN-12   | 12 digits   | Commonly used on retail products in North America. |
+    | **UPC-E**   | GTIN-12   | 12 digits   | Suitable for small packages or retail products such as cosmetics, packs of chewing gum, and cigarettes in North America. |
+    | **EAN-13**  | GTIN-13   | 13 digits   | Primarily used for retail products such as periodicals, magazines, and books outside of North America. |
+    | **EAN-8**   | GTIN-8    | 8 digits    | Designed for small packages or retail products such as cosmetics, packs of chewing gum, and cigarettes outside of North America. |
+    | **Code 39** | Non-GTIN  | 43 characters | Commonly found in warehousing and industrial applications, including automotive and electronics. It supports letters and numbers. |
+    | **Code 128**| Non-GTIN  | 48 characters | Used in industries like warehousing, apparel, food processing, pharmaceuticals, and medical equipment. Code 128 offers the highest character density per inch and is 20-30% smaller than Code 39. It supports letters, numbers, special characters, and control codes. |
     | **ISBN**    | GTIN-13   | 13 digits (10 digits before January 2007) | Used to identify physical books and e-books globally. |
 
 
 If no search results are found or a selected combination of filters returns no products, users can now clear all applied filters with a single click and instantly restore the full product list:
 
 ![No search results](../media/no-search-results.png){: style="display: block; margin: 0 auto;" width="800" }
+
+!!! note
+    The barcode scanner can be turned off.
+
+    ![Read more](../media/readmore.png){: width="20"} [Enabling barcode scanner](/platform/user-guide/latest/catalog/configuring-barcode-scanner-search#enable-barcode-scanner-on-the-frontend)
+
+!!! note
+    The barcode scanner search mode can be configured:
+
+    * **Full-text search** treats a scan as an regular keyword search.
+    * **Exact match on selected fields** matches the scanned value only against the fields you specify, such as address, SKU, or GTIN.
+
+    ![Read more](../media/readmore.png){: width="20"} [Configuring barcode scanner search mode](/platform/user-guide/latest/catalog/configuring-barcode-scanner-search#configure-barcode-scanner-search-mode)
+ 
 
 
 <br>

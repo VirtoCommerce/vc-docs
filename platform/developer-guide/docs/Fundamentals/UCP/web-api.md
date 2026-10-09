@@ -204,6 +204,6 @@ Responses include a correlation id when available. The module reads `X-Correlati
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../configuration">← Configuration</a>
+    <a href="../authenticated-buyer-setup">← Authenticating MCP clients</a>
     <a href="../mcp-server">MCP server →</a>
 </div>

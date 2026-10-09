@@ -938,6 +938,7 @@ This configuration node defines authorization settings for the system.
 | SecurityStampValidationInterval | "00:05:00" | The time span between revalidations of a signed-in application cookie against the user's security stamp.<br>A shorter interval rejects a stale or replayed cookie sooner. If set to **00:00:00**, the cookie is validated on every request. The default is 5 minutes. |
 | CookieExpireTimeSpan | "01:00:00" | The time span specifying the lifetime of the application authentication cookie.<br>The default is 60 minutes. |
 | CookieSlidingExpiration | true<br>false | A boolean setting that renews the cookie lifetime on user activity, up to the bounded maximum.<br>If set to **true**, the lifetime is extended while the user stays active; if set to **false**, the cookie expires at a fixed time. |
+| Resources | ["https://your-app.example.com/some/endpoint"] | An array of URIs declared as OAuth-protected resources, so an OAuth client can be scoped to one of them. Append to this array rather than replacing it when more than one module declares a resource, for example the UCP module's MCP endpoint. |
 
 **Example**
 
@@ -951,7 +952,8 @@ This configuration node defines authorization settings for the system.
   "EnablePersistentStorageTokenValidation": true,
   "SecurityStampValidationInterval": "00:05:00",
   "CookieExpireTimeSpan": "01:00:00",
-  "CookieSlidingExpiration": true
+  "CookieSlidingExpiration": true,
+  "Resources": ["https://your-app.example.com/some/endpoint"]
 }
 ```
 
@@ -1285,7 +1287,7 @@ This node configures file upload settings, including storage location, upload sc
 |-----------------------------|-------------------------------------------------------------------------------------------|-------------|
 | RootPath                    | `"upload"`                                                                               | The root directory where uploaded files are stored. |
 | Scopes                      |                                                                                           | Specifies upload scopes, each with its own settings such as file size limits, allowed extensions, and permissions. |
-| Scopes.Scope                | `"quote-attachments"` <br> `"organization-logos"` <br> `"product-configuration"` <br> `"purchase-request-sources"`      | Identifies the upload scope. Supported scopes include quote attachments, organization logos, and product configuration uploads. |
+| Scopes.Scope                | `"quote-attachments"` <br> `"organization-logos"` <br> `"product-configuration"` <br> `"purchase-request-sources"` <br> `"return-attachments"`      | Identifies the upload scope. Supported scopes include quote attachments, organization logos, product configuration, purchase request sources, and return attachments. |
 | Scopes.MaxFileSize          | `10485760`                                                                               | Sets the maximum file size (in bytes) allowed for uploads within this scope. |
 | Scopes.AllowedExtensions    | `[".jpg", ".jpeg", ".png", ".gif", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".txt"]` | Defines the allowed file extensions for uploads within this scope. Supported extensions include image (`.jpg`, `.jpeg`, `.png`, `.gif`), document (`.pdf`, `.doc`, `.docx`, `.txt`), and spreadsheet (`.xls`, `.xlsx`) formats. |
 | Scopes.AllowAnonymousUpload | `true` <br> `false`                                                                      | Indicates whether anonymous uploads are permitted for this scope. |
@@ -1349,6 +1351,22 @@ This node configures file upload settings, including storage location, upload sc
               ".txt"
             ],
             "AllowAnonymousUpload": true
+          }
+        ]
+      }
+    }
+    ```
+
+=== "Return attachment upload"
+    ```json title="appsettings.json"
+    {
+      "FileUpload": {
+        "RootPath": "attachments",
+        "Scopes": [
+          {
+            "Scope": "return-attachments",
+            "MaxFileSize": 5242880,
+            "AllowedExtensions": [".jpg", ".jpeg", ".png", ".webp", ".pdf"]
           }
         ]
       }

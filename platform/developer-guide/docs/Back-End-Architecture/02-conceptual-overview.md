@@ -17,7 +17,7 @@ The Virto Commerce Platform's core components are:
 
 * **Supported databases**: The Platform is database-agnostic, supporting multiple databases for flexibility and scalability:
 	- MS SQL Server 2019 and higher.
-	- MySql Server 5.7 and higher.
+	- MySql Server 8.4 and higher.
 	- PostgreSQL 12 and higher.
 
 * **Supported search engines**: Virto Commerce supports various search engines to provide efficient and scalable search capabilities:

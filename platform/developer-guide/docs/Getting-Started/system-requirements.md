@@ -85,7 +85,7 @@ For issues with .NET on operating systems not listed here, open a GitHub issue i
 The Virto Commerce Platform supports:
 
 * MS SQL Server 2019 and higher.
-* MySql Server 5.7 and higher.
+* MySql Server 8.4 and higher.
 * PostgreSQL 12 and higher.
 
 <br>

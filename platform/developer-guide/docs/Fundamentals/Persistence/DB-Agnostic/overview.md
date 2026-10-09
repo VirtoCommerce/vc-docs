@@ -20,7 +20,7 @@ Virto Commerce ships three first-party database providers, selected through the 
 | Provider | `DatabaseProvider` value | Minimum version |
 | --- | --- | --- |
 | Microsoft SQL Server | `SqlServer` | 2019 |
-| MySQL | `MySql` | 5.7 |
+| MySQL | `MySql` | 8.4 |
 | PostgreSQL | `PostgreSql` | 12 |
 
 All three are fully supported for ecommerce modules. **SQL Server is the default**: `DatabaseProvider` falls back to `SqlServer` when it is not set. A few operational paths are SQL Server-specific, namely the legacy Virto Commerce 2.x to 3.x upgrade path and the [SQL maintenance scripts](../../../Operations/maintenance-tasks-for-sql.md). MySQL and PostgreSQL have no such legacy constraints.

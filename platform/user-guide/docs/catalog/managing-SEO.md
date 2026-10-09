@@ -26,6 +26,6 @@ SEO has been enabled for the **Bolts** category.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../managing-properties">← Managing properties</a>
+    <a href="../configuring-barcode-scanner-search">← Configuring barcode scanner search</a>
     <a href="../add-videos">Adding videos →</a>
 </div>
