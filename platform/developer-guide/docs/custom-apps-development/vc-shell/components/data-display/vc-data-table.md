@@ -217,6 +217,83 @@ For any rendering not covered by built-in types, use the `#body` slot:
 </VcColumn>
 ```
 
+### Custom Cell Types
+
+A `#body` slot covers one-off formatting. When the same rendering should apply
+to a column `type` across every table in the app, register a cell component
+instead. Registration is global and reactive — already-mounted tables pick the
+new component up.
+
+```ts
+// src/cells/register.ts — imported once from your app entry point
+import { useCellRegistry } from "@vc-shell/framework";
+import CellRating from "./CellRating.vue";
+
+const { register } = useCellRegistry();
+
+register({
+  type: "rating",
+  component: CellRating,
+  config: { editable: false },
+});
+```
+
+```vue
+<VcColumn id="rating" field="rating" title="Rating" type="rating" />
+```
+
+The cell component receives a `value` prop holding the resolved field value.
+When `config.editable` is `true`, it also receives `editable`, `label`,
+`fieldName`, `fieldId`, `rules` and `rowIndex` while the row is being edited —
+mirror `CellDefault.vue` for that contract.
+
+Registering an existing type replaces the built-in for the whole app:
+
+```ts
+register({ type: "money", component: MyMoneyCell, config: { editable: true } });
+```
+
+The 12 built-ins are registered by `registerBuiltinCells()`, which runs once
+when the table's cell renderer module is loaded — that is, as soon as anything
+imports `VcDataTable`. Because ES modules finish evaluating before the module
+that imported them runs, that always happens before your own registration code,
+and `register()` is last-write-wins — so a type you register replaces the
+built-in. `registerBuiltinCells()` itself skips types that are already present,
+which keeps it idempotent and stops it clobbering a registration that did manage
+to land first (for instance when the table is loaded through a dynamic
+`import()`). `BUILTIN_CELL_TYPES` lists the names that are taken.
+
+A `type` that resolves to nothing falls back to `CellDefault`, which renders the
+raw value. Custom names are allowed, so a misspelt built-in is not a type error;
+in development builds an unresolved type logs a warning naming the type.
+
+#### Cell registry API
+
+| Member               | Signature                                         | Description                                              |
+| -------------------- | ------------------------------------------------- | -------------------------------------------------------- |
+| `register`           | `(registration: CellRegistration) => void`        | Register or replace a cell type.                         |
+| `get`                | `(type: string) => CellRegistration \| undefined` | Look up a registration.                                  |
+| `has`                | `(type: string) => boolean`                       | Whether a type is registered.                            |
+| `getRegisteredTypes` | `() => string[]`                                  | All registered type names.                               |
+| `unregister`         | `(type: string) => boolean`                       | Remove a type. Returns `false` if it was not registered. |
+| `clear`              | `() => void`                                      | Remove every registration, including the built-ins.      |
+
+Two module-level exports come with it:
+
+| Export                 | Signature             | Description                                                                                               |
+| ---------------------- | --------------------- | --------------------------------------------------------------------------------------------------------- |
+| `registerBuiltinCells` | `() => void`          | Register the 12 built-in cell types. Idempotent and non-destructive; called for you when the table loads. |
+| `BUILTIN_CELL_TYPES`   | `readonly CellType[]` | The names of the 12 built-in types.                                                                       |
+
+`CellRegistration` is `{ type: CellType | string; component: Component; config?: { editable?: boolean; additionalProps?: string[] } }`.
+
+`clear()` empties the registry permanently — `registerBuiltinCells()` runs once
+per module load, so it will not repopulate on its own. Call it again yourself if
+you need the built-ins back.
+
+`CellType` accepts the 12 built-in names with autocomplete plus any custom
+string. `BuiltinCellType` is the narrow union of just the built-ins.
+
 ---
 
 ## Sorting
@@ -457,6 +534,8 @@ The pagination bar renders below the table with page numbers, and a "Showing X-Y
 
 Three editing modes are available, set via the `edit-mode` prop.
 
+On mobile the table renders cards. With `edit-mode="cell"` a tap on an editable field opens its editor (built-in or `#editor`) in the card; `edit-mode="inline"` shows the built-in editors in every card. `row` mode is desktop-only.
+
 ### Cell Editing
 
 Click any editable cell to activate its editor. Press Enter or click away to commit, Escape to cancel.
@@ -555,6 +634,8 @@ For complex editors, use the `#editor` slot:
 </VcColumn>
 ```
 
+The editor opens focused on its first focusable element. It closes on Enter, Escape, Tab out, or a click outside it; a click inside a popup the editor opened (linked by `aria-controls`, as VcSelect's dropdown is) keeps it open.
+
 ---
 
 ## Column Management
@@ -617,7 +698,7 @@ After initialization the column lives in the weight model. Container resizes rec
 
 - `minWidth` and `maxWidth` are enforced by the engine on every computation pass.
 - Default `minWidth` is 40 px when not specified.
-- In crisis (sum of all `minWidth` values exceeds available width), the engine squeezes columns below their minimums and emits a console warning rather than breaking layout.
+- In crisis (sum of all `minWidth` values exceeds available width), the engine squeezes columns below their minimums rather than breaking layout. A console warning is logged only if the shortage lasts beyond 500 ms, so a blade's opening animation does not trigger it.
 
 ### Column Switcher
 
