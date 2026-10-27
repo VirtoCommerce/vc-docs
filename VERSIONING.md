@@ -4,7 +4,7 @@ This repository publishes versioned documentation using [mike](https://github.co
 
 ## Versioning scheme
 
-There are two kinds of version. The rolling version documents the Edge release channel and lives on `main`. Stable versions are frozen snapshots that track Virto Commerce Platform stable releases, for example `stable14`, `stable15`.
+There are two kinds of version. The rolling version documents the Edge release channel and lives on `main`. Stable versions are frozen snapshots that track Virto Commerce Platform stable releases, for example `stable15`, `stable16`.
 
 - The rolling version occupies the `latest` slug. Its **VERSION** file reads `latest` and is never changed. In the version selector it is titled Edge.
 - Stable version numbers are not contiguous. A docs version exists only for a Platform stable release that shipped documentation changes, so gaps such as the missing `stable13` are expected.
@@ -25,6 +25,7 @@ There are two kinds of version. The rolling version documents the Edge release c
 | Branch             | Version    | Title     | URL prefix example               |
 |--------------------|------------|-----------|----------------------------------|
 | `main`             | `latest`   | Edge      | `/platform/user-guide/latest/`   |
+| `release/stable16` | `stable16` | Stable 16 | `/platform/user-guide/stable16/` |
 | `release/stable15` | `stable15` | Stable 15 | `/platform/user-guide/stable15/` |
 | `release/stable14` | `stable14` | Stable 14 | `/platform/user-guide/stable14/` |
 | `release/stable12` | `stable12` | Stable 12 | `/platform/user-guide/stable12/` |
