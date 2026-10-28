@@ -5,6 +5,7 @@ nav:
   - Purchasing:
       - Dashboard: dashboard.md
       - Orders: orders.md
+      - Returns: returns.md
       - Lists: lists.md
       - Quote Requests: quote-requests.md
       - Purchase Requests: purchase-requests.md

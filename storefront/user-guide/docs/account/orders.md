@@ -13,9 +13,6 @@ Here you can:
 
 * Sort orders by date, status, or total in ascending or descending order:
 
-    ![Order management](../media/managing-orders.gif)
-
-
 To view the order details, click the desired order in the orders list. The order details open in a new window:
 
 ![Order details](../media/order-details.png)
@@ -37,22 +34,7 @@ Here you can:
 
 ## Return request
 
-Once your order reaches the **Completed** status, you can request a return:
-
-1. Click the **Request return** button that appears above the order details:
-
-    ![Request return](../media/request-return.png){: style="display: block; margin: 0 auto;" }
-
-1. Provide the following details:
-
-    ![Return details](../media/return-details.png){: style="display: block; margin: 0 auto;" }
-
-1. Click **Submit return**.
-
-Created returns appear in the existing **Returns** list in the main menu. Each return can later be rejected, partially approved, or fully approved.
-<br>
-<br>
-![Read more](../media/readmore.png){: width="20"} [Configuring returns](/platform/user-guide/latest/order-management/managing-returns)
+Once your order reaches the **Completed** status, you can [request a return](../shopping/returns.md).
 
 
 <br>
@@ -61,5 +43,5 @@ Created returns appear in the existing **Returns** list in the main menu. Each r
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../dashboard">← Dashboard</a>
-    <a href="../lists">Lists →</a>
+    <a href="../returns">Returns →</a>
 </div>

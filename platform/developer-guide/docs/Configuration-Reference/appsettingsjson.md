@@ -1772,7 +1772,8 @@ This node controls the OpenTelemetry observability settings:
       "Experimental.ModelContextProtocol"
     ],
     "Meters": [
-      "VirtoCommerce.UCP"
+      "VirtoCommerce.UCP",
+      "VirtoCommerce.Platform.Caching"
     ]
   }
 }

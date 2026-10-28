@@ -31,9 +31,9 @@ The customers can be edited as follows:
 
 ![Edit customers](../media/edit-my-customers.gif)
 
-## Calendar
+## Tasks
 
-Sales reps can manage their tasks directly from the Sales Rep dashboard and track daily activities and customer follow-ups with the help of **Calendar**:
+Sales reps can manage their tasks directly from the Sales Rep dashboard and track daily activities and customer follow-ups in the **Tasks** section:
 
 <div>
   <script async src="https://js.storylane.io/js/v2/storylane.js" data-verify-origin=""></script>

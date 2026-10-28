@@ -115,7 +115,9 @@ The module exports metrics, traces, and logs over OTLP only. The Platform does n
 
 Metrics, traces, and logs from the Platform are now viewable in Prometheus and Grafana.
 
-The exported metrics are infrastructure-level: request rate and duration, .NET runtime, process, database, and the other sources listed above. The module does not define custom business metrics, so application-level indicators are not emitted out of the box.
+The metrics above are collected automatically. The module also exports any meter a platform component or another module registers through `OpenTelemetry:Meters`. The platform's own cache counters are the first such opt-in metric. They live under the `VirtoCommerce.Platform.Caching` meter; add that name to `OpenTelemetry:Meters` to export cache hit and miss counts.
+
+![Readmore](media/readmore.png){: width="25"} [Cache metrics reference](../Fundamentals/Caching/01-overview.md#cache-metrics)
 
 ## Troubleshooting
 

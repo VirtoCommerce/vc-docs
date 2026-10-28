@@ -144,6 +144,23 @@ By default, the Platform caches null values. If you choose to use negative cachi
 
 ![Readmore](media/readmore.png){: width="25"} [Cache configuration](02-cache-configuration.md)
 
+## Cache metrics
+
+Platform 3.1082.0 and higher reports cache lookups through the `VirtoCommerce.Platform.Caching` meter in `PlatformMemoryCache`, `RedisPlatformMemoryCache`, and `RequestScopedCache`:
+
+* `virtocommerce.cache.requests`: a counter of cache lookups. Tags: `cache.request.type` (`hit` or `miss`) and `cache.name`.
+* `virtocommerce.cache.request.groups`: a counter of per-request outcomes for a named cache. Tags: `cache.name` and `cache.outcome` (`hit_only`, `mixed`, or `miss_only`).
+
+`cache.name` is resolved automatically. A cache consumer calls `CacheKey.RegisterCacheName(ownerType, modelType)` once, and every lookup for that key is named with no change at the call site.
+
+For a request that touches multiple named caches, the request's own Activity carries additional tags:
+
+* `cache.hits` and `cache.misses`: the totals for the request.
+* `cache.lookup.summary`: a bounded summary, up to 64 groups or 8 KiB.
+* `cache.groups.truncated`: set when the summary was cut off.
+
+![Readmore](media/readmore.png){: width="25"} [Export cache metrics with the OpenTelemetry module](../../Extensibility/opentelemetry.md)
+
 ## Scaling
 
 Running multiple Platform instances, each with its own local cache, and which in turn must be consistent with the cache of other instances, can be challenging. Without solving this problem, each instance of the application will have inconsistent data, which will definitely frustrate Virto Commerce customers.

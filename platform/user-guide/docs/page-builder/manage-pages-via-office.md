@@ -133,7 +133,26 @@ To reuse files without uploading them again and reduce duplicate media uploads, 
     !!! note
         If a user is trying to upload a file with the same full name (name + extension) as an existing file in the target folder, a confirmation prompt is displayed before anything is written.
 
-In the **Designer** mode, you can use image from the Assets Library or upload new ones:
+A folder loads 20 files at a time. Use the paginator at the bottom to move between pages. Change **Items per page** to 20, 50, or 100 to load more or fewer files at once.
+
+Use **Search assets…** to find a file by name. Use **Sort by** to order files:
+
+* **Name (A-Z)**.
+* **Name (Z-A)**.
+* **Recently modified**.
+* **Largest first**.
+
+Changing the search, the sort, or the page size returns you to the first page.
+
+!!! note
+    Search covers the whole current folder, not its sub-folders.
+
+Each file shows how many pages and shared components use it. Click a file to see where it is used, split into **Pages** and **Shared components**.
+
+!!! note
+    Deleting a folder is confirmed with a warning that names every page using a file inside that folder, at any depth.
+
+In the **Designer** mode, you can use image from the Assets Library or upload new ones. The picker shows only images, with the same pagination and search as the library:
 
 ![Assets library](media/assets-library-in-designer.png){: style="display: block; margin: 0 auto;" }
 

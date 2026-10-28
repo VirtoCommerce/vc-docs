@@ -12,13 +12,13 @@ Sales funnel (checkout) events represent sequential steps that guide the custome
 
 After the customer proceeds to checkout, the following events are tracked in the specified order:
 
-| GA event         	    | Action (trigger)                                                                          | Checkout step                                                          	|
-|-------------------	|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------	|
-| begin_checkout    	| Click **Proceed to checkout**.                                                           	|                                                                         	|
-| add_shipping_info 	| Click **Proceed to billing** after specifying the shipping address and delivery method. 	| Shipping.                                                             	|
-| add_payment_info  	| Click **Review order** after specifying the billing address and the payment method.       | Billing.                                                              	|
-| place_order       	| Click **Place order** after reviewing the order.                                       	| Order review.                                                         	|
-| purchase          	| Click **Pay now** after selecting the payment method.                                 	| Payment (unless manual payment was select at the previous step). 	        |
+| GA event         	    | Action (trigger)                                                                          | Checkout step                        |
+|-------------------	|-------------------------------------------------------------------------------------------|----------------------------------------|
+| begin_checkout    	| Click **Proceed to checkout**.                                                           	|                                         |
+| add_shipping_info 	| Click **Proceed to billing** after specifying the shipping address and delivery method. 	| Shipping.                               |
+| add_payment_info  	| Click **Review order** after specifying the billing address and the payment method.       | Billing.                                |
+| place_order       	| Click **Place order** after reviewing the order.                                       	| Order review.                             |
+| purchase          	| Click **Pay now** after selecting the payment method.            | Payment (unless manual payment was select at the previous step). |
 
 !!! note
     For a single-step checkout, only `begin_checkout` and `place_order` are tracked. Other events can be added at the client's request.
@@ -192,6 +192,82 @@ The table below shows additional events that track user actions across the Front
     </tr>
   </tbody>
 </table>
+
+## Product list and click tracking
+
+Product list tracking runs through a beacon tracking engine. The engine generates `view_item_list`, `select_item`, and `view_item` from page markup. This lets Page Builder content, catalog lists, and plain HTML lists report to GA4 without custom analytics code.
+
+!!! tip
+    Inspect these events in the browser console:
+
+    ```js
+    window.dataLayer
+      .filter(e => e[0] === 'event' && ['view_item_list', 'select_item', 'view_item'].includes(e[1]))
+      .map(e => ({ event: e[1], params: e[2] }))
+    ```
+
+### List identifiers
+
+Each surface sends a fixed `item_list_id`:
+
+| Frontend surface | `item_list_id` | Notes |
+|---|---|---|
+| Page Builder products and predefined-product-list blocks | `products_block` | One event per block, each with its own items, even when two blocks share the id. |
+| Page Builder products-carousel block | `products_carousel` | An untitled carousel omits `item_list_name`. |
+| Page Builder favorite-products block | `favorite_products` | A block whose filter matches nothing sends no event. |
+| Product page, recommended products | `recommended_products_<model>` | For example `recommended_products_bought-together`. `related_id` is the product id, and `related_type` is `product`. |
+| Product page, related products | `related_products` | |
+| Product page, variations | `variations` | Sends `view_item_list` only, never `select_item`. `related_id` is the parent product. |
+| Cart, recently browsed | `recently_browsed_products` | |
+| Your own HTML list | The value of `data-list-id`. | See [Custom list markup](#custom-list-markup). |
+
+The Page Builder `demo-product-list` and `product-info` blocks do not send these events yet.
+
+!!! note
+    These surfaces still use the existing analytics calls, one event per view or click:
+
+    1. Category pages.
+    1. The search bar dropdown (`search_bar`).
+    1. The comparison page.
+    1. The wishlist page.
+    1. Cart line items.
+
+### Event timing
+
+The following situations determine whether a `view_item_list` or `select_item` event is sent:
+
+| Situation | What happens |
+|---|---|
+| A list renders, in or out of the viewport. | One `view_item_list`. |
+| The window resizes, or the same products are added to cart, have their quantity changed, or are refetched. | No second event. |
+| The viewport shows fewer cards than the list holds. | `items` still holds the whole list. |
+| A paginated list, for example the variations table, moves to another page. | A new `view_item_list` with that page's items only. Returning to an earlier page sends it again. |
+| A product link is clicked, Enter is pressed on it, or it is Ctrl-clicked. | One `select_item`. |
+| A card image, a carousel arrow, the quantity control, add to cart, add to a list, or compare is clicked. | No `select_item`. |
+| A card has no `data-product-id`. | The card still works. Its item has no `item_id`. |
+| A single-hit barcode search redirects straight to the product page. | No `view_item_list`. On a store with [barcode scanner search](/platform/user-guide/latest/catalog/configuring-barcode-scanner-search) configured, one `view_item` there instead. |
+
+### Custom list markup
+
+Add the following markup to a Page Builder Text block, or to any page template, to report a plain HTML list to GA4:
+
+```html
+<div data-vc-track="product-list" data-list-id="my_list" data-list-name="My list">
+  <div data-vc-track="product-card" data-product-id="example-id" data-product-sku="EXAMPLE-SKU" data-product-name="Example product" data-product-price="19.90">
+    <a data-vc-track="product-link" href="/example-product">Example product</a>
+    <span>$19.90</span>
+  </div>
+</div>
+```
+
+| Attribute | On | What it does |
+|---|---|---|
+| `data-vc-track="product-list"` | The list container. | Marks the list. `data-list-id` becomes `item_list_id`. |
+| `data-vc-track="product-card"` | Each card. | Becomes one entry in `items`. |
+| `data-vc-track="product-link"` | The link inside a card. | The only element whose click sends `select_item`. |
+| `data-product-id`, `data-product-sku`, `data-product-name`, `data-product-price` | A card. | Map to the matching [item fields](#item-fields). |
+
+A card can carry only `data-product-name` and `data-product-price`; its item then has no `item_id`. Editing the price on such a card sends a new `view_item_list` for that list, while a card with an id ignores a price edit.
 
 ## Ecommerce event payloads
 

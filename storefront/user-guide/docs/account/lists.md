@@ -64,9 +64,15 @@ To share a list:
 
         ![Specific customers](../media/specific-customers.png){: style="display: block; margin: 0 auto;" }
 
-        The customer receives the notification:
+        The selected customers receive the notification:
 
         ![Received notification](../media/received-notification.png){: style="display: block; margin: 0 auto;" }
+
+        The list gets the **Shared with (...) customers** status:
+
+        ![Shared with 4](../media/shared-with-4-customers.png){: style="display: block; margin: 0 auto;" }
+
+        When this list is clicked, a message that has been sent and the customers it has been shared with will be opened. 
 
     === "Anyone with link"
 
@@ -83,6 +89,6 @@ Your modifications have been applied.
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../orders">← Orders</a>
+    <a href="../../shopping/returns">← Returns</a>
     <a href="../quote-requests">Quote requests →</a>
 </div>

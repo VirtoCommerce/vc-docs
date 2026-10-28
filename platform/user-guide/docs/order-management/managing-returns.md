@@ -1,6 +1,14 @@
 # Manage Returns
 
-A return is created by an operator against an existing order in the Admin UI or upon the customer's request.
+A return can be created by an operator against an existing order in the Admin UI or submitted by a buyer.
+
+!!! note
+    On the Frontend, users can request a return only if all the following conditions are met:
+
+    1. The shipment has been completed, and the shipment date is specified in the shipment documents.
+    1. The shipped items are specified in the shipment documents.
+    1. The **Approved** switch has been turned to on.
+    1. The **Completed** status has been set for the order.
 
 Managing returns includes:
 
@@ -29,7 +37,7 @@ The return has been created.
 
 ## View and process returns
 
-To process the returns:
+To process the created returns or returns submitted by a buyer:
 
 1. In the main menu, click **Orders**.
 1. In the next **Customer orders** blade select the required order.
@@ -38,10 +46,15 @@ To process the returns:
 
     ![Return processing](media/return-processing.png){: style="display: block; margin: 0 auto;" }
 
-1. In the **Return** blade, change the return status (**Completed**, **Approved**, or **Deleted**) and enter your resolution.
+1. In the **Return** blade, click the **Line items** widget.
+1. In the next blade, configure the items quantity you are going to return and click.
+1. Click **Approve/decline** button in the toolbar.
+
+    ![Return processing 2](media/return-processing2.png)
+
 1. Click **Save** in the toolbar to save the changes.
 
-The modifications have been saved.
+The buyer sees the return request status change.
 
 ## Settings
 
