@@ -7,6 +7,9 @@ This document provides an overview of the Virto Commerce Frontend modules archit
 * **Modularity:** Modules in the **/modules** folder can be removed without affecting the Core.  
 * **Control:** Decision-makers have clear oversight.  
 
+This article describes a module built directly inside the vc-frontend repository. A backend module can instead ship its own Frontend UI as a separately built plugin, loaded at runtime.
+
+![Readmore](media/readmore.png){: width="25"} [Module Federation](module-federation.md)
 
 ## Key concepts
 
@@ -152,5 +155,5 @@ Happy coding! 🚀
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../architecture">← Frontend application architecture</a>
-    <a href="../../spa-architecture-for-seo-and-404-handling">SPA architecture for SEO and 404 handling →</a>
+    <a href="../module-federation">Module Federation →</a>
 </div>

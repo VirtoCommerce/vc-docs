@@ -224,6 +224,6 @@ To prevent outdated **.html** templates from being served, make sure your custom
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../modules-architecture/modules-architecture">← Modules architecture</a>
+    <a href="../modules-architecture/module-federation">← Module Federation</a>
     <a href="../deployment">Deployment →</a>
 </div>
