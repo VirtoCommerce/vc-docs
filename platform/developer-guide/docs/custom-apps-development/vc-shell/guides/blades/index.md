@@ -301,6 +301,7 @@ The host blade does not know the widget exists at build time, so there is no `us
 
 - [useWidgets service reference.](../../composables/services/useWidgets.md)
 - [Module Federation concept.](../../concepts/module-federation.md)
+- [Extend another module's blades: widgets, toolbar buttons, extension points.](../extend-another-module.md)
 
 ## Recipe: confirmation
 
