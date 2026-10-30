@@ -23,19 +23,19 @@ All three registrations run once, in the contributing module's `install()`. They
 
 ## Recipe: add a widget to another module's blade
 
-```ts title="src/modules/messenger/index.ts"
+```ts title="src/modules/shipping/index.ts"
 import { defineAppModule, registerExternalWidget } from "@vc-shell/framework";
 import { markRaw } from "vue";
-import MessengerWidget from "./components/MessengerWidget.vue";
+import ShippingWidget from "./components/ShippingWidget.vue";
 
 export default defineAppModule({
   blades: pages,
   locales,
   install() {
     registerExternalWidget({
-      id: "MessengerWidget",
-      component: markRaw(MessengerWidget),
-      targetBlades: ["ProductDetails", "Offer", "OrderDetails"],
+      id: "ShippingWidget",
+      component: markRaw(ShippingWidget),
+      targetBlades: ["OrderDetails", "ReturnDetails"],
       isVisible: (blade) => !!blade?.param,
     });
   },
@@ -84,16 +84,16 @@ An extension point is a named place in a blade or page. The owning module (the h
 
 ### Host: declare the extension point
 
-The vendor portal's seller details blade lets other modules add fields to its form:
+An order details blade lets other modules add fields to its form:
 
-```vue title="seller-details-edit.vue (host)"
+```vue title="order-details.vue (host module)"
 <template>
   <VcForm>
-    <!-- ...seller fields... -->
+    <!-- ...order fields... -->
 
     <ExtensionPoint
-      v-if="sellerDetails?.id"
-      name="seller:commissions"
+      v-if="order?.id"
+      name="order:details-fields"
       wrapper-class="tw-p-2"
     />
   </VcForm>
@@ -104,7 +104,7 @@ import { ExtensionPoint } from "@vc-shell/framework";
 </script>
 ```
 
-Name extension points as `<area>:<place>`, for example `seller:commissions` or `order:sidebar`. A host can render nothing for a point that has no registrations, so declaring one costs nothing until a plugin uses it.
+Name extension points as `<area>:<place>`, for example `order:details-fields` or `customer:sidebar`. A host can render nothing for a point that has no registrations, so declaring one costs nothing until a plugin uses it.
 
 `<ExtensionPoint>` props:
 
@@ -120,19 +120,19 @@ For custom rendering, use the default scoped slot, which receives `components` a
 
 ### Plugin: register a component
 
-The commissions module adds a fee field to that form:
+A loyalty module adds a points field to that form:
 
-```ts title="commissions module: src/modules/commissions/index.ts"
+```ts title="src/modules/loyalty/index.ts (plugin module)"
 import { useExtensionPoint } from "@vc-shell/framework";
-import { CommissionsFeeField } from "./components";
+import { LoyaltyPointsField } from "./components";
 
 export default {
   install() {
-    const { add } = useExtensionPoint("seller:commissions");
+    const { add } = useExtensionPoint("order:details-fields");
 
     add({
-      id: "commissions-fee",
-      component: CommissionsFeeField,
+      id: "loyalty-points",
+      component: LoyaltyPointsField,
     });
   },
 };
@@ -156,20 +156,24 @@ The framework declares its own extension points. Use the `ExtensionPoints` const
 | --- | --- | --- |
 | `ExtensionPoints.AUTH_AFTER_FORM` | `auth:after-form` | Login page, below the sign-in form |
 
-The marketplace registration module uses it to add a sign-up button to the login page:
+For example, a self sign-up module adds a button to the login page:
 
-```ts title="registration module: src/modules/registration/index.ts"
+```ts title="src/modules/sign-up/index.ts"
 import { useExtensionPoint, ExtensionPoints } from "@vc-shell/framework";
-import { RegistrationButton } from "./components";
+import { SignUpButton } from "./components";
 
-const { add } = useExtensionPoint(ExtensionPoints.AUTH_AFTER_FORM);
+export default {
+  install() {
+    const { add } = useExtensionPoint(ExtensionPoints.AUTH_AFTER_FORM);
 
-add({
-  id: "registration-button",
-  component: RegistrationButton,
-  priority: 10,
-  meta: { type: "action" },
-});
+    add({
+      id: "sign-up-button",
+      component: SignUpButton,
+      priority: 10,
+      meta: { type: "action" },
+    });
+  },
+};
 ```
 
 ## Common mistakes
