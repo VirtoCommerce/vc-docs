@@ -104,6 +104,7 @@ export default defineAppModule({ locales: { en: {} } });
 Order does not matter. The reactive store accepts `add` calls before the host declares the point and resolves them when the host blade mounts. Use globally unique `id` values; a second `add` with the same `id` replaces the entry.
 
 - [Extension points and metadata filters.](../../concepts/extensions.md)
+- [Extend another module's blades: widgets, toolbar buttons, extension points.](../extend-another-module.md)
 
 ## Recipe: ship a Module Federation plugin remote
 
