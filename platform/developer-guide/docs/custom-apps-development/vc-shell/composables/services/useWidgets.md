@@ -50,11 +50,11 @@ None.
 
 ### Additional Exports
 
-| Export                                 | Description                                                                                                                                            |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `provideWidgetService()`               | Creates and provides the widget service via Vue injection. Idempotent -- returns existing service if already provided. Cleans up via `onScopeDispose`. |
-| `registerWidget(widget, bladeId)`      | Global pre-registration. Widgets registered this way are picked up when `provideWidgetService()` creates the service. Use in module `install()`.       |
-| `registerExternalWidget(registration)` | Global pre-registration for cross-module widgets. These widgets are rendered in blades owned by other modules.                                         |
+| Export                                 | Description                                                                                                                                                                                                            |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `provideWidgetService()`               | Creates and provides the widget service via Vue injection. Idempotent -- returns existing service if already provided. Cleans up via `onScopeDispose`.                                                                 |
+| `registerWidget(widget, bladeId)`      | Global pre-registration. Widgets registered this way are picked up when `provideWidgetService()` creates the service. Use in module `install()`. Pass a blade name to show the widget on every instance of that blade. |
+| `registerExternalWidget(registration)` | Global pre-registration for cross-module widgets. These widgets are rendered in blades owned by other modules.                                                                                                         |
 
 
 
@@ -75,7 +75,7 @@ export default {
         component: markRaw(OrderStatusWidget),
         icon: "fas fa-clipboard-check",
       },
-      "order-details", // blade ID where this widget appears
+      "OrderDetails", // blade name (from defineBlade); the widget appears on every open instance of it
     );
   },
 };
@@ -95,12 +95,41 @@ export default {
   install() {
     registerExternalWidget({
       id: "shipping-tracker",
-      targetBlades: ["order-details"], // target blades from other modules
+      targetBlades: ["OrderDetails"], // blade names from other modules
       component: markRaw(ShippingTracker),
       title: "Shipping",
     });
   },
 };
+```
+
+The widget component reads the blade's data with [`injectBladeContext()`](../bladeContext/), since it renders inside the blade. `isVisible` runs before the component exists, so a function form receives the blade context as its second argument:
+
+```typescript
+registerExternalWidget({
+  id: "shipping-tracker",
+  targetBlades: ["OrderDetails"],
+  component: markRaw(ShippingTracker),
+  // the blade calls defineBladeContext({ item })
+  isVisible: (blade, ctx) => (ctx.item as Order | undefined)?.status === "Shipped",
+});
+```
+
+A headless widget registered by blade name has no component to inject from, so its `onClick` and a function `disabled` receive the context too:
+
+```typescript
+registerWidget(
+  {
+    id: "invoice",
+    title: "Invoice",
+    headless: {
+      icon: "lucide-receipt",
+      disabled: (ctx) => !ctx.item,
+      onClick: (ctx) => openInvoice((ctx?.item as Order).id),
+    },
+  },
+  "OrderDetails",
+);
 ```
 
 ## Recipe: Listing All Widgets for a Blade
