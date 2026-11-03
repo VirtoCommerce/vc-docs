@@ -38,9 +38,9 @@ A Virto Commerce solution is **composed**, not forked. Customize three layers in
     !!! warning
         **Do not fork the Platform backend.** Forking `vc-platform` and tracking an upstream remote puts you on the "customize-by-source-modification" path, which breaks [seamless delivery](../Extensibility/overview.md#seamless-delivery) and creates a long-term merge tax on every update. The Platform source is published for transparency only.
 
-    You do **not** need a platform fork to get source control and deployment from your own repository:
+    You do **not** need a Platform fork to get source control and deployment from your own repository:
 
-    * **Platform image:** Use the Virto-provided platform Docker image as-is — you do not build or maintain your own. Select the image and the modules to install; custom images you upload appear in the same dropdown.
+    * **Platform image:** Use the Virto-provided Platform Docker image as-is — you do not build or maintain your own. Select the image and the modules to install; custom images you upload appear in the same dropdown.
     * **Customizations:** Keep each custom module in its own repository and ship it as a package (see [Create a custom module](#configure-your-custom-solution) below).
     * **Source-controlled deployment:** Drive deployment from your own Git repository with [GitOps](/platform/deployment-on-cloud/latest/enable-gitops/). Your deploy repo references the platform image, module artifacts, and frontend; Virto Cloud syncs from it. See [Backend customization on Virto Cloud](/platform/deployment-on-cloud/latest/backend-customization/) for the end-to-end flow.
 
@@ -49,7 +49,15 @@ A Virto Commerce solution is **composed**, not forked. Customize three layers in
     1. Define which modules to install via a [package.json](https://github.com/VirtoCommerce/vc-modules/blob/master/modules_v3.json).
     1. Configure runtime behavior via [appsettings.json](../Configuration-Reference/appsettingsjson.md). 
 
-1. Fork the [Frontend](https://github.com/VirtoCommerce/vc-frontend) for branding and customization. Track upstream to receive releases.
+1. Fork a Frontend for branding and customization. Track upstream to receive releases. Two options exist today: 
+
+    * [vc-frontend](https://github.com/VirtoCommerce/vc-frontend), the stable theme:
+
+        ![Regular](media/Frontend-regular.png)
+
+    * [vc-frontend-next](https://github.com/VirtoCommerce/vc-frontend-next), a modern, cutting-edge redesign that's still evolving. Check with the Virto Commerce team before building on it:
+
+        ![Next](media/Frontend-next.png)
 
 1. Create a custom module:
 

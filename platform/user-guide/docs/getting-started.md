@@ -1,6 +1,20 @@
 # Getting Started
 
+Virto Commerce is a headless platform, and multiple client apps can be connected to it. Two Frontend options exist today: 
+
+* [vc-frontend](https://github.com/VirtoCommerce/vc-frontend), the stable theme.
+
+    ![Regular](media/Frontend-regular.png)
+
+* [vc-frontend-next](https://github.com/VirtoCommerce/vc-frontend-next), a modern, cutting-edge redesign that's still evolving. Check with the Virto Commerce team before building on it:
+
+    ![Next](media/Frontend-next.png)
+
+!!! note
+    This guide uses the **vc-frontend** UI for illustrations.  
+
 If you're new to Virto Commerce, the following steps will guide you through the essential configurations and actions to ensure a seamless start for your store:
+
 
 1. [Create a catalog.](getting-started.md#create-catalog)
 1. [Configure store and prices.](getting-started.md#configure-store-and-prices)

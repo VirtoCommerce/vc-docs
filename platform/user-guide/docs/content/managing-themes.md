@@ -74,6 +74,7 @@ The new theme appears in the themes list. Now it needs to filled in.
 
 ## Apply theme color scheme
 
+<!--apply-theme-color-scheme-start-->
 Users can personalize their store by applying a [custom theme](/storefront/developer-guide/latest/customization/visual-theme-customization) or choosing from the ready-to-use color schemes designed by Virto Commerce. Each release includes a set of default color presets, with new ones added several times a year. To access the latest default color presets, users can simply download the updated theme. Currently, the following out-of-the-box color schemes can be applied to your store:
 
 === "purple-pink"
@@ -123,6 +124,7 @@ To apply a new color scheme to your store:
 1. Click **Save** in the toolbar. 
 
 Your new color scheme has been applied.
+<!--apply-theme-color-scheme-end-->
 
 
 <br>

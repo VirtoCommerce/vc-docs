@@ -14,6 +14,16 @@ It includes:
 * CDN (optional, placed before the load balancer).
 * Prerender.io (optional for server-side rendering).
 
+Two Frontend options exist today: 
+
+* [vc-frontend](https://github.com/VirtoCommerce/vc-frontend), the stable theme.
+
+    ![Regular](media/Frontend-regular.png)
+
+* [vc-frontend-next](https://github.com/VirtoCommerce/vc-frontend-next), a modern, cutting-edge redesign that's still evolving. Check with the Virto Commerce team before building on it:
+
+    ![Next](media/Frontend-next.png)
+
 The workflow ensures a seamless and efficient operation of the Virto Commerce Frontend Application:
 
 1. **Client request**:

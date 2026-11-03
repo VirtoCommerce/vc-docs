@@ -2,6 +2,19 @@
 
 This guide is designed to help you navigate and make the most of your shopping experience on our Frontend. You will find valuable information on how to browse products, manage your account, place orders, and much more.
 
+!!! note
+    Two Frontend options exist today: 
+
+    ??? "Frontend. Our stable theme"
+        ![Regular](media/Frontend-regular.png)
+
+
+    ??? "Frontend Next. Our cutting-edge redesign that's still evolving"
+        ![Next](media/Frontend-next.png)
+
+    This guide uses the **vc-frontend** UI for illustrations.  
+
+
 |Item|Description|
 |---|---|
 | ![Registration and signing in](media/register-overview.png) | <br><ul><li> [Create account](registration_and_signing_in/create-account.md)</li> <li> [Sign in](registration_and_signing_in/sign-in.md) </li> <li>[Manage password](registration_and_signing_in/password-management.md) </li></ul>|

@@ -10,18 +10,18 @@ There are three types of missions:
 
 === "Buy a target number of orders"
 
-    ![Mission 1](../media/mission1.png)
+    ![Mission 1](../media/mission1.png){: style="display: block; margin: 0 auto;" }
 
 === "Reach a target order value"
 
-    ![Mission 2](../media/mission2.png)
+    ![Mission 2](../media/mission2.png){: style="display: block; margin: 0 auto;" }
 
 === "Buy a target quantity of SKUs"
 
     !!! note
         Users can buy the required SKUs directly from the mission progress window.
 
-    ![Mission 3](../media/mission3.png)
+    ![Mission 3](../media/mission3.png){: style="display: block; margin: 0 auto;" }
 
 <br>
 <br>
