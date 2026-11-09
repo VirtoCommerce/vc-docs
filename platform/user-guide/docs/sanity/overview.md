@@ -1,6 +1,6 @@
 # Overview
 
-The **Sanity** module integrates [Sanity](https://www.sanity.io/), a powerful headless CMS, with the Virto Commerce platform. It allows your marketing and content teams to create, manage, and publish rich ecommerce content in Sanity Studio, while automatically syncing that content to your Virto Commerce Frontend. Unlike the Content module, which manages pages and assets directly within the Virto Commerce platform, the Sanity module connects to an external, best-in-class content authoring environment and delivers its content through Virto Commerce.
+The **Sanity** module integrates [Sanity](https://www.sanity.io/), a powerful headless CMS, with the Virto Commerce Platform. It allows your marketing and content teams to create, manage, and publish rich ecommerce content in Sanity Studio, while automatically syncing that content to your Virto Commerce Frontend. Unlike the Content module, which manages pages and assets directly within the Virto Commerce Platform, the Sanity module connects to an external, best-in-class content authoring environment and delivers its content through Virto Commerce.
 
 The [Content module](../content/overview.md) must be installed before using the Sanity module, as it provides the underlying content storage and delivery infrastructure.
 
@@ -21,6 +21,7 @@ With the Sanity module, you can:
 * Publish content changes that automatically propagate to your Virto Commerce Frontend without developer involvement.
 * Combine Sanity-managed content with Virto Commerce product and catalog data for rich, content-driven shopping experiences.
 * Deliver consistent content across web, mobile, and other digital touchpoints from a single source.
+* Fetch and index [several document types from several Sanity datasets or projects](settings.md), with a priority for conflicts.
 
 ![Readmore](media/readmore.png){: width="25"} [Sanity module setup](/platform/developer-guide/latest/Extensibility/cms-integrations/sanity-setup)
 
@@ -30,5 +31,5 @@ With the Sanity module, you can:
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../../pages/settings">← Pages settings</a>
-    <a href="../../contentful/overview">Contentful module overview →</a>
+    <a href="../settings">Sanity settings →</a>
 </div>

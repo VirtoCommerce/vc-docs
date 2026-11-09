@@ -31,6 +31,7 @@ The customers can be edited as follows:
 
 ![Edit customers](../media/edit-my-customers.gif)
 
+
 ## Tasks
 
 Sales reps can manage their tasks directly from the Sales Rep dashboard and track daily activities and customer follow-ups in the **Tasks** section:
@@ -53,6 +54,15 @@ The rep can browse and search the list, then open or download any accessible doc
 
 ![Readmore](../media/readmore.png){: width="20"} [Uploading documents to the library](/platform/user-guide/latest/sales-rep/document-library)
 
+
+## My activity
+
+The **Activity** section shows a merged, newest-first feed of what the rep's customers did: orders placed and customer assignments, plus, when analytics is connected, searches, product views, and sign-ins. Each category has its own tab with a counter, and the rep can filter the feed by customer, category, or date period:
+
+![My activity](../media/my-activity.png){: style="display: block; margin: 0 auto;" }
+
+!!! note
+    The searches, product views, and sign-ins tabs need Google Analytics 4 connected to the store.
 
 
 

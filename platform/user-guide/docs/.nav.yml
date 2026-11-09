@@ -13,6 +13,9 @@ nav:
           - Glossary: glossary.md
     - Modules:
           - Overview: platform-overview.md
+          - Admin Shell:
+                - Overview: admin-shell/overview.md
+                - Installing and Using Admin Shell: admin-shell/installing-admin-shell.md
           - <b>Catalog</b>:
                 - Overview: catalog/overview.md
                 - Managing Catalogs:
@@ -128,6 +131,7 @@ nav:
                       - Settings: pages/settings.md
                 - Sanity:
                       - Overview: sanity/overview.md
+                      - Settings: sanity/settings.md
                 - Contentful:
                       - Overview: contentful/overview.md
           - AI Smart Capture:
@@ -141,12 +145,22 @@ nav:
                 - Azure Blob Storage: azure-blob-storage/overview.md
                 - File System Assets: file-system/overview.md
           - Authentication Related Modules:
-                - Google SSO: google-sso/overview.md
-                - Azure AD: azure-ad/overview.md
-                - Enabling Authentication Types: azure-ad/enabling-authentication-types.md
+                - Overview: authentication-overview.md
+                - Google SSO:
+                      - Overview: google-sso/overview.md
+                      - Installing and Enabling Google SSO: google-sso/enabling-google-sso.md
+                - Azure AD (Entra ID):
+                      - Overview: azure-ad/overview.md
+                      - Installing and Enabling Azure AD: azure-ad/enabling-azure-ad.md
                 - OTP:
                       - Overview: otp/overview.md
-                      - Enabling OTP Sign-In: otp/enabling-otp.md
+                      - Installing and Enabling OTP Sign-In: otp/enabling-otp.md
+                - MFA:
+                      - Overview: mfa/overview.md
+                      - Installing and Enabling MFA: mfa/enabling-mfa.md
+                - Passkeys:
+                      - Overview: passkeys/overview.md
+                      - Installing and Using Passkeys: passkeys/enabling-passkeys.md
           - Back-in-Stock:
                   - Overview: back-in-stock/overview.md
                   - Inventory and Notifications Management: back-in-stock/stock-and-notifications-management.md

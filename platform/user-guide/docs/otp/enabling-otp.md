@@ -1,4 +1,4 @@
-# Enable OTP Sign-In
+# Install and Enable OTP Sign-In
 
 Install the OTP module the same way as [other modules](/platform/user-guide/latest/modules-installation).
 
@@ -35,5 +35,5 @@ Customers can now sign in to the Frontend with a one-time code emailed to them, 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← OTP module overview</a>
-    <a href="../../back-in-stock/overview">Back-in-Stock module overview →</a>
+    <a href="../../mfa/overview">MFA module overview →</a>
 </div>

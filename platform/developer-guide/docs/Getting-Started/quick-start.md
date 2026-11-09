@@ -23,6 +23,9 @@ $installSCript = Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Virto
 
 Open `http://localhost:8090` and sign in with `admin` / `store` to access the Platform admin.
 
+!!! note
+    This is the classic AngularJS back office. A new Vue-based back office called [Admin Shell](/platform/user-guide/latest/admin-shell/overview) is also available in preview; install it like any other module.
+
 <br>
 ![Read more](media/readmore.png){: width="20"} [Local install with start-local. Prerequisites, lifecycle commands, customization, and troubleshooting](Installation-Guide/start-local.md)
 

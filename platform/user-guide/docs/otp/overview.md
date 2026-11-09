@@ -1,4 +1,4 @@
-# OTP
+# Overview
 
 The **OTP** module lets a customer sign in to the Frontend with a one-time passcode instead of a password.
 
@@ -22,6 +22,6 @@ The diagram below shows the OTP module dependencies:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../azure-ad/enabling-authentication-types">← Enabling authentication types</a>
-    <a href="../enabling-otp">Enabling OTP sign-in →</a>
+    <a href="../../azure-ad/overview">← Azure AD module overview</a>
+    <a href="../enabling-otp">Installing and enabling OTP sign-in →</a>
 </div>

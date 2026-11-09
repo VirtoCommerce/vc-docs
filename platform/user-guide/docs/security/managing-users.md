@@ -39,9 +39,14 @@ To edit a user:
 
 The modifications have been saved.
 
+!!! note
+    The **Email confirmed** and **Lockout enabled** switches on this blade matter for [MFA](../mfa/overview.md): a user without a confirmed email or with lockout disabled cannot complete a sign-in that requires a code.
+
 ![Readmore](media/readmore.png){: width="25"} [Login on behalf](login-on-behalf.md)
 
 ![Readmore](media/readmore.png){: width="25"} [API keys](api-key.md)
+
+![Readmore](media/readmore.png){: width="25"} [Requiring MFA for a user](../mfa/enabling-mfa.md#require-mfa-for-a-user-or-organization)
 
 ## Assign roles to users
 

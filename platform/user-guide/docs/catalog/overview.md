@@ -28,6 +28,6 @@ With the Catalog module, you can manage:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../platform-overview">← Modules overview </a>
+    <a href="../../admin-shell/installing-admin-shell">← Installing and Using Admin Shell</a>
     <a href="../add-new-catalog">Managing catalogs →</a>
 </div>

@@ -10,6 +10,11 @@ The following logs are recorded:
 | Token endpoint, password grant | Success <br> Wrong password <br> Unknown user name <br> Locked-out account <br> Password login disabled <br> Expired password | 
 | External identity provider (SSO) | Success and failure with the provider name |
 | Login on behalf | Grant <br> Revert back to the operator <br> Denied attempt <br> Attempt against a user that does not exist |
+| MFA code step | Success <br> Wrong code <br> Too many wrong codes <br> Code unavailable <br> Expired or invalid session |
+| [Passkey](../passkeys/overview.md) sign-in | Success <br> Failure |
+
+!!! note
+    When [MFA](../mfa/overview.md) requires a code, a sign-in writes two records: the password step with a **Requires two factor** outcome, and the code step with the **MFA** sign-in type and its real outcome. Only the code step counts toward the summary widgets, so a completed sign-in is not counted twice.
 
 
 To view the sign-in log:

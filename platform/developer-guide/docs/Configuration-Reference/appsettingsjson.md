@@ -710,6 +710,7 @@ This node enables authentication with username and password.
 | ----------| ------------------------  | ------------ |
 | Enabled   | true<br> false            | Always enabled by default. Setting to **false** will disable logging in with username and password. |
 | Priority  | 0                         | Configures the priority of the password login popup on the _Login_ page. The lowest value means the highest priority.|
+| DetailedErrors | false<br> true | Reports a lockout as its own error at the token endpoint instead of a generic one. The MFA and OTP modules read this setting too, for the same reason. |
 
 
 **Example**
@@ -1476,6 +1477,35 @@ This node configures the appearance and behavior of the login page.
 ```
 
 
+### MultiFactorAuthentication
+
+This node configures the second sign-in factor the [MFA module](/platform/user-guide/latest/mfa/overview) emails to a user after their password. Like **Sanity**, it sits at the configuration root rather than under `VirtoCommerce`.
+
+| Node | Default or sample value | Description |
+| --- | --- | --- |
+| TwoFactorTokenLifetime | "00:10:00" | How long the second step stays open after the password: the two-factor token of the token endpoint and the two-factor cookie of the Backoffice. |
+| CodeResendInterval | "00:00:30" | How often a code can be sent to a user by the same provider. Must be shorter than `TwoFactorTokenLifetime`. |
+| MaxCodeAttempts | 3 | How many wrong codes a user can enter within `TwoFactorTokenLifetime`, at the token endpoint and on the Backoffice code screen together. |
+| DisableEnforcement | false | Stops requiring the code whatever the settings say. A recovery switch for an administrator who can't pass the second factor. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "MultiFactorAuthentication": {
+    "TwoFactorTokenLifetime": "00:10:00",
+    "CodeResendInterval": "00:00:30",
+    "MaxCodeAttempts": 3,
+    "DisableEnforcement": false
+  }
+}
+```
+
+!!! note
+    If an administrator can no longer sign in because of MFA, set `DisableEnforcement` to `true` (or the `MultiFactorAuthentication__DisableEnforcement` environment variable) and restart the platform. Fix the account or the settings, then remove the switch. The platform logs a warning at startup while it's on.
+
+![Readmore](media/readmore.png){: width="25"} [Enabling MFA](/platform/user-guide/latest/mfa/enabling-mfa)
+
 ### Modularity
 
 This node configures external sources, from which modules are being installed and discovered.
@@ -1557,6 +1587,26 @@ This node enables notification configuration for the Virto Commerce Notification
 
 <!--notifications-end-->
 
+
+### Passkey
+
+This node turns passkey sign-in on or off for the [Passkeys module](/platform/user-guide/latest/passkeys/overview). It sits at the configuration root rather than under `VirtoCommerce`, like **Sanity** and **MultiFactorAuthentication**.
+
+| Node | Default or sample value | Description |
+| --- | --- | --- |
+| Enabled | true | Turns passkey sign-in and passkey creation on or off, in the Backoffice and on every store's Frontend. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "Passkey": {
+    "Enabled": true
+  }
+}
+```
+
+![Readmore](media/readmore.png){: width="25"} [Enabling Passkeys](/platform/user-guide/latest/passkeys/enabling-passkeys)
 
 ### Payments
 
@@ -1919,6 +1969,34 @@ This node configures the push notification service settings for scalability in t
   }
 }
 ```
+
+### Sanity
+
+This node configures the Sanity module's webhook authorization and the named secrets its store settings reference. Unlike most nodes on this page, it sits at the configuration root rather than under `VirtoCommerce`.
+
+| Node | Default or sample value | Description |
+| ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------- |
+| WebhookSecrets | [ ] | Secrets accepted when validating a Sanity webhook signature. A request is accepted when it matches any of them, which covers several webhooks and lets a secret be rotated without downtime. Empty rejects every webhook request. |
+| WebhookToleranceSeconds | 300 | How far a webhook timestamp may be from the current time, in seconds. Guards against replay. Range: 1 to 86400. |
+| WebhookMaxBodySize | 10485760 | Largest webhook body accepted, in bytes. Range: 1024 to 104857600 (1 KB to 100 MB). |
+| Secrets | { } | Named API tokens that the **Sanity.Projects** and **Sanity.ApiToken** store settings reference as `${name}`. Names are case-insensitive. |
+
+**Example**
+
+```json title="appsettings.json"
+{
+  "Sanity": {
+    "WebhookSecrets": [ "whsec_current" ],
+    "WebhookToleranceSeconds": 300,
+    "WebhookMaxBodySize": 10485760,
+    "Secrets": {
+      "projectAToken": "sk..."
+    }
+  }
+}
+```
+
+![Readmore](media/readmore.png){: width="25"} [Sanity module setup](../Extensibility/cms-integrations/sanity-setup.md)
 
 ### Search
 

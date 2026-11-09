@@ -5,7 +5,7 @@ This glossary explains Virto Commerce business and operations vocabulary used th
 For developer vocabulary, such as DDD patterns, .NET interfaces, or extensibility APIs, see the [Developer guide glossary](/platform/developer-guide/latest/glossary).
 
 ## Admin UI
-Same as **Platform** and **Back office**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
+Same as **Platform** and **Backoffice**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 
 ## Applications menu
 
@@ -24,7 +24,7 @@ A file (such as an image, video, document, or media resource) that is uploaded t
 ## Association
 A tool that allows you to add a block of related items to a product or multiple products. For example, this could be a widget with related products or accessories that go with the product in question.
 
-## Back office
+## Backoffice
 Same as **Admin UI** and **Platform**. An administrative interface of the Virto Commerce Platform where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 
 ## Bill of materials
@@ -172,7 +172,7 @@ Virto Commerce packages Product Information Management as the [PIM Packaged Busi
 The term also appears as a category of third-party system that Virto Commerce integrates with in multi-region deployments; see [B2B Multi-Regional eCommerce Architecture](multiregional-ecommerce.md).
 
 ## Platform
-Same as **Admin UI** and **Back office**. An administrative interface where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
+Same as **Admin UI** and **Backoffice**. An administrative interface where internal users manage and configure commerce operations, including catalogs, inventory, pricing, orders, customers, and system settings.
 
 ## Product
 A basic entity in Virto Commerce's Catalog module, a product is a basic type of item that can be created and listed on an ecommerce site. You can choose to create entries for both physical and digital products. There are also special types of products, such as bills of materials, variations, and configurables.

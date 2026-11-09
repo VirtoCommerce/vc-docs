@@ -21,6 +21,8 @@ To configure the admin profile:
 
 Your settings are saved automatically.
 
+![Readmore](media/readmore.png){: width="25"} [Managing your own passkeys](passkeys/enabling-passkeys.md#manage-your-own-passkeys)
+
 
 <br>
 <br>

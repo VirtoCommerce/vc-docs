@@ -28,6 +28,6 @@ The Back-in-stock module provides:
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../../otp/enabling-otp">← Enabling OTP sign-in</a>
+    <a href="../../authentication-overview">← Authentication-related modules</a>
     <a href="../stock-and-notifications-management">Inventory and notifications management →</a>
 </div>

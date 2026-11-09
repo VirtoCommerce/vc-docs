@@ -23,5 +23,6 @@ nav:
   - User:
       - Profile: profile.md
       - Change Password: change-password.md
+      - Security: security.md
       - Addresses: addresses.md
       - Saved Credit Cards: saved-credit-cards.md

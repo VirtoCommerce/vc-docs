@@ -13,6 +13,9 @@ Virto Commerce is a headless platform, and multiple client apps can be connected
 !!! note
     This guide uses the **vc-frontend** UI for illustrations.  
 
+!!! note
+    The screens in this guide show the classic AngularJS back office. A new Vue-based back office called [Admin Shell](admin-shell/overview.md) is also available in preview.
+
 If you're new to Virto Commerce, the following steps will guide you through the essential configurations and actions to ensure a seamless start for your store:
 
 

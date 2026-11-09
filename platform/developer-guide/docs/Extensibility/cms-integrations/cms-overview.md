@@ -6,7 +6,7 @@ The following CMS integrations are currently available:
 
 * [Page Builder](../cms-integrations/PageBuilder/overview.md): Native Virto Commerce visual editor for creating ecommerce pages from configurable blocks, integrated directly into the Content module.
 * [Builder.io](builder-io-setup.md): Store-level integration that activates Builder.io tracking and connects the Builder.io visual editor with Virto Commerce Frontend.
-* [Sanity](sanity-setup.md): Webhook-based integration that syncs page create, update, and delete events from Sanity Studio into Virto Commerce Pages.
+* [Sanity](sanity-setup.md): Webhook-based integration that syncs Sanity Studio document changes into Virto Commerce Pages across several document types, datasets, or projects at once. It also supports scheduled sync and full index rebuild via the Sanity Content API.
 * [Contentful](contentful-setup.md): Webhook-based integration that syncs page create, update, and delete events from Contentful into Virto Commerce Pages. Also supports scheduled sync and full index rebuild via the Contentful Content Delivery API.
 
 ## Pages module as unification layer
@@ -43,7 +43,7 @@ The Virto Pages module supports end-to-end content workflows and standard platfo
 
 | CMS                                                         | Integration type          |
 |-------------------------------------------------------------|---------------------------|
-| [Sanity](sanity-setup.md)                                   | Webhook                   |
+| [Sanity](sanity-setup.md)                                   | Webhook + Content API     |
 | [Contentful](contentful-setup.md)                           | Webhook + Delivery API    |
 | [Builder.io](builder-io-setup.md)                           | Store settings + Frontend |
 | [Page Builder](../cms-integrations/PageBuilder/overview.md) | Native module             |
