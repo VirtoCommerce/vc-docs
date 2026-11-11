@@ -32,6 +32,7 @@ With the Page Builder module, you can
 * Customize ecommerce pages with a preview feature.
 * Preview content before publishing.
 * Export, import, and duplicate pages.
+* Manage [Multilanguage Pages](multilanguage-pages.md) with one language version per store language.
 * Access a block library for different page elements.
 * Implement SEO by design for better search engine visibility.
 * Ensure mobile-friendliness through design.

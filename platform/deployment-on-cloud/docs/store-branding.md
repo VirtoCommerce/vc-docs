@@ -97,12 +97,14 @@ You can personalize your store by applying a [custom theme](/storefront/develope
 
 For the purpose of this guide, a color scheme named **safco** has been created by the developers. To apply a new color scheme to your store:
 
-1. Select one of the out-of-the-box color schemes or your custom scheme (**safco**) and copy its name without extension to clipboard:
+1. Select one of the out-of-the-box color schemes or your custom scheme (**safco**) and copy its name without extension to clipboard.
 1. Go to **Stores** --> Your store --> **White labeling**.
 1. In the **White labeling** blade, click ![Pencil](media/pencil.png){: width="25"} next to the **Theme preset name**.
 1. In the next blade, click **Add** in the toolbar.
-1. Paste the filename to the new field and click ![Floppy](media/floppy.png){: width="25"} to save the changes.
-1. Click **Save** in the too lbar.1.  In the previous blade, s elect the newly added theme from the dropdown list.1.  Click **Save** in the toolbar.
+1. Paste the filename to the new field and click ![Floppy](media/floppy.png){: width="20"} to save the changes.
+1. Click **Save** in the toolbar.
+1. In the previous blade, select the newly added theme from the dropdown list.
+1. Click **Save** in the toolbar.
 
 Your new color scheme has been applied:
 

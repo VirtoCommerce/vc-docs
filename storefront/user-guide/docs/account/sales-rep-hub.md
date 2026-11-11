@@ -31,6 +31,20 @@ The customers can be edited as follows:
 
 ![Edit customers](../media/edit-my-customers.gif)
 
+### Customer profile
+
+Click a customer to open their profile. It shows the customer's orders and carts: orders in **New** status, active carts, purchased month to date, orders placed year to date, average order value, and the customer's recent orders:
+
+![Customer profile](../media/customer-profile.png)
+
+The **Customer activity** widget on the same profile shows the customer's web activity from Google Analytics 4. 
+
+The **Summary** tab shows the last login, the total number of visits, the last search term, and the last viewed product, and the **Searches** and **Product views** tabs show the full history. Click **All activity** to open the customer's own activity feed, the same page the [My activity](#my-activity) feed opens for a single customer.
+
+![Customer activity](../media/customer-activity.png)
+
+!!! note
+    The **Customer activity** widget needs the Google Ecommerce Analytics module connected to the store. Without it, the profile still shows the order and cart data above, but has no **Customer activity** widget, and **All activity** opens the customer's profile instead of their activity feed.
 
 ## Tasks
 

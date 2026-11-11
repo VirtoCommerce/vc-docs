@@ -172,6 +172,6 @@ Back in Page Builder Office, you will see the name of the page(s) where the imag
 ********
 
 <div style="display: flex; justify-content: space-between;">
-    <a href="../manage-pages">← Managing pages via Content module </a>
-    <a href="../configure-content-block">Configure content blocks in Designer →</a>
+    <a href="../multilanguage-pages">← Multilanguage pages</a>
+    <a href="../configure-content-block">Configuring content blocks in Designer →</a>
 </div>

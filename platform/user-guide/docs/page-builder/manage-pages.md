@@ -8,6 +8,9 @@ Managing pages through the Content module includes:
 
 ## Create new page
 
+!!! note
+    In a store with more than one language, **Add** first offers a choice between a **Landing Page** (the single-language flow below) and a [Multilanguage Page](multilanguage-pages.md).
+
 You can create new pages using:
 
 * [Designer (block-based option).](#create-new-page-in-designer)
@@ -75,5 +78,5 @@ Alternatively, you can publish or unpublish your page later in from the Content 
 
 <div style="display: flex; justify-content: space-between;">
     <a href="../overview">← Page Builder module overview</a>
-    <a href="../manage-pages-via-office">Managing pages via Page Builder office →</a>
+    <a href="../multilanguage-pages">Multilanguage pages →</a>
 </div>

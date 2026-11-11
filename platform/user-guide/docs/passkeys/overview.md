@@ -12,7 +12,7 @@ The diagram below shows the Passkeys module dependencies:
 
 ## Key features
 
-* A user adds a passkey from their own profile, in the [Backoffice](../enabling-passkeys.md#manage-your-own-passkeys) or on the [Frontend](/storefront/user-guide/latest/account/security#add-passkey). The browser or device keeps the private key, and the Platform keeps only the public key.
+* A user adds a passkey from their own profile, in the [Backoffice](enabling-passkeys.md#manage-your-own-passkeys) or on the [Frontend](/storefront/user-guide/latest/account/security#add-passkey). The browser or device keeps the private key, and the Platform keeps only the public key.
 * Users rename and delete their own passkeys from their list of sign-in keys.
 * A passkey sign-in skips the one-time code from [MFA](../mfa/overview.md), since a passkey is already a strong second factor.
 * The passkey button and passkey creation only appear in a browser that supports passkeys.
