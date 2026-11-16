@@ -1,6 +1,7 @@
 {
   "$schema": "https://context7.com/schema/context7.json",
   "projectTitle": "Virto Commerce",
+  "description": "Virto Commerce is an open-source platform for building extensible ecommerce applications. This includes complex digital commerce solutions for B2B, B2C, or B2B2C businesses, marketplaces, and derived SaaS commerce platforms.",
   "branch": "main",
   "previousVersions": [
     {
@@ -18,6 +19,9 @@
     {
       "branch": "release/stable11"
     }
+  ],
+  "rules": [
+    "VirtoCommerce has edge (current, pre-production daily) and stable (production-ready, once in a quarter with hotfixes) releases. Always query the docs version matching the release you target."
   ],
   "url": "https://context7.com/virtocommerce/vc-docs",
   "public_key": "pk_tJVCDYWsAhEkwzp0zjDh2"
