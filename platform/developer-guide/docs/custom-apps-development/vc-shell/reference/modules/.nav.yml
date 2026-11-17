@@ -2,5 +2,6 @@
 # To update: edit a *.docs.md in vc-shell, then run yarn docs:sync
 title: Modules
 nav:
+  - Assets Folder Manager: assets-folder-manager.md
   - Assets Manager: assets-manager.md
   - Assets Module: assets.md

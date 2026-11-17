@@ -7,3 +7,4 @@ nav:
   - VcGallery: vc-gallery.md
   - VcImageTile: vc-image-tile.md
   - VcScheduler: vc-scheduler.md
+  - VcSearchBar: vc-search-bar.md

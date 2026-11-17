@@ -161,6 +161,7 @@ Key points:
 
 ## Related
 
+- [Assets Folder Manager](./assets-folder-manager.md) -- browses a storage folder tree instead of a flat asset list
 - `framework/core/composables/useAssetsManager/` -- `useAssetsManager`, `AssetLike`, `UseAssetsManagerReturn`
 - `framework/core/utilities/assets.ts` -- `isImage`, `readableSize`, `getExtensionColor`, `getExtensionLabel`
 - `framework/modules/assets/components/assets-details/` -- `AssetsDetails` child blade opened on row click
