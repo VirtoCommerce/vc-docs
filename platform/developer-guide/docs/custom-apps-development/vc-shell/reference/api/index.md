@@ -24,13 +24,13 @@ Composition API functions shipped under `@vc-shell/framework`. Grouped by domain
 
 | Section | Use it for |
 | --- | --- |
-| [Blade navigation](../../composables/blade-navigation/useBlade.md). | `useBlade`, `useBladeContext`, `useBladeRegistry`, `useBladeWidgets`. |
+| [Blade navigation](../../composables/blade-navigation/useBlade.md). | `useBlade`, `useBladeContext`, `useBladeWidgets`. |
 | [Data](../../composables/data/useApiClient.md). | `useApiClient`, `useAssets`, `useAssetsManager`, `useDataTablePagination`, `useDataTableSort`, `useTableSelection`, `useTableSort`. |
 | [Forms](../../composables/forms/useBladeForm.md). | `useBladeForm`, `useDynamicProperties`, `useModificationTracker`. |
 | [Notifications](../../composables/notifications/useNotifications.md). | `useNotifications`, `usePopup`. |
-| [Services](../../composables/services/useToolbar.md). | `useToolbar`, `useMenuService`, `useDashboard`, `useSettings`, `useSettingsMenu`, `useAppBarWidget`, `useAppBarMobileButtons`, `useWidgets`. |
-| [UI state](../../composables/ui-state/useResponsive.md). | `useResponsive`, `useTheme`, `useLoading`, `useBreadcrumbs`, `useConnectionStatus`, `useKeyboardNavigation`, `useMenuExpanded`, `useSidebarState`, `useSlowNetworkDetection`. |
-| [User](../../composables/user/useUser.md). | `useUser`, `useLanguages`, `usePermissions`, `usePlatformLocaleSync`. |
+| [Services](../../composables/services/useToolbar.md). | `useToolbar`, `useMenuService`, `useDashboard`, `useSettings`, `useSettingsMenu`, `useAppBarWidget`, `useWidgets`. |
+| [UI state](../../composables/ui-state/useResponsive.md). | `useResponsive`, `useTheme`, `useLoading`, `useBreadcrumbs`, `useSidebarState`. |
+| [User](../../composables/user/useUser.md). | `useUser`, `useLanguages`, `usePermissions`. |
 | [Utilities](../../composables/utilities/useAsync.md). | `useAsync`, `useFunctions`, `useBeforeUnload`, `useErrorHandler`, `useAppInsights`, `useWebVitals`. |
 
 ## Plugins
